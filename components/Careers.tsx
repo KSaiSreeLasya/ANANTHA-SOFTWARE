@@ -55,11 +55,15 @@ const Careers: React.FC = () => {
         .getPublicUrl(filePath);
 
       // 3. Construct Date string (YYYY-MM-DD)
-      const startDate = formData.year && formData.month && formData.day 
+      const startDate = formData.year && formData.month && formData.day
         ? `${formData.year}-${formData.month.padStart(2, '0')}-${formData.day.padStart(2, '0')}`
         : null;
 
-      // 4. Insert into career_applications table
+      // 4. Get IP address and user agent
+      const ipAddress = await getClientIp();
+      const userAgent = getUserAgent();
+
+      // 5. Insert into career_applications table
       const { error: insertError } = await supabase
         .from('career_applications')
         .insert([{
@@ -70,7 +74,9 @@ const Careers: React.FC = () => {
           position: formData.position,
           start_date: startDate,
           resume_url: publicUrl,
-          linkedin_url: formData.linkedin
+          linkedin_url: formData.linkedin,
+          ip_address: ipAddress,
+          user_agent: userAgent
         }]);
 
       if (insertError) throw insertError;
