@@ -51,16 +51,15 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           {/* Logo */}
-          <div 
-            className="flex-shrink-0 flex flex-col cursor-pointer group" 
+          <div
+            className="flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
             onClick={() => onNavigate('home')}
           >
-            <span className="text-xl font-bold tracking-tighter text-white uppercase group-hover:text-coral transition-colors">
-              ANANTHA SOFTWARE
-            </span>
-            <span className="text-[10px] tracking-[0.3em] text-coral font-semibold uppercase -mt-1">
-              Engineering Future
-            </span>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2Fdd826854f6f44d3b95695750dd149fd4%2F69ef4033ddb2424b84ea4261dc960c9c?format=webp&width=800"
+              alt="Anantha Software"
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Nav */}
