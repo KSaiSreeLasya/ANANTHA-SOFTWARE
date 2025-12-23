@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AuthProvider } from './lib/authContext';
+import { useSeo } from './lib/useSeo';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -17,6 +18,9 @@ const App: React.FC = () => {
     const hash = window.location.hash.replace('#', '');
     return hash || 'home';
   });
+
+  // Update SEO meta tags based on current page
+  useSeo(currentPage);
 
   // Function to handle navigation globally
   const navigateTo = (page: string) => {
