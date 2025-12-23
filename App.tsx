@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -9,6 +8,8 @@ import Careers from './components/Careers';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
+import Login from './components/Login';
+import Signup from './components/Signup';
 
 const App: React.FC = () => {
   // Use state to track the current "page"
