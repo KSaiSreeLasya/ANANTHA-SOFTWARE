@@ -95,17 +95,34 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Newsletter */}
           <div>
             <h4 className="text-white font-bold mb-8 text-sm uppercase tracking-widest">Stay Updated</h4>
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                required
-                placeholder="name@company.com"
-                className="bg-white/5 border border-white/10 rounded px-4 py-3 outline-none focus:border-coral w-full text-white text-xs"
-              />
-              <button className="bg-white/10 text-white px-6 py-3 rounded text-[10px] font-black hover:bg-white hover:text-black transition-all uppercase tracking-[0.2em] w-full">
-                Subscribe
-              </button>
-            </form>
+            {newsletterSuccess ? (
+              <div className="bg-green-500/20 border border-green-500/30 text-green-400 p-4 rounded text-xs text-center">
+                ✓ Thanks for subscribing!
+              </div>
+            ) : (
+              <form className="space-y-4" onSubmit={handleNewsletterSubmit}>
+                {newsletterError && (
+                  <div className="bg-red-500/20 border border-red-500/30 text-red-400 p-2 rounded text-xs text-center">
+                    {newsletterError}
+                  </div>
+                )}
+                <input
+                  type="email"
+                  required
+                  placeholder="name@company.com"
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  className="bg-white/5 border border-white/10 rounded px-4 py-3 outline-none focus:border-coral w-full text-white text-xs"
+                />
+                <button
+                  type="submit"
+                  disabled={newsletterSubmitting}
+                  className="bg-white/10 text-white px-6 py-3 rounded text-[10px] font-black hover:bg-white hover:text-black transition-all uppercase tracking-[0.2em] w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {newsletterSubmitting ? 'Subscribing...' : 'Subscribe'}
+                </button>
+              </form>
+            )}
           </div>
 
           {/* Social */}
