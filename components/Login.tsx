@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 import { supabase } from '../lib/supabase';
+import { useAuth } from '../lib/authContext';
 
 interface LoginProps {
   onNavigate: (page: string) => void;
