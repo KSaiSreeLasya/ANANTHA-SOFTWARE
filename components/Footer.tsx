@@ -20,6 +20,42 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
     { label: 'Contact', id: 'contact' },
   ];
 
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setNewsletterSubmitting(true);
+    setNewsletterError('');
+
+    try {
+      const ipAddress = await getClientIp();
+      const userAgent = getUserAgent();
+
+      const { error } = await supabase
+        .from('newsletter_subscribers')
+        .insert([{
+          email: newsletterEmail,
+          ip_address: ipAddress,
+          user_agent: userAgent
+        }]);
+
+      if (error) {
+        if (error.code === '23505') {
+          setNewsletterError('This email is already subscribed!');
+        } else {
+          throw error;
+        }
+      } else {
+        setNewsletterSuccess(true);
+        setNewsletterEmail('');
+        setTimeout(() => setNewsletterSuccess(false), 5000);
+      }
+    } catch (error: any) {
+      console.error('Newsletter subscription error:', error);
+      setNewsletterError('Failed to subscribe. Please try again.');
+    } finally {
+      setNewsletterSubmitting(false);
+    }
+  };
+
   return (
     <footer className="bg-[#0a0a0a] border-t border-white/5 pt-24 pb-12 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
