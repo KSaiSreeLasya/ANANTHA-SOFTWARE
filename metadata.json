@@ -1,0 +1,8 @@
+{
+  "name": "Anantha Software - Digital Solutions",
+  "description": "A high-performance, modern corporate website for Anantha Software, featuring service showcases, contact integration, and an AI-powered assistant for project consultations.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
