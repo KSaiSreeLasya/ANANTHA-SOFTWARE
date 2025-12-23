@@ -139,7 +139,10 @@ ALTER TABLE login_audit_logs ENABLE ROW LEVEL SECURITY;
 
 CREATE POLICY "Users can view own login logs"
   ON login_audit_logs FOR SELECT
-  USING (auth.uid() = user_id OR role = 'admin');
+  USING (
+    auth.uid() = user_id
+    OR (SELECT role FROM users WHERE id = auth.uid()) = 'admin'
+  );
 
 -- ============================================================================
 -- 6. CREATE UPDATED_AT TRIGGER (Auto-update timestamp)
