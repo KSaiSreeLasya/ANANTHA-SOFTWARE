@@ -63,9 +63,12 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="flex flex-col cursor-pointer" onClick={() => onNavigate('home')}>
-              <span className="text-xl font-bold tracking-tighter text-white uppercase">ANANTHA SOFTWARE</span>
-              <span className="text-[10px] tracking-[0.3em] text-coral font-semibold uppercase -mt-1">Engineering Future</span>
+            <div className="cursor-pointer hover:opacity-80 transition-opacity" onClick={() => onNavigate('home')}>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fdd826854f6f44d3b95695750dd149fd4%2F69ef4033ddb2424b84ea4261dc960c9c?format=webp&width=800"
+                alt="Anantha Software"
+                className="h-16 w-auto"
+              />
             </div>
             <p className="text-xs text-gray-500 leading-relaxed uppercase tracking-wider">
               SOLUTIONS PVT LTD,<br />
