@@ -18,13 +18,19 @@ const Contact: React.FC = () => {
     setErrorMsg('');
 
     try {
+      // Get IP address and user agent
+      const ipAddress = await getClientIp();
+      const userAgent = getUserAgent();
+
       const { error } = await supabase
         .from('contact_submissions')
         .insert([
-          { 
-            name: formData.name, 
-            email: formData.email, 
-            message: formData.message 
+          {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            ip_address: ipAddress,
+            user_agent: userAgent
           }
         ]);
 
