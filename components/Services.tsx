@@ -31,6 +31,11 @@ const Services: React.FC = () => {
 
           {/* Silicon Engineering */}
           <div className="p-12 border-b border-white/10 flex gap-6">
+            <div className="w-16 h-16 bg-indigo-600/20 rounded flex items-center justify-center flex-shrink-0 text-indigo-400">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
             <div>
               <h4 className="text-xl font-bold mb-4">Silicon Engineering</h4>
               <ul className="text-sm text-gray-400 space-y-2">
