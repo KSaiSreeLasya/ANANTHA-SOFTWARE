@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
                 <div className="ml-6">
                   <h4 className="text-lg font-bold">Visit Our Office</h4>
                   <p className="text-gray-400">Financial District, Hyderabad,
-                    Telangana 500032</p>
+                    Telangana,500032</p>
                 </div>
               </div>
             </div>
