@@ -113,12 +113,17 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
               </a>
             ))}
             <div className="pt-6 border-t border-white/5 flex flex-col space-y-4">
-              <button className="text-left px-4 py-3 text-gray-400 font-medium">Log In</button>
-              <button 
-                onClick={() => onNavigate('contact')}
+              <button
+                onClick={() => onNavigate('login')}
+                className="text-left px-4 py-3 text-gray-400 font-medium hover:text-white transition-colors"
+              >
+                Log In
+              </button>
+              <button
+                onClick={() => onNavigate('signup')}
                 className="bg-coral py-4 rounded-xl text-white font-bold text-center uppercase tracking-widest shadow-lg shadow-coral/20"
               >
-                Get Started
+                Sign Up
               </button>
             </div>
           </div>
