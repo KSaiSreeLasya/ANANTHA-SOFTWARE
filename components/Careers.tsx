@@ -1,6 +1,6 @@
-
 import React, { useState, useRef } from 'react';
 import { supabase } from '../lib/supabase';
+import { getClientIp, getUserAgent } from '../lib/ipService';
 
 const Careers: React.FC = () => {
   const [formData, setFormData] = useState({
