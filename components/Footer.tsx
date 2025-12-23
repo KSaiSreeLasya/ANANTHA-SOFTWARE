@@ -1,11 +1,16 @@
-
-import React from 'react';
+import React, { useState } from 'react';
+import { supabase } from '../lib/supabase';
+import { getClientIp, getUserAgent } from '../lib/ipService';
 
 interface FooterProps {
   onNavigate: (page: string) => void;
 }
 
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterSubmitting, setNewsletterSubmitting] = useState(false);
+  const [newsletterSuccess, setNewsletterSuccess] = useState(false);
+  const [newsletterError, setNewsletterError] = useState('');
   const navLinks = [
     { label: 'Home', id: 'home' },
     { label: 'Services', id: 'services' },
