@@ -79,13 +79,23 @@ const Careers: React.FC = () => {
           user_agent: userAgent
         }]);
 
-      if (insertError) throw insertError;
+      if (insertError) {
+        console.error('Insert error details:', {
+          message: insertError.message,
+          code: insertError.code,
+          details: insertError.details,
+          hint: insertError.hint,
+          full: insertError
+        });
+        throw insertError;
+      }
 
       setIsSubmitted(true);
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error: any) {
-      console.error('Submission error:', error);
-      const errorMessage = error?.message || error?.error_description || JSON.stringify(error);
+      console.error('Full submission error:', error);
+      const errorMessage = error?.message || error?.error_description || 'Unknown error';
+      console.log('Error object:', error);
       setErrorMsg(`Error submitting application: ${errorMessage}`);
     } finally {
       setIsSubmitting(false);
