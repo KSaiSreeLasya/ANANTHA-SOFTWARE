@@ -56,9 +56,9 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
             onClick={() => onNavigate('home')}
           >
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2Fdd826854f6f44d3b95695750dd149fd4%2F69ef4033ddb2424b84ea4261dc960c9c?format=webp&width=800"
+              src="https://cdn.builder.io/api/v1/image/assets%2Fdd826854f6f44d3b95695750dd149fd4%2F69ef4033ddb2424b84ea4261dc960c9c?format=webp&width=1200"
               alt="Anantha Software"
-              className="h-12 w-auto"
+              className="h-20 w-auto"
             />
           </div>
 
