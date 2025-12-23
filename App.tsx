@@ -8,7 +8,6 @@ import About from './components/About';
 import Careers from './components/Careers';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ChatBot from './components/ChatBot';
 import Login from './components/Login';
 import Signup from './components/Signup';
 
@@ -96,7 +95,6 @@ const App: React.FC = () => {
         </main>
 
         <Footer onNavigate={navigateTo} />
-        <ChatBot />
       </div>
     </AuthProvider>
   );
