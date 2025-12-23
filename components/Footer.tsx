@@ -1,11 +1,16 @@
-
-import React from 'react';
+import React, { useState } from 'react';
+import { supabase } from '../lib/supabase';
+import { getClientIp, getUserAgent } from '../lib/ipService';
 
 interface FooterProps {
   onNavigate: (page: string) => void;
 }
 
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterSubmitting, setNewsletterSubmitting] = useState(false);
+  const [newsletterSuccess, setNewsletterSuccess] = useState(false);
+  const [newsletterError, setNewsletterError] = useState('');
   const navLinks = [
     { label: 'Home', id: 'home' },
     { label: 'Services', id: 'services' },
@@ -14,6 +19,42 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
     { label: 'Careers', id: 'careers' },
     { label: 'Contact', id: 'contact' },
   ];
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setNewsletterSubmitting(true);
+    setNewsletterError('');
+
+    try {
+      const ipAddress = await getClientIp();
+      const userAgent = getUserAgent();
+
+      const { error } = await supabase
+        .from('newsletter_subscribers')
+        .insert([{
+          email: newsletterEmail,
+          ip_address: ipAddress,
+          user_agent: userAgent
+        }]);
+
+      if (error) {
+        if (error.code === '23505') {
+          setNewsletterError('This email is already subscribed!');
+        } else {
+          throw error;
+        }
+      } else {
+        setNewsletterSuccess(true);
+        setNewsletterEmail('');
+        setTimeout(() => setNewsletterSuccess(false), 5000);
+      }
+    } catch (error: any) {
+      console.error('Newsletter subscription error:', error);
+      setNewsletterError('Failed to subscribe. Please try again.');
+    } finally {
+      setNewsletterSubmitting(false);
+    }
+  };
 
   return (
     <footer className="bg-[#0a0a0a] border-t border-white/5 pt-24 pb-12 mt-auto">
@@ -54,17 +95,34 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Newsletter */}
           <div>
             <h4 className="text-white font-bold mb-8 text-sm uppercase tracking-widest">Stay Updated</h4>
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                required
-                placeholder="name@company.com"
-                className="bg-white/5 border border-white/10 rounded px-4 py-3 outline-none focus:border-coral w-full text-white text-xs"
-              />
-              <button className="bg-white/10 text-white px-6 py-3 rounded text-[10px] font-black hover:bg-white hover:text-black transition-all uppercase tracking-[0.2em] w-full">
-                Subscribe
-              </button>
-            </form>
+            {newsletterSuccess ? (
+              <div className="bg-green-500/20 border border-green-500/30 text-green-400 p-4 rounded text-xs text-center">
+                ✓ Thanks for subscribing!
+              </div>
+            ) : (
+              <form className="space-y-4" onSubmit={handleNewsletterSubmit}>
+                {newsletterError && (
+                  <div className="bg-red-500/20 border border-red-500/30 text-red-400 p-2 rounded text-xs text-center">
+                    {newsletterError}
+                  </div>
+                )}
+                <input
+                  type="email"
+                  required
+                  placeholder="name@company.com"
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  className="bg-white/5 border border-white/10 rounded px-4 py-3 outline-none focus:border-coral w-full text-white text-xs"
+                />
+                <button
+                  type="submit"
+                  disabled={newsletterSubmitting}
+                  className="bg-white/10 text-white px-6 py-3 rounded text-[10px] font-black hover:bg-white hover:text-black transition-all uppercase tracking-[0.2em] w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {newsletterSubmitting ? 'Subscribing...' : 'Subscribe'}
+                </button>
+              </form>
+            )}
           </div>
 
           {/* Social */}

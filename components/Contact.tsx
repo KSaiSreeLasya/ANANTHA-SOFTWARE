@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
 import { supabase } from '../lib/supabase';
+import { getClientIp, getUserAgent } from '../lib/ipService';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -18,13 +18,19 @@ const Contact: React.FC = () => {
     setErrorMsg('');
 
     try {
+      // Get IP address and user agent
+      const ipAddress = await getClientIp();
+      const userAgent = getUserAgent();
+
       const { error } = await supabase
         .from('contact_submissions')
         .insert([
-          { 
-            name: formData.name, 
-            email: formData.email, 
-            message: formData.message 
+          {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            ip_address: ipAddress,
+            user_agent: userAgent
           }
         ]);
 
@@ -35,7 +41,8 @@ const Contact: React.FC = () => {
       setTimeout(() => setIsSuccess(false), 5000);
     } catch (error: any) {
       console.error('Error submitting form:', error);
-      setErrorMsg('Failed to send message. Please try again later.');
+      const errorMessage = error?.message || error?.error_description || JSON.stringify(error);
+      setErrorMsg(`Failed to send message: ${errorMessage}`);
     } finally {
       setIsSubmitting(false);
     }

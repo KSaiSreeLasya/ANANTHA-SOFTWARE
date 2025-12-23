@@ -1,6 +1,6 @@
-
 import React, { useState, useRef } from 'react';
 import { supabase } from '../lib/supabase';
+import { getClientIp, getUserAgent } from '../lib/ipService';
 
 const Careers: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -41,7 +41,7 @@ const Careers: React.FC = () => {
       // 1. Upload Resume to Storage
       const fileExt = resumeFile.name.split('.').pop();
       const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
-      const filePath = `resumes/${fileName}`;
+      const filePath = fileName; // Just filename, bucket is 'resumes'
 
       const { data: uploadData, error: uploadError } = await supabase.storage
         .from('resumes')
@@ -55,11 +55,15 @@ const Careers: React.FC = () => {
         .getPublicUrl(filePath);
 
       // 3. Construct Date string (YYYY-MM-DD)
-      const startDate = formData.year && formData.month && formData.day 
+      const startDate = formData.year && formData.month && formData.day
         ? `${formData.year}-${formData.month.padStart(2, '0')}-${formData.day.padStart(2, '0')}`
         : null;
 
-      // 4. Insert into career_applications table
+      // 4. Get IP address and user agent
+      const ipAddress = await getClientIp();
+      const userAgent = getUserAgent();
+
+      // 5. Insert into career_applications table
       const { error: insertError } = await supabase
         .from('career_applications')
         .insert([{
@@ -70,16 +74,29 @@ const Careers: React.FC = () => {
           position: formData.position,
           start_date: startDate,
           resume_url: publicUrl,
-          linkedin_url: formData.linkedin
+          linkedin_url: formData.linkedin,
+          ip_address: ipAddress,
+          user_agent: userAgent
         }]);
 
-      if (insertError) throw insertError;
+      if (insertError) {
+        console.error('Insert error details:', {
+          message: insertError.message,
+          code: insertError.code,
+          details: insertError.details,
+          hint: insertError.hint,
+          full: insertError
+        });
+        throw insertError;
+      }
 
       setIsSubmitted(true);
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error: any) {
-      console.error('Submission error:', error);
-      setErrorMsg(error.message || 'Error submitting application. Please try again.');
+      console.error('Full submission error:', error);
+      const errorMessage = error?.message || error?.error_description || 'Unknown error';
+      console.log('Error object:', error);
+      setErrorMsg(`Error submitting application: ${errorMessage}`);
     } finally {
       setIsSubmitting(false);
     }
