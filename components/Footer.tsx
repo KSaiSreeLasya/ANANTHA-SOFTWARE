@@ -65,9 +65,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="space-y-6">
             <div className="cursor-pointer hover:opacity-80 transition-opacity" onClick={() => onNavigate('home')}>
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Fdd826854f6f44d3b95695750dd149fd4%2F69ef4033ddb2424b84ea4261dc960c9c?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fdd826854f6f44d3b95695750dd149fd4%2F69ef4033ddb2424b84ea4261dc960c9c?format=webp&width=1200"
                 alt="Anantha Software"
-                className="h-16 w-auto"
+                className="h-24 w-auto"
               />
             </div>
             <p className="text-xs text-gray-500 leading-relaxed uppercase tracking-wider">
