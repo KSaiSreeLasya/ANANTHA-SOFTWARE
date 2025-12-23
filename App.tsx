@@ -41,6 +41,10 @@ const App: React.FC = () => {
   // Component switcher
   const renderContent = () => {
     switch (currentPage) {
+      case 'login':
+        return <Login onNavigate={navigateTo} />;
+      case 'signup':
+        return <Signup onNavigate={navigateTo} />;
       case 'services':
         return <Services />;
       case 'vision':
