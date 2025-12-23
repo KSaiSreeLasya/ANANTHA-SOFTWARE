@@ -41,7 +41,8 @@ const Contact: React.FC = () => {
       setTimeout(() => setIsSuccess(false), 5000);
     } catch (error: any) {
       console.error('Error submitting form:', error);
-      setErrorMsg('Failed to send message. Please try again later.');
+      const errorMessage = error?.message || error?.error_description || JSON.stringify(error);
+      setErrorMsg(`Failed to send message: ${errorMessage}`);
     } finally {
       setIsSubmitting(false);
     }
