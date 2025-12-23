@@ -11,8 +11,16 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
   const { user, userProfile, logout } = useAuth();
 
   const handleLogout = async () => {
-    await logout();
-    onNavigate('home');
+    try {
+      await logout();
+      onNavigate('home');
+      setIsOpen(false);
+    } catch (error) {
+      console.error('Logout failed:', error);
+      // Navigate to home even if logout fails
+      onNavigate('home');
+      setIsOpen(false);
+    }
   };
 
   const getUserDisplayName = () => {
@@ -29,6 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
     { label: 'About us', id: 'about' },
     { label: 'Careers', id: 'careers' },
     { label: 'Contact', id: 'contact' },
+    { label: 'ASOCSEMI', id: 'asocsemi', external: true, href: 'https://www.asocsemi.com/' },
   ];
 
   const handleLinkClick = (e: React.MouseEvent, id: string) => {
@@ -57,11 +66,13 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
           {/* Desktop Nav */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-center space-x-2">
-              {navItems.map((item) => (
+              {navItems.map((item: any) => (
                 <a
                   key={item.id}
-                  href={`#${item.id}`}
-                  onClick={(e) => handleLinkClick(e, item.id)}
+                  href={item.external ? item.href : `#${item.id}`}
+                  onClick={item.external ? undefined : (e) => handleLinkClick(e, item.id)}
+                  target={item.external ? '_blank' : undefined}
+                  rel={item.external ? 'noopener noreferrer' : undefined}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                     activePage === item.id
                       ? 'text-coral'
@@ -127,11 +138,13 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
       {isOpen && (
         <div className="lg:hidden bg-[#0a0a0a] border-b border-white/10 shadow-2xl animate-in fade-in duration-300">
           <div className="px-4 pt-2 pb-8 space-y-1">
-            {navItems.map((item) => (
+            {navItems.map((item: any) => (
               <a
                 key={item.id}
-                href={`#${item.id}`}
-                onClick={(e) => handleLinkClick(e, item.id)}
+                href={item.external ? item.href : `#${item.id}`}
+                onClick={item.external ? undefined : (e) => handleLinkClick(e, item.id)}
+                target={item.external ? '_blank' : undefined}
+                rel={item.external ? 'noopener noreferrer' : undefined}
                 className={`block px-4 py-4 text-base font-semibold ${
                   activePage === item.id ? 'text-coral bg-white/5' : 'text-gray-300 hover:text-coral'
                 }`}
