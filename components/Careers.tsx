@@ -85,7 +85,8 @@ const Careers: React.FC = () => {
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error: any) {
       console.error('Submission error:', error);
-      setErrorMsg(error.message || 'Error submitting application. Please try again.');
+      const errorMessage = error?.message || error?.error_description || JSON.stringify(error);
+      setErrorMsg(`Error submitting application: ${errorMessage}`);
     } finally {
       setIsSubmitting(false);
     }
