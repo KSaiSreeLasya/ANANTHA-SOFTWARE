@@ -14,6 +14,7 @@ const Login: React.FC<LoginProps> = ({ onNavigate, onAuthSuccess }) => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const { checkAuth } = useAuth();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,7 +30,20 @@ const Login: React.FC<LoginProps> = ({ onNavigate, onAuthSuccess }) => {
       if (signInError) {
         setError(signInError.message);
       } else {
-        // Redirect to home or dashboard
+        // Refresh auth context
+        await checkAuth();
+
+        // Show success alert
+        await Swal.fire({
+          title: 'Login Successful!',
+          text: 'Welcome back to Anantha Software',
+          icon: 'success',
+          confirmButtonColor: '#ff6b4a',
+          timer: 2000,
+          timerProgressBar: true,
+        });
+
+        // Redirect to home
         if (onAuthSuccess) {
           onAuthSuccess();
         }
