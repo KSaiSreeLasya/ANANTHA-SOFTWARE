@@ -11,8 +11,16 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
   const { user, userProfile, logout } = useAuth();
 
   const handleLogout = async () => {
-    await logout();
-    onNavigate('home');
+    try {
+      await logout();
+      onNavigate('home');
+      setIsOpen(false);
+    } catch (error) {
+      console.error('Logout failed:', error);
+      // Navigate to home even if logout fails
+      onNavigate('home');
+      setIsOpen(false);
+    }
   };
 
   const getUserDisplayName = () => {
@@ -29,6 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
     { label: 'About us', id: 'about' },
     { label: 'Careers', id: 'careers' },
     { label: 'Contact', id: 'contact' },
+    { label: 'ASOCSEMI', id: 'asocsemi', external: true, href: 'https://www.asocsemi.com/' },
   ];
 
   const handleLinkClick = (e: React.MouseEvent, id: string) => {
@@ -42,26 +51,27 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           {/* Logo */}
-          <div 
-            className="flex-shrink-0 flex flex-col cursor-pointer group" 
+          <div
+            className="flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
             onClick={() => onNavigate('home')}
           >
-            <span className="text-xl font-bold tracking-tighter text-white uppercase group-hover:text-coral transition-colors">
-              ANANTHA SOFTWARE
-            </span>
-            <span className="text-[10px] tracking-[0.3em] text-coral font-semibold uppercase -mt-1">
-              Engineering Future
-            </span>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2Fdd826854f6f44d3b95695750dd149fd4%2F69ef4033ddb2424b84ea4261dc960c9c?format=webp&width=1200"
+              alt="Anantha Software"
+              className="h-20 w-auto"
+            />
           </div>
 
           {/* Desktop Nav */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-center space-x-2">
-              {navItems.map((item) => (
+              {navItems.map((item: any) => (
                 <a
                   key={item.id}
-                  href={`#${item.id}`}
-                  onClick={(e) => handleLinkClick(e, item.id)}
+                  href={item.external ? item.href : `#${item.id}`}
+                  onClick={item.external ? undefined : (e) => handleLinkClick(e, item.id)}
+                  target={item.external ? '_blank' : undefined}
+                  rel={item.external ? 'noopener noreferrer' : undefined}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                     activePage === item.id
                       ? 'text-coral'
@@ -127,11 +137,13 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
       {isOpen && (
         <div className="lg:hidden bg-[#0a0a0a] border-b border-white/10 shadow-2xl animate-in fade-in duration-300">
           <div className="px-4 pt-2 pb-8 space-y-1">
-            {navItems.map((item) => (
+            {navItems.map((item: any) => (
               <a
                 key={item.id}
-                href={`#${item.id}`}
-                onClick={(e) => handleLinkClick(e, item.id)}
+                href={item.external ? item.href : `#${item.id}`}
+                onClick={item.external ? undefined : (e) => handleLinkClick(e, item.id)}
+                target={item.external ? '_blank' : undefined}
+                rel={item.external ? 'noopener noreferrer' : undefined}
                 className={`block px-4 py-4 text-base font-semibold ${
                   activePage === item.id ? 'text-coral bg-white/5' : 'text-gray-300 hover:text-coral'
                 }`}
