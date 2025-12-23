@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 interface NavbarProps {
@@ -60,17 +59,20 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
               ))}
               
               <div className="ml-4 flex items-center space-x-6 border-l border-white/10 pl-6 h-6">
-                <button className="flex items-center text-sm font-medium text-gray-300 hover:text-white">
+                <button
+                  onClick={() => onNavigate('login')}
+                  className="flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                >
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                   </svg>
                   Log In
                 </button>
                 <button
-                  onClick={() => onNavigate('contact')}
+                  onClick={() => onNavigate('signup')}
                   className="border border-white/30 text-white px-6 py-2 rounded text-sm font-bold hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-wider"
                 >
-                  Get Started
+                  Sign Up
                 </button>
               </div>
             </div>
