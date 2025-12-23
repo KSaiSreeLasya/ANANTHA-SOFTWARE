@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { AuthProvider } from './lib/authContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -84,18 +85,20 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col bg-[#0a0a0a] text-white selection:bg-coral selection:text-white">
-      <Navbar activePage={currentPage} onNavigate={navigateTo} />
-      
-      <main className="flex-grow pt-20">
-        <div key={currentPage} className="animate-in fade-in slide-in-from-bottom-2 duration-500">
-          {renderContent()}
-        </div>
-      </main>
+    <AuthProvider>
+      <div className="relative min-h-screen flex flex-col bg-[#0a0a0a] text-white selection:bg-coral selection:text-white">
+        <Navbar activePage={currentPage} onNavigate={navigateTo} />
 
-      <Footer onNavigate={navigateTo} />
-      <ChatBot />
-    </div>
+        <main className="flex-grow pt-20">
+          <div key={currentPage} className="animate-in fade-in slide-in-from-bottom-2 duration-500">
+            {renderContent()}
+          </div>
+        </main>
+
+        <Footer onNavigate={navigateTo} />
+        <ChatBot />
+      </div>
+    </AuthProvider>
   );
 };
 
