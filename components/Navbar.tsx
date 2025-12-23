@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useAuth } from '../lib/authContext';
 
 interface NavbarProps {
   activePage: string;
@@ -7,6 +8,19 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user, userProfile, logout } = useAuth();
+
+  const handleLogout = async () => {
+    await logout();
+    onNavigate('home');
+  };
+
+  const getUserDisplayName = () => {
+    if (userProfile?.first_name && userProfile?.last_name) {
+      return `${userProfile.first_name} ${userProfile.last_name}`;
+    }
+    return user?.email || 'User';
+  };
 
   const navItems = [
     { label: 'Home', id: 'home' },
