@@ -140,18 +140,29 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
               </a>
             ))}
             <div className="pt-6 border-t border-white/5 flex flex-col space-y-4">
-              <button
-                onClick={() => onNavigate('login')}
-                className="text-left px-4 py-3 text-gray-400 font-medium hover:text-white transition-colors"
-              >
-                Log In
-              </button>
-              <button
-                onClick={() => onNavigate('signup')}
-                className="bg-coral py-4 rounded-xl text-white font-bold text-center uppercase tracking-widest shadow-lg shadow-coral/20"
-              >
-                Sign Up
-              </button>
+              {user ? (
+                <>
+                  <div className="px-4 py-3 flex items-center space-x-2 border-b border-white/5">
+                    <svg className="w-4 h-4 text-coral" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-sm font-medium text-white">{getUserDisplayName()}</span>
+                  </div>
+                  <button
+                    onClick={handleLogout}
+                    className="text-left px-4 py-3 text-gray-400 font-medium hover:text-coral transition-colors"
+                  >
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <button
+                  onClick={() => onNavigate('login')}
+                  className="text-left px-4 py-3 text-gray-400 font-medium hover:text-white transition-colors"
+                >
+                  Log In
+                </button>
+              )}
             </div>
           </div>
         </div>
