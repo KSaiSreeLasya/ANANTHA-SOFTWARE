@@ -126,13 +126,13 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2.5 rounded-lg text-text-muted hover:text-primary hover:bg-primary/15 transition-all duration-400 active:scale-90 border border-transparent hover:border-primary/30 group"
+              className="p-2 text-text-muted hover:text-primary transition-colors duration-400 group"
             >
-              <svg className="h-6 w-6 transition-transform duration-400 group-hover:rotate-90" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+              <svg className="h-6 w-6 transition-transform duration-400 group-hover:scale-110" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                 {isOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12" />
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M4 6h16M4 12h16M4 18h16" />
                 )}
               </svg>
             </button>
