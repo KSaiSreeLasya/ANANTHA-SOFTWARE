@@ -7,11 +7,12 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
   return (
     <div className="relative min-h-[100vh] flex flex-col justify-center items-center overflow-hidden bg-gradient-to-b from-color-bg via-color-bg-light to-color-bg">
-      {/* Animated Background Spheres */}
+      {/* Animated Background Spheres - Premium */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float" style={{animation: 'float 8s ease-in-out infinite'}}></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-accent/20 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float" style={{animation: 'float 10s ease-in-out infinite 2s'}}></div>
-        <div className="absolute bottom-10 left-1/2 w-72 h-72 bg-secondary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float" style={{animation: 'float 12s ease-in-out infinite 4s'}}></div>
+        <div className="absolute top-20 left-10 w-80 h-80 bg-gradient-to-r from-primary/25 to-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float-slow" style={{animation: 'floatSlow 12s ease-in-out infinite'}}></div>
+        <div className="absolute top-40 right-10 w-96 h-96 bg-gradient-to-r from-accent/20 to-accent/5 rounded-full mix-blend-screen filter blur-3xl opacity-45 animate-float" style={{animation: 'float 15s ease-in-out infinite 3s'}}></div>
+        <div className="absolute bottom-10 left-1/2 w-80 h-80 bg-gradient-to-r from-secondary/15 to-secondary/5 rounded-full mix-blend-screen filter blur-3xl opacity-35 animate-float" style={{animation: 'float 18s ease-in-out infinite 6s'}}></div>
+        <div className="absolute top-1/2 right-1/4 w-72 h-72 bg-gradient-to-r from-accent/10 to-primary/5 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-float-slow" style={{animation: 'floatSlow 20s ease-in-out infinite 2s'}}></div>
       </div>
 
       {/* Grid Background */}
