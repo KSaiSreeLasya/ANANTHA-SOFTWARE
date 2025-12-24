@@ -27,54 +27,83 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center py-20">
+        {/* Badge */}
+        <div className="mb-8 inline-block animate-fade-in-up">
+          <div className="px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-semibold uppercase tracking-widest flex items-center gap-2">
+            <span className="w-2 h-2 bg-primary rounded-full animate-pulse-smooth"></span>
+            Transforming Industries
+          </div>
+        </div>
+
         {/* ASOCSEMI Banner */}
-        <div className="mb-16 inline-block">
-          <div className="gradient-card p-8 md:p-10 rounded-2xl max-w-2xl mx-auto card-hover group">
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" style={{background: 'radial-gradient(circle at top, rgba(255,107,107,0.1), transparent 70%)'}}></div>
-            <h3 className="relative text-xl md:text-2xl font-bold mb-3 group-hover:text-coral transition-colors duration-300">
-              Anantha Software is now <span className="text-coral">ASOCSEMI</span>
+        <div className="mb-16 inline-block w-full px-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          <div className="gradient-card-subtle p-8 md:p-10 rounded-2xl max-w-3xl mx-auto card-hover group border-primary/40">
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" style={{background: 'radial-gradient(circle at top, rgba(37,99,235,0.15), transparent 70%)'}}></div>
+            <h3 className="relative text-xl md:text-2xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">
+              Anantha Software is now <span className="text-gradient">ASOCSEMI</span>
             </h3>
-            <p className="relative text-xs md:text-sm text-gray-400 leading-relaxed uppercase tracking-wider font-medium">
+            <p className="relative text-xs md:text-sm text-text-muted leading-relaxed uppercase tracking-wider font-medium">
               Transitioning to ASOCSEMI! We are excited to introduce our expanded semiconductor and engineering services.
               Our commitment to excellence drives us to deliver top-tier technology.
             </p>
             <button
               onClick={() => window.open('https://www.asocsemi.com/', '_blank')}
-              className="relative mt-8 px-8 py-3.5 bg-coral text-white text-xs font-bold rounded-full uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-300 shadow-xl shadow-coral/25 hover:shadow-coral/40 transform hover:scale-105"
+              className="relative mt-8 px-8 py-3.5 btn-primary btn-primary-solid rounded-lg text-xs font-bold uppercase tracking-[0.15em] transform hover:scale-105 group/btn"
             >
-              Get Started
+              <span className="relative z-10">Explore ASOCSEMI</span>
             </button>
           </div>
         </div>
 
-        <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.95] mb-8 uppercase">
-          Empowering <br />
-          <span className="text-gradient">Integrated Tech</span>
+        {/* Main Heading */}
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] mb-8 uppercase animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+          <span className="block mb-2 text-text">Delivering Excellence in</span>
+          <span className="text-gradient block">Engineering & Technology</span>
         </h1>
-        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-12 font-medium tracking-wide leading-relaxed">
-          You Believe, We Build. Delivering world-class expertise in Silicon Engineering, AI/ML, and Software Ecosystems.
+
+        {/* Subheading */}
+        <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-12 font-medium leading-relaxed animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+          Cutting-edge solutions in VLSI, AI/ML, and Software Engineering. Empowering businesses to innovate, scale, and lead their industries with advanced technology partnerships.
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-6 items-center animate-fade-in-up" style={{animationDelay: '0.5s'}}>
           <button
             onClick={() => navigateTo('services')}
-            className="btn-primary btn-primary-solid rounded-full px-10 py-4 shadow-xl shadow-coral/30 hover:shadow-coral/50"
+            className="btn-primary btn-primary-solid rounded-lg px-10 py-4 text-sm font-bold uppercase tracking-widest shadow-glow hover:shadow-2xl transform transition-all hover:scale-105 active:scale-95"
           >
-            Our Services
+            Explore Services
           </button>
           <button
             onClick={() => navigateTo('contact')}
-            className="btn-primary btn-primary-outline rounded-full px-10 py-4"
+            className="btn-primary btn-primary-outline rounded-lg px-10 py-4 text-sm font-bold uppercase tracking-widest transform transition-all hover:scale-105 active:scale-95"
           >
-            Get In Touch
+            Let's Talk
           </button>
         </div>
 
+        {/* Stats Row */}
+        <div className="mt-20 grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+          {[
+            { value: '4+', label: 'Years' },
+            { value: '50+', label: 'Team Members' },
+            { value: '3', label: 'Continents' }
+          ].map((stat, i) => (
+            <div key={i} className="text-center group/stat cursor-default">
+              <div className="text-2xl md:text-3xl font-black text-gradient mb-1 group-hover/stat:scale-110 transition-transform duration-300">{stat.value}</div>
+              <div className="text-xs text-text-muted uppercase tracking-wider font-semibold">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="flex flex-col items-center gap-2">
+            <span className="text-xs text-text-muted uppercase tracking-widest font-semibold">Scroll to explore</span>
+            <svg className="w-5 h-5 text-primary animate-pulse-smooth" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
