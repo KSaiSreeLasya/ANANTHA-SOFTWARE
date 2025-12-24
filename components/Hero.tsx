@@ -59,12 +59,14 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
 
         {/* Main Heading */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] mb-8 uppercase animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-          <span className="block mb-2 text-text">Delivering Excellence in</span>
-          <span className="text-gradient block">Engineering & Technology</span>
+          <span className="block mb-2 text-text group">Delivering Excellence in
+            <div className="absolute -inset-2 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-lg -z-10"></div>
+          </span>
+          <span className="text-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text animate-gradient-shift block">Engineering & Technology</span>
         </h1>
 
         {/* Subheading */}
-        <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-12 font-medium leading-relaxed animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+        <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-12 font-medium leading-relaxed animate-fade-in-up hover:text-text-secondary transition-colors duration-500" style={{animationDelay: '0.4s'}}>
           Cutting-edge solutions in VLSI, AI/ML, and Software Engineering. Empowering businesses to innovate, scale, and lead their industries with advanced technology partnerships.
         </p>
 
