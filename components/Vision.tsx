@@ -1,18 +1,19 @@
-
 import React from 'react';
 
 const Vision: React.FC = () => {
   return (
-    <div className="bg-[#0a0a0a] py-24 relative">
+    <div className="bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] section-padding relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-20">
-          <h2 className="text-4xl font-bold mb-6">Our Mission</h2>
-          <p className="text-lg text-gray-400 max-w-4xl leading-relaxed">
+          <p className="text-coral font-bold tracking-[0.3em] uppercase text-xs mb-4">Our Foundation</p>
+          <h2 className="text-4xl md:text-5xl font-black mb-8 uppercase tracking-tight">Our Mission</h2>
+          <div className="divider-coral w-12 mb-8"></div>
+          <p className="text-lg text-gray-300 max-w-4xl leading-relaxed font-medium">
             At Anantha Software, we specialize in developing integrated hardware and software solutions that support the semiconductor, AI/ML, and IoT industries across many domains such as consumer durables, storage, automotive, wireless, and data center. Our mission is to provide cutting-edge technological solutions that drive innovation and empower businesses to achieve their goals.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 border border-white/10 rounded-2xl overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden">
           <div className="relative h-[400px] flex items-center justify-center p-12 bg-gradient-to-br from-blue-900/20 to-black">
              <div className="absolute inset-0 opacity-30 grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80" alt="Story" className="w-full h-full object-cover" />
