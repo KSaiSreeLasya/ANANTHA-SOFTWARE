@@ -100,59 +100,57 @@ const Contact: React.FC = () => {
           <div className="gradient-card rounded-2xl p-8 md:p-12 card-hover text-white">
             {isSuccess ? (
               <div className="h-full flex flex-col items-center justify-center text-center animate-fade-in">
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                  <svg className="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-20 h-20 bg-emerald-500/20 rounded-full flex items-center justify-center mb-6 animate-glow">
+                  <svg className="w-10 h-10 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
-                <p className="text-gray-600">Thank you for reaching out. We'll be in touch soon.</p>
+                <h3 className="text-3xl font-bold mb-3 text-white">Message Sent!</h3>
+                <p className="text-gray-300 font-medium">Thank you for reaching out. We'll be in touch soon.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 {errorMsg && (
-                  <div className="bg-red-50 text-red-500 p-4 rounded-xl text-sm font-medium">
+                  <div className="bg-red-500/20 border border-red-500/40 text-red-300 p-4 rounded-lg text-sm font-medium">
                     {errorMsg}
                   </div>
                 )}
                 <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">Name</label>
+                  <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Name</label>
                   <input
                     required
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-4 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                     placeholder="Enter your name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">Email</label>
+                  <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Email</label>
                   <input
                     required
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-4 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                     placeholder="you@company.com"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">Message</label>
+                  <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Message</label>
                   <textarea
                     required
                     rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-4 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all resize-none"
                     placeholder="Tell us about your project"
                   ></textarea>
                 </div>
                 <button
                   disabled={isSubmitting}
-                  className={`w-full py-5 rounded-xl text-white font-bold text-lg transition-all shadow-lg active:scale-95 ${
-                    isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:shadow-blue-500/20'
-                  }`}
+                  className={`btn-primary btn-primary-solid rounded-lg w-full py-4 mt-2 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
