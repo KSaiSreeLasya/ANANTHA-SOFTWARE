@@ -89,11 +89,12 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <li key={link.id}>
                   <button
                     onClick={() => onNavigate(link.id)}
-                    className="text-xs text-text-muted uppercase tracking-widest hover:text-primary transition-all duration-400 hover:translate-x-1 group relative"
+                    className="text-xs text-text-muted uppercase tracking-widest hover:text-primary transition-all duration-400 hover:translate-x-1 group relative px-3 py-2 rounded-md hover:bg-primary/10"
                     style={{animation: `slideInLeft 0.5s ease-out ${0.05 * idx}s backwards`}}
                   >
+                    <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 blur-sm rounded-md -z-10"></div>
                     <span className="relative z-10">{link.label}</span>
-                    <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-transparent group-hover:w-full transition-all duration-400"></div>
+                    <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-400"></div>
                   </button>
                 </li>
               ))}
