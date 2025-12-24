@@ -61,11 +61,18 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] mb-8 uppercase animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-          <span className="block mb-2 text-text group">Delivering Excellence in
-            <div className="absolute -inset-2 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-lg -z-10"></div>
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] mb-8 uppercase" style={{animationDuration: '1s'}}>
+          <span className="block mb-4 text-text group animate-fade-in-up" style={{animationDelay: '0.2s', animationDuration: '0.8s'}}>
+            <span className="inline-block relative">
+              <span className="absolute -inset-4 bg-gradient-to-r from-primary/0 via-primary/15 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-lg"></span>
+              <span className="relative">Delivering</span>
+            </span>
+            {' '}
+            <span className="inline-block text-gradient bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text" style={{animation: 'gradient-shift 6s ease infinite', backgroundSize: '200% 200%'}}>Excellence</span>
+            {' '}
+            in
           </span>
-          <span className="text-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text animate-gradient-shift block">Engineering & Technology</span>
+          <span className="block text-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text animate-gradient-shift animate-fade-in-up" style={{animationDelay: '0.4s', animationDuration: '0.8s'}}>Engineering & Technology</span>
         </h1>
 
         {/* Subheading */}
