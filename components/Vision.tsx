@@ -19,7 +19,7 @@ const Vision: React.FC = () => {
                 <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80" alt="Story" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
              </div>
              <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700"></div>
-             <h3 className="relative text-3xl font-bold tracking-widest uppercase z-10 text-center group-hover:text-primary transition-colors duration-500">Our Story</h3>
+             <h3 className="relative text-3xl font-bold tracking-widest uppercase z-10 text-center group-hover:text-primary transition-colors duration-500 px-4">Our Story</h3>
           </div>
           <div className="gradient-card p-12 flex flex-col justify-center rounded-2xl card-hover animate-fade-in-up" style={{animationDelay: '0.2s'}}>
              <p className="text-text-secondary text-sm leading-relaxed font-medium group-hover:text-white transition-colors duration-500">
