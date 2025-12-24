@@ -14,8 +14,8 @@ const Services: React.FC = () => {
             <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-secondary rounded-full inline-block mr-2.5 animate-pulse-scale"></span>
             Our Expertise
           </div>
-          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-8 animate-fade-in-up">
-            Comprehensive <span className="text-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text animate-gradient-shift">Technology Solutions</span>
+          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-8 animate-fade-in-up flex flex-col items-center justify-center">
+            <span>Comprehensive</span> <span className="text-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text animate-gradient-shift">Technology Solutions</span>
           </h2>
           <div className="divider w-16 mx-auto mb-8 hover:w-24 transition-all duration-500"></div>
           <p className="text-text-secondary max-w-3xl mx-auto text-lg leading-relaxed font-medium animate-fade-in-up hover:text-white transition-colors duration-500" style={{animationDelay: '0.1s'}}>
