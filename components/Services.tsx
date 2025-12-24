@@ -26,17 +26,19 @@ const Services: React.FC = () => {
         {/* Services Grid - 2 columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {/* Integrated Hardware/Software */}
-          <div className="gradient-card p-10 rounded-xl card-hover flex gap-6 group">
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-600/30 to-blue-600/10 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-400 group-hover:scale-110 transition-transform duration-300">
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path d="M12 11V16M12 11L12 11.01M12 11L15 8M12 11L9 8" strokeWidth="2" strokeLinecap="round" />
-              </svg>
-            </div>
-            <div className="flex-1">
-              <h4 className="text-lg font-bold mb-3 group-hover:text-coral transition-colors duration-300">Integrated Hardware and Software Solutions</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                At Anantha Software, we specialize in developing integrated hardware and software solutions that support the semiconductor, AI/ML, and IoT industries across many domains such as consumer durables, storage, automotive, wireless, and data center.
-              </p>
+          <div className="gradient-card-subtle p-8 rounded-2xl card-hover group border-primary/40 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <div className="flex items-start gap-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary/30 to-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0 text-primary group-hover:scale-125 transition-all duration-300">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 11V16M12 11L12 11.01M12 11L15 8M12 11L9 8" strokeWidth="2" strokeLinecap="round" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <h4 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors duration-300">Integrated Hardware & Software</h4>
+                <p className="text-text-muted text-sm leading-relaxed">
+                  End-to-end solutions for semiconductor, AI/ML, and IoT industries across consumer, storage, automotive, wireless, and data center domains.
+                </p>
+              </div>
             </div>
           </div>
 
