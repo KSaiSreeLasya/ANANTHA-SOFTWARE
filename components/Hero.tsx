@@ -112,10 +112,10 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-xs text-text-muted uppercase tracking-widest font-semibold">Scroll to explore</span>
-            <svg className="w-5 h-5 text-primary animate-pulse-smooth" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+          <div className="flex flex-col items-center gap-3 group cursor-pointer">
+            <span className="text-xs text-text-muted uppercase tracking-widest font-semibold group-hover:text-primary transition-colors duration-500">Scroll to explore</span>
+            <svg className="w-6 h-6 text-primary animate-bounce-smooth group-hover:scale-125 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </div>
