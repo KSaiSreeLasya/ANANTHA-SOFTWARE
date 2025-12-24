@@ -158,6 +158,25 @@ const Contact: React.FC = () => {
             )}
           </div>
         </div>
+
+        {/* Map Section */}
+        <div className="mt-20 pt-16 border-t border-white/10">
+          <p className="text-coral font-bold tracking-[0.3em] uppercase text-xs mb-4">Visit Us</p>
+          <h3 className="text-3xl md:text-4xl font-black mb-12 uppercase tracking-tight">
+            Find Us on the Map
+          </h3>
+          <div className="map-container rounded-xl overflow-hidden shadow-2xl">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7644279365327!2d78.33665267599429!3d17.423089283470294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8de7c6d9d223%3A0x82e8892a719cbebd!2sASOCSEMI%20by%20ANANTHA%20SOFTWARE%20SOLUTIONS%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1766569883600!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-96 md:h-[500px]"
+            ></iframe>
+          </div>
+        </div>
       </div>
     </div>
   );
