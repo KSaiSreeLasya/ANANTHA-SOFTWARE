@@ -118,20 +118,23 @@ const Careers: React.FC = () => {
         </div>
 
         <div className="gradient-card p-12 rounded-2xl card-hover border-primary/30 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-          <h3 className="text-2xl font-bold mb-10 text-white">Application Form</h3>
+          <div className="mb-10">
+            <h3 className="text-3xl font-bold text-white">Application Form</h3>
+            <p className="text-text-muted mt-2">Fill out the form below and join our growing team of innovators.</p>
+          </div>
 
           {isSubmitted ? (
-            <div className="text-center py-20 animate-fade-in">
-              <div className="w-20 h-20 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 animate-glow">
-                 <svg className="w-10 h-10 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+            <div className="text-center py-20 animate-scale-in">
+              <div className="w-24 h-24 bg-gradient-to-br from-tertiary/30 to-tertiary/10 rounded-full flex items-center justify-center mx-auto mb-8 animate-glow shadow-lg shadow-tertiary/30">
+                 <svg className="w-12 h-12 text-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                  </svg>
               </div>
               <h3 className="text-3xl font-bold mb-3 text-white">Application Received!</h3>
-              <p className="text-gray-300 font-medium">Our HR team will review your profile and get back to you soon.</p>
+              <p className="text-text-secondary font-medium">Our HR team will review your profile and reach out within 2-3 business days.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-7">
               {errorMsg && (
                 <div className="bg-red-500/20 border border-red-500/40 text-red-300 p-4 rounded-lg text-sm font-medium">
                   {errorMsg}
