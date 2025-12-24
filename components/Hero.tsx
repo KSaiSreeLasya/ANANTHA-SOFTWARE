@@ -39,21 +39,23 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
         </div>
 
         {/* ASOCSEMI Banner */}
-        <div className="mb-16 w-full px-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+        <div className="mb-16 w-full px-4 animate-fade-in-up" style={{animationDelay: '0.1s', animationDuration: '0.8s'}}>
           <div className="max-w-3xl mx-auto relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-all duration-700 blur-2xl -z-10"></div>
-            <div className="flex flex-col items-center text-center space-y-4 py-12 relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/8 via-accent/6 to-secondary/8 opacity-0 group-hover:opacity-100 transition-all duration-700 blur-3xl -z-10 rounded-2xl"></div>
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 opacity-0 group-hover:opacity-100 blur-lg -z-20 rounded-2xl transition-opacity duration-700"></div>
+            <div className="flex flex-col items-center text-center space-y-5 py-16 px-8 relative border border-primary/20 group-hover:border-primary/50 bg-gradient-to-br from-primary/8 to-primary/3 rounded-2xl backdrop-blur-md transition-all duration-500">
               <h3 className="text-xl md:text-2xl font-bold group-hover:text-primary transition-colors duration-500">
-                Anantha Software is now <span className="text-gradient bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text">ASOCSEMI</span>
+                Anantha Software is now <span className="text-gradient bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text animate-gradient-shift inline-block" style={{backgroundSize: '200% 200%'}}>ASOCSEMI</span>
               </h3>
-              <div className="h-0.5 w-20 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="h-1 w-24 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500 rounded-full"></div>
               <p className="text-xs md:text-sm text-text-muted leading-relaxed uppercase tracking-wider font-medium group-hover:text-text-secondary transition-colors duration-500 max-w-xl">
                 Transitioning to ASOCSEMI! We are excited to introduce our expanded semiconductor and engineering services. Our commitment to excellence drives us to deliver top-tier technology.
               </p>
               <button
                 onClick={() => window.open('https://www.asocsemi.com/', '_blank')}
-                className="mt-4 px-8 py-3 btn-primary btn-primary-outline rounded-lg text-xs font-bold uppercase tracking-[0.15em] transform hover:scale-105 active:scale-95 transition-all duration-400 group/btn"
+                className="mt-4 px-8 py-3 btn-primary btn-primary-outline rounded-lg text-xs font-bold uppercase tracking-[0.15em] transform hover:scale-105 active:scale-95 transition-all duration-400 group/btn overflow-hidden"
               >
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 transform -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 ease-in-out"></div>
                 <span className="relative z-10">Explore ASOCSEMI</span>
               </button>
             </div>
