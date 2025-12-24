@@ -150,12 +150,12 @@ const Services: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-24 pt-24 border-t border-white/5">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold uppercase tracking-wider mb-2">Driving Technological Advancements</h3>
-            <div className="h-0.5 w-12 bg-coral mx-auto"></div>
+        <div className="mt-24 pt-20 border-t border-white/10">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4">Driving Technological Advancements</h3>
+            <div className="divider-coral w-12 mx-auto"></div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[
               { val: '4', label: 'Years of Expertise' },
               { val: '3', label: 'Technology Partnerships' },
@@ -163,9 +163,9 @@ const Services: React.FC = () => {
               { val: '3', label: 'Global Presence' },
               { val: '2', label: 'Industry Awards' }
             ].map(s => (
-              <div key={s.label} className="text-center">
-                <div className="text-5xl font-bold text-coral mb-2">{s.val}</div>
-                <div className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">{s.label}</div>
+              <div key={s.label} className="gradient-card p-8 rounded-xl text-center card-hover group">
+                <div className="text-4xl md:text-5xl font-black text-coral mb-3 group-hover:text-teal transition-colors duration-300">{s.val}</div>
+                <div className="text-xs uppercase tracking-widest text-gray-400 font-semibold">{s.label}</div>
               </div>
             ))}
           </div>
