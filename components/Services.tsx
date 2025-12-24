@@ -159,7 +159,7 @@ const Services: React.FC = () => {
         <div className="mt-24 pt-20 border-t border-primary/20">
           <div className="text-center mb-16 animate-fade-in-up">
             <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4">Proven Expertise & Impact</h3>
-            <div className="divider w-12 mx-auto"></div>
+            <div className="divider w-16 mx-auto hover:w-24 transition-all duration-500"></div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[
@@ -169,9 +169,10 @@ const Services: React.FC = () => {
               { val: '100+', label: 'Projects Delivered' },
               { val: '2', label: 'Industry Awards' }
             ].map((s, i) => (
-              <div key={s.label} className="gradient-card-subtle p-8 rounded-2xl text-center card-hover group animate-fade-in-up border-primary/40" style={{animationDelay: `${0.1 * (i + 1)}s`}}>
-                <div className="text-4xl md:text-5xl font-black text-gradient mb-3 group-hover:scale-110 transition-transform duration-300">{s.val}</div>
-                <div className="text-xs uppercase tracking-wider text-text-muted font-semibold">{s.label}</div>
+              <div key={s.label} className="gradient-card-subtle p-8 rounded-2xl text-center card-hover group animate-fade-in-up border-primary/40 relative overflow-hidden" style={{animationDelay: `${0.1 * (i + 1)}s`}}>
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10 text-4xl md:text-5xl font-black text-gradient group-hover:scale-125 transition-transform duration-500 mb-3">{s.val}</div>
+                <div className="relative z-10 text-xs uppercase tracking-wider text-text-muted group-hover:text-primary font-semibold transition-colors duration-500">{s.label}</div>
               </div>
             ))}
           </div>
