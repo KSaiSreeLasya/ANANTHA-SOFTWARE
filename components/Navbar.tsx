@@ -94,13 +94,13 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
               <div className="ml-6 flex items-center space-x-3 border-l border-white/10 pl-6">
                 {user ? (
                   <>
-                    <div className="flex items-center space-x-2.5 px-4 py-2 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 hover:border-primary/50 transition-all duration-300 group">
-                      <div className="w-2 h-2 rounded-full bg-primary animate-pulse-smooth group-hover:animate-glow"></div>
-                      <span className="text-sm font-medium text-text-secondary group-hover:text-primary transition-colors duration-300">{getUserDisplayName()}</span>
+                    <div className="flex items-center space-x-2.5 px-4 py-2 rounded-lg bg-gradient-to-r from-primary/15 to-accent/10 border border-primary/30 hover:border-primary/60 transition-all duration-400 group cursor-default hover:shadow-lg hover:shadow-primary/20">
+                      <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-primary to-accent animate-pulse-scale group-hover:animate-glow"></div>
+                      <span className="text-sm font-medium text-text-secondary group-hover:text-primary transition-colors duration-400">{getUserDisplayName()}</span>
                     </div>
                     <button
                       onClick={handleLogout}
-                      className="text-sm font-medium text-text-muted hover:text-primary transition-all duration-300 px-4 py-2 rounded-lg hover:bg-primary/10 group"
+                      className="text-sm font-medium text-text-muted hover:text-primary transition-all duration-400 px-4 py-2 rounded-lg hover:bg-primary/15 border border-transparent hover:border-primary/30 group"
                     >
                       <span className="relative z-10">Logout</span>
                     </button>
@@ -109,9 +109,9 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                   <>
                     <button
                       onClick={() => onNavigate('login')}
-                      className="flex items-center text-sm font-semibold text-primary hover:text-primary-light transition-all duration-300 px-4 py-2 rounded-lg hover:bg-primary/10 group"
+                      className="flex items-center text-sm font-semibold text-primary hover:text-primary-light transition-all duration-400 px-5 py-2.5 rounded-lg hover:bg-primary/15 border border-primary/30 hover:border-primary/60 group"
                     >
-                      <svg className="w-4 h-4 mr-2 group-hover:scale-125 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 mr-2 group-hover:scale-125 transition-transform duration-400 group-hover:-rotate-12" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                       </svg>
                       Log In
