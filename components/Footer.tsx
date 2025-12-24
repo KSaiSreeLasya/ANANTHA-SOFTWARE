@@ -147,11 +147,11 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-500 uppercase tracking-widest space-y-4 md:space-y-0">
-          <p className="font-medium">© 2024 Anantha Software Solutions. All Rights Reserved.</p>
+        <div className="pt-12 border-t border-primary/20 flex flex-col md:flex-row justify-between items-center text-[10px] text-text-muted uppercase tracking-widest space-y-4 md:space-y-0 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+          <p className="font-medium hover:text-primary transition-colors duration-500">© 2024 Anantha Software Solutions. All Rights Reserved.</p>
           <div className="flex space-x-8">
-            <button className="text-gray-400 hover:text-coral transition-colors duration-300 font-medium">Privacy Policy</button>
-            <button className="text-gray-400 hover:text-coral transition-colors duration-300 font-medium">Terms</button>
+            <button className="text-text-muted hover:text-primary transition-all duration-400 font-medium border-b border-transparent hover:border-primary">Privacy Policy</button>
+            <button className="text-text-muted hover:text-primary transition-all duration-400 font-medium border-b border-transparent hover:border-primary">Terms</button>
           </div>
         </div>
       </div>
