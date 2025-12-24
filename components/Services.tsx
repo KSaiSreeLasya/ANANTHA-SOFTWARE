@@ -2,14 +2,15 @@ import React from 'react';
 
 const Services: React.FC = () => {
   return (
-    <div className="bg-[#0a0a0a] py-24 wavy-bg">
+    <div className="bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] section-padding wavy-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-widest mb-4">
-            EMPOWERING THE FUTURE OF TECHNOLOGY AND ENGINEERING
+        <div className="text-center mb-20">
+          <p className="text-coral font-bold tracking-[0.3em] uppercase text-xs mb-4">Our Services</p>
+          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-8">
+            EMPOWERING THE FUTURE OF <span className="text-gradient">TECHNOLOGY</span> AND ENGINEERING
           </h2>
-          <div className="h-1 w-20 bg-coral mx-auto mb-4"></div>
-          <p className="text-gray-400 uppercase text-xs tracking-[0.4em]">Our Services</p>
+          <div className="divider-coral w-12 mx-auto mb-6"></div>
+          <p className="text-gray-400 max-w-2xl mx-auto text-sm leading-relaxed">Comprehensive solutions designed to accelerate innovation</p>
         </div>
 
         {/* Detailed Services Grid */}
