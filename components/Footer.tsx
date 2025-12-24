@@ -62,8 +62,8 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
 
           {/* Company Info */}
-          <div className="space-y-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-            <div className="cursor-pointer group transition-all transform duration-500 hover:scale-110" onClick={() => onNavigate('home')}>
+          <div className="space-y-6 animate-fade-in-up text-left md:text-left" style={{animationDelay: '0.1s'}}>
+            <div className="cursor-pointer group transition-all transform duration-500 hover:scale-110 inline-block" onClick={() => onNavigate('home')}>
               <div className="relative">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Fdd826854f6f44d3b95695750dd149fd4%2F69ef4033ddb2424b84ea4261dc960c9c?format=webp&width=1200"
