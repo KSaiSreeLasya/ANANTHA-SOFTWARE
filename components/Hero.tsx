@@ -9,10 +9,20 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
     <div className="relative min-h-[100vh] flex flex-col justify-center items-center overflow-hidden bg-gradient-to-b from-color-bg via-color-bg-light to-color-bg">
       {/* Animated Background Spheres - Premium */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-80 h-80 bg-gradient-to-r from-primary/25 to-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float-slow" style={{animation: 'floatSlow 12s ease-in-out infinite'}}></div>
-        <div className="absolute top-40 right-10 w-96 h-96 bg-gradient-to-r from-accent/20 to-accent/5 rounded-full mix-blend-screen filter blur-3xl opacity-45 animate-float" style={{animation: 'float 15s ease-in-out infinite 3s'}}></div>
-        <div className="absolute bottom-10 left-1/2 w-80 h-80 bg-gradient-to-r from-secondary/15 to-secondary/5 rounded-full mix-blend-screen filter blur-3xl opacity-35 animate-float" style={{animation: 'float 18s ease-in-out infinite 6s'}}></div>
-        <div className="absolute top-1/2 right-1/4 w-72 h-72 bg-gradient-to-r from-accent/10 to-primary/5 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-float-slow" style={{animation: 'floatSlow 20s ease-in-out infinite 2s'}}></div>
+        {/* Large Primary Sphere */}
+        <div className="absolute top-10 left-5 w-96 h-96 bg-gradient-to-br from-primary/30 via-primary/15 to-primary/5 rounded-full mix-blend-screen filter blur-3xl opacity-60 animate-float-slow" style={{animation: 'floatSlow 14s ease-in-out infinite'}}></div>
+
+        {/* Secondary Accent Sphere */}
+        <div className="absolute top-32 right-0 w-80 h-80 bg-gradient-to-bl from-accent/25 via-accent/10 to-accent/2 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float" style={{animation: 'float 16s ease-in-out infinite 2s'}}></div>
+
+        {/* Tertiary Cyan Sphere */}
+        <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-secondary/20 to-secondary/5 rounded-full mix-blend-screen filter blur-3xl opacity-45 animate-float" style={{animation: 'float 18s ease-in-out infinite 4s'}}></div>
+
+        {/* Corner Accent Sphere */}
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-bl from-accent/15 to-primary/5 rounded-full mix-blend-screen filter blur-3xl opacity-35 animate-float-slow" style={{animation: 'floatSlow 22s ease-in-out infinite 3s'}}></div>
+
+        {/* Extra Bottom Accent */}
+        <div className="absolute -bottom-32 right-10 w-96 h-96 bg-gradient-to-t from-primary/20 to-transparent rounded-full mix-blend-screen filter blur-3xl opacity-40" style={{animation: 'float 24s ease-in-out infinite 6s'}}></div>
       </div>
 
       {/* Grid Background */}
