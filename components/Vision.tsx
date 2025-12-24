@@ -4,11 +4,11 @@ const Vision: React.FC = () => {
   return (
     <div className="bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] section-padding relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-20">
-          <p className="text-coral font-bold tracking-[0.3em] uppercase text-xs mb-4">Our Foundation</p>
+        <div className="mb-20 animate-fade-in-up">
+          <p className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30">Our Foundation</p>
           <h2 className="text-4xl md:text-5xl font-black mb-8 uppercase tracking-tight">Our Mission</h2>
-          <div className="divider-coral w-12 mb-8"></div>
-          <p className="text-lg text-gray-300 max-w-4xl leading-relaxed font-medium">
+          <div className="divider-coral w-16 mb-8"></div>
+          <p className="text-lg text-text-secondary max-w-4xl leading-relaxed font-medium hover:text-text-secondary transition-colors duration-500">
             At Anantha Software, we specialize in developing integrated hardware and software solutions that support the semiconductor, AI/ML, and IoT industries across many domains such as consumer durables, storage, automotive, wireless, and data center. Our mission is to provide cutting-edge technological solutions that drive innovation and empower businesses to achieve their goals.
           </p>
         </div>
