@@ -75,13 +75,14 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                   onClick={item.external ? undefined : (e) => handleLinkClick(e, item.id)}
                   target={item.external ? '_blank' : undefined}
                   rel={item.external ? 'noopener noreferrer' : undefined}
-                  className={`px-3.5 py-2 text-sm font-semibold transition-all duration-400 relative group border-b-2 ${
+                  className={`px-4 py-2 text-sm font-semibold transition-all duration-400 relative group border-b-2 rounded-md ${
                     activePage === item.id
                       ? 'text-primary border-b-primary'
-                      : 'text-text-muted border-b-transparent hover:text-primary hover:border-b-primary/50'
+                      : 'text-text-muted border-b-transparent hover:text-primary hover:border-b-primary/50 hover:bg-primary/10'
                   }`}
                   style={{animation: `fadeInUp 0.6s ease-out ${0.06 * index}s backwards`}}
                 >
+                  <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 blur-sm rounded-md -z-10"></div>
                   <span className="relative z-10">{item.label}</span>
                   {activePage === item.id && (
                     <div className="absolute -bottom-0.5 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-accent to-primary animate-glow" style={{boxShadow: '0 0 10px rgba(31, 111, 235, 0.4)'}}></div>
@@ -108,13 +109,14 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                   <>
                     <button
                       onClick={() => onNavigate('login')}
-                      className="flex items-center text-sm font-semibold text-primary hover:text-primary-light transition-all duration-400 group relative"
+                      className="flex items-center text-sm font-semibold text-primary hover:text-primary-light transition-all duration-400 group relative px-4 py-2 rounded-md hover:bg-primary/10"
                     >
-                      <svg className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-400" fill="currentColor" viewBox="0 0 20 20">
+                      <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/15 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 blur-sm rounded-md -z-10"></div>
+                      <svg className="w-4 h-4 mr-2 group-hover:scale-125 group-hover:rotate-12 transition-all duration-400" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                       </svg>
-                      Log In
-                      <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-400"></div>
+                      <span className="relative z-10">Log In</span>
+                      <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-400"></div>
                     </button>
                   </>
                 )}

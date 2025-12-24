@@ -89,11 +89,12 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <li key={link.id}>
                   <button
                     onClick={() => onNavigate(link.id)}
-                    className="text-xs text-text-muted uppercase tracking-widest hover:text-primary transition-all duration-400 hover:translate-x-1 group relative"
+                    className="text-xs text-text-muted uppercase tracking-widest hover:text-primary transition-all duration-400 hover:translate-x-1 group relative px-3 py-2 rounded-md hover:bg-primary/10"
                     style={{animation: `slideInLeft 0.5s ease-out ${0.05 * idx}s backwards`}}
                   >
+                    <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 blur-sm rounded-md -z-10"></div>
                     <span className="relative z-10">{link.label}</span>
-                    <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-transparent group-hover:w-full transition-all duration-400"></div>
+                    <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-400"></div>
                   </button>
                 </li>
               ))}
@@ -137,8 +138,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="animate-fade-in-up" style={{animationDelay: '0.4s'}}>
             <h4 className="text-white font-bold mb-8 text-sm uppercase tracking-widest">Connect</h4>
             <div className="flex space-x-4 mb-8">
-              <button className="w-11 h-11 rounded-full border border-primary/30 flex items-center justify-center text-text-muted hover:text-white hover:border-primary hover:bg-primary/20 transition-all duration-400 transform hover:scale-125 hover:shadow-lg hover:shadow-primary/30 group active:scale-95">
-                <svg className="w-5 h-5 group-hover:rotate-12 transition-transform duration-400" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <button className="w-12 h-12 rounded-full border-2 border-primary/40 flex items-center justify-center text-text-muted hover:text-white hover:border-primary bg-primary/8 hover:bg-primary/20 transition-all duration-400 transform hover:scale-110 hover:shadow-lg hover:shadow-primary/40 group active:scale-95 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-white/15 to-primary/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                <svg className="w-5 h-5 group-hover:rotate-12 transition-transform duration-400 relative z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
               </button>
             </div>
             <p className="text-[10px] text-text-muted uppercase tracking-widest font-semibold hover:text-text-secondary transition-colors duration-500">
