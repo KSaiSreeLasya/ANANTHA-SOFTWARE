@@ -10,15 +10,15 @@ const Services: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
-          <div className="inline-block mb-4 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-semibold uppercase tracking-widest">
-            <span className="w-2 h-2 bg-primary rounded-full inline-block mr-2 animate-pulse-smooth"></span>
+          <div className="inline-block mb-4 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/15 to-primary/8 border border-primary/40 text-primary text-xs font-semibold uppercase tracking-widest hover:border-primary/60 transition-all duration-500 shadow-lg shadow-primary/10">
+            <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-secondary rounded-full inline-block mr-2.5 animate-pulse-scale"></span>
             Our Expertise
           </div>
           <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-8 animate-fade-in-up">
-            Comprehensive <span className="text-gradient">Technology Solutions</span>
+            Comprehensive <span className="text-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text animate-gradient-shift">Technology Solutions</span>
           </h2>
-          <div className="divider w-12 mx-auto mb-8"></div>
-          <p className="text-text-secondary max-w-3xl mx-auto text-lg leading-relaxed font-medium animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+          <div className="divider w-16 mx-auto mb-8 hover:w-24 transition-all duration-500"></div>
+          <p className="text-text-secondary max-w-3xl mx-auto text-lg leading-relaxed font-medium animate-fade-in-up hover:text-white transition-colors duration-500" style={{animationDelay: '0.1s'}}>
             End-to-end engineering and software solutions designed for businesses that demand excellence and innovation.
           </p>
         </div>
