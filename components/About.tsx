@@ -10,7 +10,7 @@ const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-24 animate-fade-in-up">
-          <p className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 inline-block">About Anantha Software</p>
+          <p className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30">About Anantha Software</p>
           <h2 className="text-5xl md:text-6xl font-black mb-8 uppercase tracking-tight">About Us</h2>
           <div className="h-1 w-16 bg-gradient-to-r from-primary via-accent to-primary mx-auto mb-8 rounded-full"></div>
           <p className="text-text-secondary font-bold tracking-widest uppercase text-sm mb-8">Driving Innovation Through Excellence</p>
