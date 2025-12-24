@@ -82,7 +82,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
 
           {/* Quick Navigation */}
-          <div className="animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          <div className="animate-fade-in-up text-left" style={{animationDelay: '0.2s'}}>
             <h4 className="text-white font-bold mb-8 text-sm uppercase tracking-widest">Navigation</h4>
             <ul className="space-y-3">
               {navLinks.map((link, idx) => (
