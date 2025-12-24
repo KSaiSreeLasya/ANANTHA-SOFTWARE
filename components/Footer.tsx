@@ -63,30 +63,30 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="cursor-pointer hover:opacity-80 transition-opacity" onClick={() => onNavigate('home')}>
+            <div className="cursor-pointer hover:opacity-90 transition-opacity transform hover:scale-105 duration-300" onClick={() => onNavigate('home')}>
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fdd826854f6f44d3b95695750dd149fd4%2F69ef4033ddb2424b84ea4261dc960c9c?format=webp&width=1200"
                 alt="Anantha Software"
                 className="h-24 w-auto"
               />
             </div>
-            <p className="text-xs text-gray-500 leading-relaxed uppercase tracking-wider">
+            <p className="text-xs text-gray-400 leading-relaxed uppercase tracking-wider font-medium">
               SOLUTIONS PVT LTD,<br />
-              WeWork Rajapushpa Summit,<br />
-              Financial District, Hyderabad,<br />
-              Telangana 500032.
+              <span className="text-gray-500">WeWork Rajapushpa Summit,</span><br />
+              <span className="text-gray-500">Financial District, Hyderabad,</span><br />
+              <span className="text-gray-500">Telangana 500032.</span>
             </p>
           </div>
 
           {/* Quick Navigation */}
           <div>
             <h4 className="text-white font-bold mb-8 text-sm uppercase tracking-widest">Navigation</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.id}>
-                  <button 
+                  <button
                     onClick={() => onNavigate(link.id)}
-                    className="text-xs text-gray-500 uppercase tracking-widest hover:text-coral transition-colors"
+                    className="text-xs text-gray-400 uppercase tracking-widest hover:text-coral transition-all duration-300 hover:translate-x-1"
                   >
                     {link.label}
                   </button>
