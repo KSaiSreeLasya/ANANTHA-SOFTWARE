@@ -79,7 +79,7 @@ const App: React.FC = () => {
                 </div>
 
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 uppercase tracking-tight animate-fade-in-up" style={{animationDelay: '0.1s', animationDuration: '0.8s'}}>
-                  <span className="text-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text inline-block">Excellence in Engineering</span>
+                  <span className="text-gradient inline-block" style={{backgroundImage: 'linear-gradient(135deg, #1f6feb 0%, #00d4ff 50%, #8b5cf6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>Excellence in Engineering</span>
                 </h2>
 
                 <div className="h-1 w-24 bg-gradient-to-r from-primary via-accent to-secondary mx-auto mb-12 animate-fade-in-up rounded-full" style={{animationDelay: '0.2s', animationDuration: '0.8s', boxShadow: '0 0 20px rgba(31, 111, 235, 0.4)'}}></div>
