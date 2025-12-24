@@ -37,7 +37,7 @@ const Vision: React.FC = () => {
                 <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80" alt="Leadership" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
              </div>
              <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700"></div>
-             <h3 className="relative text-3xl font-bold tracking-widest uppercase text-right z-10 text-center md:text-right group-hover:text-accent transition-colors duration-500">Experienced Leadership</h3>
+             <h3 className="relative text-3xl font-bold tracking-widest uppercase z-10 text-center group-hover:text-accent transition-colors duration-500 px-4">Experienced Leadership</h3>
           </div>
         </div>
       </div>
