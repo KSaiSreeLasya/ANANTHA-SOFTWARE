@@ -122,7 +122,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2.5 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300"
+              className="p-2.5 rounded-lg text-text-muted hover:text-primary hover:bg-primary/10 transition-all duration-300 active:scale-90"
             >
               <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                 {isOpen ? (
@@ -138,36 +138,35 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-gradient-to-b from-white/5 to-transparent border-b border-white/10 animate-in fade-in duration-300">
+        <div className="lg:hidden bg-gradient-to-b from-primary/5 to-transparent border-b border-primary/20 animate-fade-in-up">
           <div className="px-4 pt-2 pb-8 space-y-1">
-            {navItems.map((item: any) => (
+            {navItems.map((item: any, index: number) => (
               <a
                 key={item.id}
                 href={item.external ? item.href : `#${item.id}`}
                 onClick={item.external ? undefined : (e) => handleLinkClick(e, item.id)}
                 target={item.external ? '_blank' : undefined}
                 rel={item.external ? 'noopener noreferrer' : undefined}
-                className={`block px-4 py-3.5 text-base font-semibold rounded-lg transition-all duration-300 ${
+                className={`block px-4 py-3.5 text-base font-semibold rounded-lg transition-all duration-300 group ${
                   activePage === item.id
-                    ? 'text-coral bg-white/10 border-l-2 border-coral'
-                    : 'text-gray-300 hover:text-coral hover:bg-white/5'
+                    ? 'text-primary bg-primary/10 border-l-2 border-primary'
+                    : 'text-text-muted hover:text-primary hover:bg-primary/10'
                 }`}
+                style={{animation: `slideInLeft 0.4s ease-out ${0.05 * index}s backwards`}}
               >
                 {item.label}
               </a>
             ))}
-            <div className="pt-6 border-t border-white/10 flex flex-col space-y-3">
+            <div className="pt-6 border-t border-primary/20 flex flex-col space-y-3">
               {user ? (
                 <>
-                  <div className="px-4 py-3 flex items-center space-x-2.5 border-b border-white/10 rounded-lg bg-white/5">
-                    <svg className="w-4 h-4 text-coral" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-sm font-medium text-white">{getUserDisplayName()}</span>
+                  <div className="px-4 py-3 flex items-center space-x-2.5 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20">
+                    <div className="w-2 h-2 rounded-full bg-primary animate-pulse-smooth"></div>
+                    <span className="text-sm font-medium text-text-secondary">{getUserDisplayName()}</span>
                   </div>
                   <button
                     onClick={handleLogout}
-                    className="text-left px-4 py-3 text-gray-400 font-medium hover:text-coral hover:bg-white/5 transition-all duration-300 rounded-lg"
+                    className="text-left px-4 py-3 text-text-muted font-medium hover:text-primary hover:bg-primary/10 transition-all duration-300 rounded-lg"
                   >
                     Logout
                   </button>
@@ -175,7 +174,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
               ) : (
                 <button
                   onClick={() => onNavigate('login')}
-                  className="text-left px-4 py-3 text-gray-400 font-medium hover:text-coral hover:bg-white/5 transition-all duration-300 rounded-lg"
+                  className="text-left px-4 py-3 text-primary font-semibold hover:bg-primary/10 transition-all duration-300 rounded-lg"
                 >
                   Log In
                 </button>
