@@ -2,19 +2,29 @@ import React from 'react';
 
 const Services: React.FC = () => {
   return (
-    <div className="bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] section-padding wavy-bg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="section-padding bg-gradient-to-b from-color-bg via-color-bg-light to-color-bg wavy-bg relative overflow-hidden">
+      {/* Background Animation */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-1/3 right-0 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-20 animate-float" style={{animation: 'float 15s ease-in-out infinite'}}></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
-          <p className="text-coral font-bold tracking-[0.3em] uppercase text-xs mb-4">Our Services</p>
-          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-8">
-            EMPOWERING THE FUTURE OF <span className="text-gradient">TECHNOLOGY</span> AND ENGINEERING
+          <div className="inline-block mb-4 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-semibold uppercase tracking-widest">
+            <span className="w-2 h-2 bg-primary rounded-full inline-block mr-2 animate-pulse-smooth"></span>
+            Our Expertise
+          </div>
+          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-8 animate-fade-in-up">
+            Comprehensive <span className="text-gradient">Technology Solutions</span>
           </h2>
-          <div className="divider-coral w-12 mx-auto mb-6"></div>
-          <p className="text-gray-400 max-w-2xl mx-auto text-sm leading-relaxed">Comprehensive solutions designed to accelerate innovation</p>
+          <div className="divider w-12 mx-auto mb-8"></div>
+          <p className="text-text-secondary max-w-3xl mx-auto text-lg leading-relaxed font-medium animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            End-to-end engineering and software solutions designed for businesses that demand excellence and innovation.
+          </p>
         </div>
 
-        {/* Detailed Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        {/* Services Grid - 2 columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {/* Integrated Hardware/Software */}
           <div className="gradient-card p-10 rounded-xl card-hover flex gap-6 group">
             <div className="w-16 h-16 bg-gradient-to-br from-blue-600/30 to-blue-600/10 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-400 group-hover:scale-110 transition-transform duration-300">
