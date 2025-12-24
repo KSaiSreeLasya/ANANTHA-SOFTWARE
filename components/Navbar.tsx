@@ -72,17 +72,18 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                   onClick={item.external ? undefined : (e) => handleLinkClick(e, item.id)}
                   target={item.external ? '_blank' : undefined}
                   rel={item.external ? 'noopener noreferrer' : undefined}
-                  className={`px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 relative group ${
+                  className={`px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-400 relative group ${
                     activePage === item.id
                       ? 'text-primary'
-                      : 'text-text-muted hover:text-text-secondary'
+                      : 'text-text-muted hover:text-primary'
                   }`}
-                  style={{animation: `fadeInUp 0.5s ease-out ${0.05 * index}s backwards`}}
+                  style={{animation: `fadeInUp 0.6s ease-out ${0.06 * index}s backwards`}}
                 >
-                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/0 via-primary/8 to-primary/0 opacity-0 group-hover:opacity-100 transition-all duration-400 group-hover:scale-105"></div>
+                  <div className="absolute inset-0 rounded-lg border border-primary/0 group-hover:border-primary/30 transition-all duration-400"></div>
                   <span className="relative z-10">{item.label}</span>
                   {activePage === item.id && (
-                    <div className="absolute bottom-1 left-4 right-4 h-1 bg-gradient-to-r from-primary to-accent rounded-full animate-glow"></div>
+                    <div className="absolute bottom-0 left-4 right-4 h-1.5 bg-gradient-to-r from-primary via-accent to-primary rounded-full animate-glow shadow-lg" style={{boxShadow: '0 0 15px rgba(31, 111, 235, 0.5)'}}></div>
                   )}
                 </a>
               ))}
