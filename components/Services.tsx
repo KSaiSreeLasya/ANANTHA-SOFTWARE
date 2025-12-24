@@ -14,16 +14,16 @@ const Services: React.FC = () => {
         </div>
 
         {/* Detailed Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 border border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           {/* Integrated Hardware/Software */}
-          <div className="p-12 border-b border-r border-white/10 flex gap-6">
-            <div className="w-16 h-16 bg-blue-600/20 rounded flex items-center justify-center flex-shrink-0 text-blue-400">
+          <div className="gradient-card p-10 rounded-xl card-hover flex gap-6 group">
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-600/30 to-blue-600/10 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-400 group-hover:scale-110 transition-transform duration-300">
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path d="M12 11V16M12 11L12 11.01M12 11L15 8M12 11L9 8" strokeWidth="2" strokeLinecap="round" />
               </svg>
             </div>
-            <div>
-              <h4 className="text-xl font-bold mb-4">Integrated Hardware and Software Solutions</h4>
+            <div className="flex-1">
+              <h4 className="text-lg font-bold mb-3 group-hover:text-coral transition-colors duration-300">Integrated Hardware and Software Solutions</h4>
               <p className="text-gray-400 text-sm leading-relaxed">
                 At Anantha Software, we specialize in developing integrated hardware and software solutions that support the semiconductor, AI/ML, and IoT industries across many domains such as consumer durables, storage, automotive, wireless, and data center.
               </p>
