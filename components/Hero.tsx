@@ -76,16 +76,18 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
         </h1>
 
         {/* Subheading */}
-        <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-12 font-medium leading-relaxed animate-fade-in-up hover:text-text-secondary transition-colors duration-500" style={{animationDelay: '0.4s'}}>
+        <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-12 font-medium leading-relaxed animate-fade-in-up group" style={{animationDelay: '0.35s', animationDuration: '0.8s'}}>
           Cutting-edge solutions in VLSI, AI/ML, and Software Engineering. Empowering businesses to innovate, scale, and lead their industries with advanced technology partnerships.
+          <div className="absolute -inset-4 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-lg -z-10 pointer-events-none"></div>
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-6 items-center animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+        <div className="flex flex-col sm:flex-row justify-center gap-6 items-center animate-fade-in-up" style={{animationDelay: '0.5s', animationDuration: '0.8s'}}>
           <button
             onClick={() => navigateTo('services')}
-            className="btn-primary btn-primary-solid rounded-lg px-10 py-4 text-sm font-bold uppercase tracking-widest shadow-glow hover:shadow-2xl transform transition-all hover:scale-105 active:scale-95 duration-400 relative group"
+            className="btn-primary btn-primary-solid rounded-lg px-10 py-4 text-sm font-bold uppercase tracking-widest shadow-glow hover:shadow-2xl transform transition-all hover:scale-105 active:scale-95 duration-400 relative group overflow-hidden"
           >
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
             <span className="relative z-10 flex items-center gap-2">
               Explore Services
               <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,8 +97,9 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
           </button>
           <button
             onClick={() => navigateTo('contact')}
-            className="btn-primary btn-primary-outline rounded-lg px-10 py-4 text-sm font-bold uppercase tracking-widest transform transition-all hover:scale-105 active:scale-95 duration-400 relative group"
+            className="btn-primary btn-primary-outline rounded-lg px-10 py-4 text-sm font-bold uppercase tracking-widest transform transition-all hover:scale-105 active:scale-95 duration-400 relative group overflow-hidden"
           >
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
             <span className="relative z-10 flex items-center gap-2">
               Let's Talk
               <svg className="w-4 h-4 group-hover:rotate-12 transition-transform duration-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
