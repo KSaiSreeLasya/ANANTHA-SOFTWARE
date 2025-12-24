@@ -103,29 +103,38 @@ const Careers: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] section-padding relative overflow-hidden">
+    <div className="bg-gradient-to-b from-color-bg via-color-bg-light to-color-bg section-padding relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-tl from-primary/8 via-transparent to-transparent rounded-full blur-3xl opacity-50 animate-float-slow"></div>
+      <div className="absolute bottom-1/4 -left-1/4 w-1/3 h-1/3 bg-gradient-to-br from-accent/8 via-transparent to-transparent rounded-full blur-3xl opacity-40 animate-float"></div>
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="mb-16 text-center">
-          <p className="text-coral font-bold tracking-[0.3em] uppercase text-xs mb-4">Join Our Team</p>
-          <h2 className="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tight">Career Opportunities</h2>
-          <div className="divider-coral w-12 mx-auto mb-6"></div>
-          <p className="text-gray-400 max-w-2xl mx-auto">Come work with us and be part of a team that's revolutionizing technology and engineering</p>
+        {/* Header Section */}
+        <div className="mb-20 text-center animate-fade-in-up">
+          <p className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 inline-block">Join Our Team</p>
+          <h2 className="text-4xl md:text-5xl font-black mb-8 uppercase tracking-tight">Career Opportunities</h2>
+          <div className="h-1 w-16 bg-gradient-to-r from-primary via-accent to-primary mx-auto mb-8 rounded-full"></div>
+          <p className="text-text-secondary max-w-2xl mx-auto text-lg font-medium">Be part of a team revolutionizing technology, engineering, and innovation. We're building the future, one project at a time.</p>
         </div>
-        <div className="gradient-card p-12 rounded-2xl">
-          <h3 className="text-2xl font-bold mb-10 text-white">Application Form</h3>
+
+        <div className="gradient-card p-12 rounded-2xl card-hover border-primary/30 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+          <div className="mb-10">
+            <h3 className="text-3xl font-bold text-white">Application Form</h3>
+            <p className="text-text-muted mt-2">Fill out the form below and join our growing team of innovators.</p>
+          </div>
 
           {isSubmitted ? (
-            <div className="text-center py-20 animate-fade-in">
-              <div className="w-20 h-20 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 animate-glow">
-                 <svg className="w-10 h-10 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+            <div className="text-center py-20 animate-scale-in">
+              <div className="w-24 h-24 bg-gradient-to-br from-tertiary/30 to-tertiary/10 rounded-full flex items-center justify-center mx-auto mb-8 animate-glow shadow-lg shadow-tertiary/30">
+                 <svg className="w-12 h-12 text-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                  </svg>
               </div>
               <h3 className="text-3xl font-bold mb-3 text-white">Application Received!</h3>
-              <p className="text-gray-300 font-medium">Our HR team will review your profile and get back to you soon.</p>
+              <p className="text-text-secondary font-medium">Our HR team will review your profile and reach out within 2-3 business days.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-7">
               {errorMsg && (
                 <div className="bg-red-500/20 border border-red-500/40 text-red-300 p-4 rounded-lg text-sm font-medium">
                   {errorMsg}
