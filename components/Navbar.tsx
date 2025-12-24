@@ -87,29 +87,27 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                 </a>
               ))}
 
-              <div className="ml-6 flex items-center space-x-4 border-l border-white/10 pl-6">
+              <div className="ml-6 flex items-center space-x-3 border-l border-white/10 pl-6">
                 {user ? (
                   <>
-                    <div className="flex items-center space-x-2.5 px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-all">
-                      <svg className="w-4 h-4 text-coral" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-sm font-medium text-white">{getUserDisplayName()}</span>
+                    <div className="flex items-center space-x-2.5 px-4 py-2 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 hover:border-primary/50 transition-all duration-300 group">
+                      <div className="w-2 h-2 rounded-full bg-primary animate-pulse-smooth group-hover:animate-glow"></div>
+                      <span className="text-sm font-medium text-text-secondary group-hover:text-primary transition-colors duration-300">{getUserDisplayName()}</span>
                     </div>
                     <button
                       onClick={handleLogout}
-                      className="text-sm font-medium text-gray-300 hover:text-coral transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-white/5"
+                      className="text-sm font-medium text-text-muted hover:text-primary transition-all duration-300 px-4 py-2 rounded-lg hover:bg-primary/10 group"
                     >
-                      Logout
+                      <span className="relative z-10">Logout</span>
                     </button>
                   </>
                 ) : (
                   <>
                     <button
                       onClick={() => onNavigate('login')}
-                      className="flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-white/5"
+                      className="flex items-center text-sm font-semibold text-primary hover:text-primary-light transition-all duration-300 px-4 py-2 rounded-lg hover:bg-primary/10 group"
                     >
-                      <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 mr-2 group-hover:scale-125 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                       </svg>
                       Log In
