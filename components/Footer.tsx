@@ -102,7 +102,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
 
           {/* Newsletter */}
-          <div className="animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+          <div className="animate-fade-in-up text-left" style={{animationDelay: '0.3s'}}>
             <h4 className="text-white font-bold mb-8 text-sm uppercase tracking-widest">Stay Updated</h4>
             {newsletterSuccess ? (
               <div className="bg-gradient-to-r from-tertiary/30 to-tertiary/10 border border-tertiary/40 text-tertiary p-4 rounded-lg text-xs text-center font-medium animate-pulse-scale shadow-lg shadow-tertiary/20">
