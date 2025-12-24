@@ -26,16 +26,17 @@ const Services: React.FC = () => {
         {/* Services Grid - 2 columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {/* Integrated Hardware/Software */}
-          <div className="gradient-card-subtle p-8 rounded-2xl card-hover group border-primary/40 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-            <div className="flex items-start gap-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary/30 to-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0 text-primary group-hover:scale-125 transition-all duration-300">
+          <div className="gradient-card-subtle p-8 rounded-2xl card-hover group border-primary/40 animate-fade-in-up relative overflow-hidden" style={{animationDelay: '0.1s'}}>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="flex items-start gap-6 relative z-10">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary/40 to-primary/15 rounded-2xl flex items-center justify-center flex-shrink-0 text-primary group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-primary/30 transition-all duration-500">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path d="M12 11V16M12 11L12 11.01M12 11L15 8M12 11L9 8" strokeWidth="2" strokeLinecap="round" />
                 </svg>
               </div>
               <div className="flex-1">
-                <h4 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors duration-300">Integrated Hardware & Software</h4>
-                <p className="text-text-muted text-sm leading-relaxed">
+                <h4 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors duration-500">Integrated Hardware & Software</h4>
+                <p className="text-text-muted text-sm leading-relaxed group-hover:text-text-secondary transition-colors duration-500">
                   End-to-end solutions for semiconductor, AI/ML, and IoT industries across consumer, storage, automotive, wireless, and data center domains.
                 </p>
               </div>
