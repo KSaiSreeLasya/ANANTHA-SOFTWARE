@@ -103,10 +103,16 @@ const Careers: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#0a0a0a] py-24 relative overflow-hidden">
+    <div className="bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] section-padding relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-[#0f0f0f] p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
-          <h2 className="text-2xl font-light mb-10 text-gray-300">Come work with us</h2>
+        <div className="mb-16 text-center">
+          <p className="text-coral font-bold tracking-[0.3em] uppercase text-xs mb-4">Join Our Team</p>
+          <h2 className="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tight">Career Opportunities</h2>
+          <div className="divider-coral w-12 mx-auto mb-6"></div>
+          <p className="text-gray-400 max-w-2xl mx-auto">Come work with us and be part of a team that's revolutionizing technology and engineering</p>
+        </div>
+        <div className="gradient-card p-12 rounded-2xl">
+          <h3 className="text-2xl font-bold mb-10 text-white">Application Form</h3>
 
           {isSubmitted ? (
             <div className="text-center py-20 animate-fade-in">
