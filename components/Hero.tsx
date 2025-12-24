@@ -103,9 +103,10 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
             { value: '50+', label: 'Team Members' },
             { value: '3', label: 'Continents' }
           ].map((stat, i) => (
-            <div key={i} className="text-center group/stat cursor-default">
-              <div className="text-2xl md:text-3xl font-black text-gradient mb-1 group-hover/stat:scale-110 transition-transform duration-300">{stat.value}</div>
-              <div className="text-xs text-text-muted uppercase tracking-wider font-semibold">{stat.label}</div>
+            <div key={i} className="text-center group/stat cursor-default relative p-4 rounded-lg hover:bg-primary/8 transition-all duration-400 border border-transparent hover:border-primary/30">
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-400 rounded-lg"></div>
+              <div className="relative z-10 text-2xl md:text-3xl font-black text-gradient group-hover/stat:scale-125 transition-transform duration-400">{stat.value}</div>
+              <div className="relative z-10 text-xs text-text-muted uppercase tracking-wider font-semibold group-hover/stat:text-primary transition-colors duration-400">{stat.label}</div>
             </div>
           ))}
         </div>
