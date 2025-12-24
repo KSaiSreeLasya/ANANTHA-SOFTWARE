@@ -31,22 +31,22 @@ const Services: React.FC = () => {
           </div>
 
           {/* Silicon Engineering */}
-          <div className="p-12 border-b border-white/10 flex gap-6">
-            <div className="w-16 h-16 bg-indigo-600/20 rounded flex items-center justify-center flex-shrink-0 text-indigo-400">
+          <div className="gradient-card p-10 rounded-xl card-hover flex gap-6 group">
+            <div className="w-16 h-16 bg-gradient-to-br from-indigo-600/30 to-indigo-600/10 rounded-lg flex items-center justify-center flex-shrink-0 text-indigo-400 group-hover:scale-110 transition-transform duration-300">
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <div>
-              <h4 className="text-xl font-bold mb-4">Silicon Engineering</h4>
+            <div className="flex-1">
+              <h4 className="text-lg font-bold mb-4 group-hover:text-coral transition-colors duration-300">Silicon Engineering</h4>
               <ul className="text-sm text-gray-400 space-y-2">
-                <li>• Architecture</li>
-                <li>• RTL Design & Integration</li>
-                <li>• Design Verification</li>
-                <li>• FPGA Prototyping and Emulation</li>
-                <li>• Design For Test (DFT)</li>
-                <li>• Physical Design</li>
-                <li>• Analog & Mixed Signal</li>
+                <li className="flex items-center"><span className="text-coral mr-2">•</span> Architecture</li>
+                <li className="flex items-center"><span className="text-coral mr-2">•</span> RTL Design & Integration</li>
+                <li className="flex items-center"><span className="text-coral mr-2">•</span> Design Verification</li>
+                <li className="flex items-center"><span className="text-coral mr-2">•</span> FPGA Prototyping and Emulation</li>
+                <li className="flex items-center"><span className="text-coral mr-2">•</span> Design For Test (DFT)</li>
+                <li className="flex items-center"><span className="text-coral mr-2">•</span> Physical Design</li>
+                <li className="flex items-center"><span className="text-coral mr-2">•</span> Analog & Mixed Signal</li>
               </ul>
             </div>
           </div>
