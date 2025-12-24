@@ -135,7 +135,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
 
           {/* Social */}
-          <div className="animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+          <div className="animate-fade-in-up text-left" style={{animationDelay: '0.4s'}}>
             <h4 className="text-white font-bold mb-8 text-sm uppercase tracking-widest">Connect</h4>
             <div className="flex space-x-4 mb-8">
               <button className="w-12 h-12 rounded-full border-2 border-primary/40 flex items-center justify-center text-text-muted hover:text-white hover:border-primary bg-primary/8 hover:bg-primary/20 transition-all duration-400 transform hover:scale-110 hover:shadow-lg hover:shadow-primary/40 group active:scale-95 relative overflow-hidden">
