@@ -223,46 +223,44 @@ const Careers: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">UPLOAD RESUME *</label>
-                <div className="flex items-center space-x-4">
-                   <input 
-                     type="file" 
-                     ref={fileInputRef} 
-                     onChange={handleFileChange} 
-                     className="hidden" 
+                <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">UPLOAD RESUME *</label>
+                <div className="flex flex-col md:flex-row md:items-center gap-4">
+                   <input
+                     type="file"
+                     ref={fileInputRef}
+                     onChange={handleFileChange}
+                     className="hidden"
                      accept=".pdf,.doc,.docx"
                    />
-                   <button 
-                     type="button" 
+                   <button
+                     type="button"
                      onClick={() => fileInputRef.current?.click()}
-                     className="flex items-center space-x-2 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-full transition-all text-xs font-bold border border-white/5"
+                     className="btn-primary btn-primary-outline rounded-lg px-6 py-3 flex items-center justify-center space-x-2 text-xs w-full md:w-auto"
                    >
-                      <span>{resumeFile ? '✓' : '+'}</span>
+                      <span className="text-lg">{resumeFile ? '✓' : '+'}</span>
                       <span>{resumeFile ? resumeFile.name : 'Upload File'}</span>
                    </button>
-                   <span className="text-[10px] text-gray-600">PDF, DOC, DOCX up to 5MB</span>
+                   <span className="text-xs text-gray-500 md:whitespace-nowrap">PDF, DOC, DOCX up to 5MB</span>
                 </div>
               </div>
 
               <div>
-                <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Link to LinkedIn</label>
-                <input 
-                  type="url" 
-                  placeholder="https://" 
+                <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Link to LinkedIn</label>
+                <input
+                  type="url"
+                  placeholder="https://"
                   value={formData.linkedin}
                   onChange={e => setFormData({...formData, linkedin: e.target.value})}
-                  className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral transition-colors" 
+                  className="gradient-card w-full rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 font-bold text-sm uppercase tracking-widest transition-all rounded-full ${
-                  isSubmitting ? 'bg-gray-600 text-gray-400 cursor-not-allowed' : 'bg-white/20 hover:bg-white text-black'
-                }`}
+                className={`btn-primary btn-primary-solid rounded-lg w-full py-4 mt-2 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
-                {isSubmitting ? 'Submitting...' : 'Apply'}
+                {isSubmitting ? 'Submitting...' : 'Apply Now'}
               </button>
             </form>
           )}
