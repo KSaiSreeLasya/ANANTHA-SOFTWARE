@@ -60,35 +60,40 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
     <footer className="bg-gradient-to-t from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] border-t border-white/10 pt-24 pb-12 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-          
+
           {/* Company Info */}
-          <div className="space-y-6">
-            <div className="cursor-pointer hover:opacity-90 transition-opacity transform hover:scale-105 duration-300" onClick={() => onNavigate('home')}>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Fdd826854f6f44d3b95695750dd149fd4%2F69ef4033ddb2424b84ea4261dc960c9c?format=webp&width=1200"
-                alt="Anantha Software"
-                className="h-24 w-auto"
-              />
+          <div className="space-y-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <div className="cursor-pointer group transition-all transform duration-500 hover:scale-110" onClick={() => onNavigate('home')}>
+              <div className="relative">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fdd826854f6f44d3b95695750dd149fd4%2F69ef4033ddb2424b84ea4261dc960c9c?format=webp&width=1200"
+                  alt="Anantha Software"
+                  className="h-24 w-auto group-hover:brightness-125 transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg blur-xl"></div>
+              </div>
             </div>
-            <p className="text-xs text-gray-400 leading-relaxed uppercase tracking-wider font-medium">
+            <p className="text-xs text-text-muted leading-relaxed uppercase tracking-wider font-medium hover:text-text-secondary transition-colors duration-500">
               SOLUTIONS PVT LTD,<br />
-              <span className="text-gray-500">WeWork Rajapushpa Summit,</span><br />
-              <span className="text-gray-500">Financial District, Hyderabad,</span><br />
-              <span className="text-gray-500">Telangana 500032.</span>
+              <span className="text-text-muted/70">WeWork Rajapushpa Summit,</span><br />
+              <span className="text-text-muted/70">Financial District, Hyderabad,</span><br />
+              <span className="text-text-muted/70">Telangana 500032.</span>
             </p>
           </div>
 
           {/* Quick Navigation */}
-          <div>
+          <div className="animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             <h4 className="text-white font-bold mb-8 text-sm uppercase tracking-widest">Navigation</h4>
             <ul className="space-y-3">
-              {navLinks.map((link) => (
+              {navLinks.map((link, idx) => (
                 <li key={link.id}>
                   <button
                     onClick={() => onNavigate(link.id)}
-                    className="text-xs text-gray-400 uppercase tracking-widest hover:text-coral transition-all duration-300 hover:translate-x-1"
+                    className="text-xs text-text-muted uppercase tracking-widest hover:text-primary transition-all duration-400 hover:translate-x-1 group relative"
+                    style={{animation: `slideInLeft 0.5s ease-out ${0.05 * idx}s backwards`}}
                   >
-                    {link.label}
+                    <span className="relative z-10">{link.label}</span>
+                    <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-transparent group-hover:w-full transition-all duration-400"></div>
                   </button>
                 </li>
               ))}
