@@ -151,37 +151,38 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                 onClick={item.external ? undefined : (e) => handleLinkClick(e, item.id)}
                 target={item.external ? '_blank' : undefined}
                 rel={item.external ? 'noopener noreferrer' : undefined}
-                className={`block px-4 py-3.5 text-base font-semibold rounded-lg transition-all duration-400 group relative overflow-hidden ${
+                className={`block px-4 py-3 text-base font-semibold transition-all duration-400 group relative border-l-2 ${
                   activePage === item.id
-                    ? 'text-primary bg-primary/12 border-l-2 border-primary shadow-lg shadow-primary/20'
-                    : 'text-text-muted hover:text-primary hover:bg-primary/10 border-l-2 border-transparent hover:border-primary/50'
+                    ? 'text-primary border-l-primary'
+                    : 'text-text-muted hover:text-primary border-l-transparent hover:border-l-primary/50'
                 }`}
                 style={{animation: `slideInLeft 0.5s ease-out ${0.06 * index}s backwards`}}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
                 <span className="relative z-10">{item.label}</span>
               </a>
             ))}
             <div className="pt-6 border-t border-primary/20 flex flex-col space-y-3">
               {user ? (
                 <>
-                  <div className="px-4 py-3 flex items-center space-x-2.5 rounded-lg bg-gradient-to-r from-primary/15 to-accent/10 border border-primary/30 group cursor-default">
-                    <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-primary to-accent animate-pulse-scale"></div>
-                    <span className="text-sm font-medium text-text-secondary group-hover:text-primary transition-colors duration-400">{getUserDisplayName()}</span>
+                  <div className="px-4 py-3 flex items-center space-x-2 text-text-secondary group cursor-default">
+                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-accent animate-pulse-scale"></div>
+                    <span className="text-sm font-medium group-hover:text-primary transition-colors duration-400">{getUserDisplayName()}</span>
                   </div>
                   <button
                     onClick={handleLogout}
-                    className="text-left px-4 py-3 text-text-muted font-medium hover:text-primary hover:bg-primary/12 transition-all duration-400 rounded-lg border border-transparent hover:border-primary/30"
+                    className="text-left px-4 py-3 text-text-muted font-medium hover:text-primary transition-colors duration-400 group relative"
                   >
                     Logout
+                    <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary group-hover:w-8 transition-all duration-400"></div>
                   </button>
                 </>
               ) : (
                 <button
                   onClick={() => onNavigate('login')}
-                  className="text-left px-4 py-3 text-primary font-semibold hover:bg-primary/15 transition-all duration-400 rounded-lg border border-primary/30 hover:border-primary/60"
+                  className="text-left px-4 py-3 text-primary font-semibold hover:text-primary-light transition-colors duration-400 group relative"
                 >
                   Log In
+                  <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary group-hover:w-12 transition-all duration-400"></div>
                 </button>
               )}
             </div>
