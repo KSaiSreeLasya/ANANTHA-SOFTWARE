@@ -110,16 +110,23 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
         </div>
 
         {/* Stats Row */}
-        <div className="mt-20 grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+        <div className="mt-24 grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.6s', animationDuration: '0.8s'}}>
           {[
-            { value: '4+', label: 'Years' },
-            { value: '50+', label: 'Team Members' },
-            { value: '3', label: 'Continents' }
+            { value: '4+', label: 'Years', delay: 0 },
+            { value: '50+', label: 'Team Members', delay: 0.1 },
+            { value: '3', label: 'Continents', delay: 0.2 }
           ].map((stat, i) => (
-            <div key={i} className="text-center group/stat cursor-default relative p-4 rounded-lg hover:bg-primary/8 transition-all duration-400 border border-transparent hover:border-primary/30">
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-400 rounded-lg"></div>
-              <div className="relative z-10 text-2xl md:text-3xl font-black text-gradient group-hover/stat:scale-125 transition-transform duration-400">{stat.value}</div>
-              <div className="relative z-10 text-xs text-text-muted uppercase tracking-wider font-semibold group-hover/stat:text-primary transition-colors duration-400">{stat.label}</div>
+            <div
+              key={i}
+              className="text-center group/stat cursor-default relative p-6 rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-400 bg-gradient-to-br from-primary/8 to-primary/3 hover:from-primary/15 hover:to-primary/8 overflow-hidden backdrop-blur-sm"
+              style={{animation: 'fadeInUp 0.8s ease-out', animationDelay: `${0.65 + stat.delay}s`, animationFillMode: 'both'}}
+            >
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500 blur-lg -z-10"></div>
+              <div className="relative z-10">
+                <div className="text-3xl md:text-4xl font-black text-gradient group-hover/stat:scale-110 transition-transform duration-400 inline-block">{stat.value}</div>
+                <div className="text-xs text-text-muted uppercase tracking-widest font-semibold group-hover/stat:text-primary transition-colors duration-400 mt-2">{stat.label}</div>
+              </div>
             </div>
           ))}
         </div>
