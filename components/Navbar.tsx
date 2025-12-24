@@ -165,13 +165,13 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
             <div className="pt-6 border-t border-primary/20 flex flex-col space-y-3">
               {user ? (
                 <>
-                  <div className="px-4 py-3 flex items-center space-x-2.5 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20">
-                    <div className="w-2 h-2 rounded-full bg-primary animate-pulse-smooth"></div>
-                    <span className="text-sm font-medium text-text-secondary">{getUserDisplayName()}</span>
+                  <div className="px-4 py-3 flex items-center space-x-2.5 rounded-lg bg-gradient-to-r from-primary/15 to-accent/10 border border-primary/30 group cursor-default">
+                    <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-primary to-accent animate-pulse-scale"></div>
+                    <span className="text-sm font-medium text-text-secondary group-hover:text-primary transition-colors duration-400">{getUserDisplayName()}</span>
                   </div>
                   <button
                     onClick={handleLogout}
-                    className="text-left px-4 py-3 text-text-muted font-medium hover:text-primary hover:bg-primary/10 transition-all duration-300 rounded-lg"
+                    className="text-left px-4 py-3 text-text-muted font-medium hover:text-primary hover:bg-primary/12 transition-all duration-400 rounded-lg border border-transparent hover:border-primary/30"
                   >
                     Logout
                   </button>
@@ -179,7 +179,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
               ) : (
                 <button
                   onClick={() => onNavigate('login')}
-                  className="text-left px-4 py-3 text-primary font-semibold hover:bg-primary/10 transition-all duration-300 rounded-lg"
+                  className="text-left px-4 py-3 text-primary font-semibold hover:bg-primary/15 transition-all duration-400 rounded-lg border border-primary/30 hover:border-primary/60"
                 >
                   Log In
                 </button>
