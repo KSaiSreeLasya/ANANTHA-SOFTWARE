@@ -37,23 +37,24 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
         </div>
 
         {/* ASOCSEMI Banner */}
-        <div className="mb-16 inline-block w-full px-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-          <div className="gradient-card-subtle p-8 md:p-10 rounded-2xl max-w-3xl mx-auto card-hover group border-primary/40 relative overflow-hidden">
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 rounded-2xl" style={{background: 'radial-gradient(circle at top, rgba(31,111,235,0.2), transparent 70%)'}}></div>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-l from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl"></div>
-            <h3 className="relative text-xl md:text-2xl font-bold mb-3 group-hover:text-primary transition-colors duration-500">
-              Anantha Software is now <span className="text-gradient bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text">ASOCSEMI</span>
-            </h3>
-            <p className="relative text-xs md:text-sm text-text-muted leading-relaxed uppercase tracking-wider font-medium group-hover:text-text-secondary transition-colors duration-500">
-              Transitioning to ASOCSEMI! We are excited to introduce our expanded semiconductor and engineering services.
-              Our commitment to excellence drives us to deliver top-tier technology.
-            </p>
-            <button
-              onClick={() => window.open('https://www.asocsemi.com/', '_blank')}
-              className="relative mt-8 px-8 py-3.5 btn-primary btn-primary-solid rounded-lg text-xs font-bold uppercase tracking-[0.15em] transform hover:scale-105 active:scale-95 transition-all duration-400 group/btn shadow-lg shadow-primary/20"
-            >
-              <span className="relative z-10">Explore ASOCSEMI</span>
-            </button>
+        <div className="mb-16 w-full px-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          <div className="max-w-3xl mx-auto relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-all duration-700 blur-2xl -z-10"></div>
+            <div className="flex flex-col items-center text-center space-y-4 py-12 relative">
+              <h3 className="text-xl md:text-2xl font-bold group-hover:text-primary transition-colors duration-500">
+                Anantha Software is now <span className="text-gradient bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text">ASOCSEMI</span>
+              </h3>
+              <div className="h-0.5 w-20 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <p className="text-xs md:text-sm text-text-muted leading-relaxed uppercase tracking-wider font-medium group-hover:text-text-secondary transition-colors duration-500 max-w-xl">
+                Transitioning to ASOCSEMI! We are excited to introduce our expanded semiconductor and engineering services. Our commitment to excellence drives us to deliver top-tier technology.
+              </p>
+              <button
+                onClick={() => window.open('https://www.asocsemi.com/', '_blank')}
+                className="mt-4 px-8 py-3 btn-primary btn-primary-outline rounded-lg text-xs font-bold uppercase tracking-[0.15em] transform hover:scale-105 active:scale-95 transition-all duration-400 group/btn"
+              >
+                <span className="relative z-10">Explore ASOCSEMI</span>
+              </button>
+            </div>
           </div>
         </div>
 
