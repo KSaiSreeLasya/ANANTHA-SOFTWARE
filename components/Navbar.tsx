@@ -52,14 +52,17 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
         <div className="flex justify-between h-20 items-center">
           {/* Logo */}
           <div
-            className="flex-shrink-0 cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95"
+            className="flex-shrink-0 cursor-pointer transition-all duration-500 hover:scale-110 active:scale-95 group"
             onClick={() => onNavigate('home')}
           >
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2Fdd826854f6f44d3b95695750dd149fd4%2F69ef4033ddb2424b84ea4261dc960c9c?format=webp&width=1200"
-              alt="Anantha Software"
-              className="h-20 w-auto filter brightness-110"
-            />
+            <div className="relative">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fdd826854f6f44d3b95695750dd149fd4%2F69ef4033ddb2424b84ea4261dc960c9c?format=webp&width=1200"
+                alt="Anantha Software"
+                className="h-20 w-auto filter brightness-110 group-hover:brightness-125 transition-all duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg blur-xl"></div>
+            </div>
           </div>
 
           {/* Desktop Nav */}
