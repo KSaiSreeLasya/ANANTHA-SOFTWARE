@@ -54,7 +54,7 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/8 via-accent/6 to-secondary/8 opacity-0 group-hover:opacity-100 transition-all duration-700 blur-3xl -z-10 rounded-2xl"></div>
             <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 opacity-0 group-hover:opacity-100 blur-lg -z-20 rounded-2xl transition-opacity duration-700"></div>
             <div className="flex flex-col items-center text-center space-y-5 py-16 px-8 relative border border-primary/20 group-hover:border-primary/50 bg-gradient-to-br from-primary/8 to-primary/3 rounded-2xl backdrop-blur-md transition-all duration-500">
-              <h3 className="text-xl md:text-2xl font-bold group-hover:text-primary transition-colors duration-500">
+              <h3 className="text-xl md:text-2xl font-bold group-hover:text-primary transition-colors duration-500 w-full flex flex-col items-center justify-center">
                 Anantha Software is now <span className="text-gradient bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text animate-gradient-shift inline-block" style={{backgroundSize: '200% 200%'}}>ASOCSEMI</span>
               </h3>
               <div className="h-1 w-24 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500 rounded-full"></div>
