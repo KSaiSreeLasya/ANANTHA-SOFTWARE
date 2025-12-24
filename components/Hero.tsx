@@ -6,26 +6,25 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
   return (
-    <div className="relative min-h-[90vh] flex flex-col justify-center items-center overflow-hidden bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a]">
-      {/* Enhanced Background Effect */}
-      <div className="absolute inset-0 z-0 opacity-40">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full">
-          <svg className="w-full h-full" viewBox="0 0 1440 800" fill="none">
-            <defs>
-              <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#ff6b6b" stopOpacity="0.4" />
-                <stop offset="50%" stopColor="#14b8a6" stopOpacity="0.2" />
-                <stop offset="100%" stopColor="#ff6b6b" stopOpacity="0.4" />
-              </linearGradient>
-            </defs>
-            <path d="M0 400C120 320 240 320 360 400C480 480 600 480 720 400C840 320 960 320 1080 400C1200 480 1320 480 1440 400" stroke="url(#gradientStroke)" strokeWidth="2" />
-            <path d="M0 450C120 370 240 370 360 450C480 530 600 530 720 450C840 370 960 370 1080 450C1200 530 1320 530 1440 450" stroke="url(#gradientStroke)" strokeWidth="1.5" opacity="0.5" />
-          </svg>
-        </div>
+    <div className="relative min-h-[100vh] flex flex-col justify-center items-center overflow-hidden bg-gradient-to-b from-color-bg via-color-bg-light to-color-bg">
+      {/* Animated Background Spheres */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float" style={{animation: 'float 8s ease-in-out infinite'}}></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-accent/20 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float" style={{animation: 'float 10s ease-in-out infinite 2s'}}></div>
+        <div className="absolute bottom-10 left-1/2 w-72 h-72 bg-secondary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float" style={{animation: 'float 12s ease-in-out infinite 4s'}}></div>
       </div>
 
-      {/* Radial Gradient Overlay */}
-      <div className="absolute inset-0 z-0 bg-radial-gradient opacity-30"></div>
+      {/* Grid Background */}
+      <div className="absolute inset-0 z-0 opacity-[0.03]">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(37, 99, 235, 0.3)" strokeWidth="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center py-20">
         {/* ASOCSEMI Banner */}
