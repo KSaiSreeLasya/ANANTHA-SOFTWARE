@@ -126,9 +126,9 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2.5 rounded-lg text-text-muted hover:text-primary hover:bg-primary/10 transition-all duration-300 active:scale-90"
+              className="p-2.5 rounded-lg text-text-muted hover:text-primary hover:bg-primary/15 transition-all duration-400 active:scale-90 border border-transparent hover:border-primary/30 group"
             >
-              <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+              <svg className="h-6 w-6 transition-transform duration-400 group-hover:rotate-90" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                 {isOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -142,7 +142,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-gradient-to-b from-primary/5 to-transparent border-b border-primary/20 animate-fade-in-up">
+        <div className="lg:hidden bg-gradient-to-b from-primary/8 via-primary/4 to-transparent border-b border-primary/20 animate-slide-in-down">
           <div className="px-4 pt-2 pb-8 space-y-1">
             {navItems.map((item: any, index: number) => (
               <a
