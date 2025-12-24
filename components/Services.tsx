@@ -44,20 +44,21 @@ const Services: React.FC = () => {
           </div>
 
           {/* Silicon Engineering */}
-          <div className="gradient-card-subtle p-8 rounded-2xl card-hover group border-primary/40 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            <div className="flex items-start gap-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-accent/30 to-accent/10 rounded-2xl flex items-center justify-center flex-shrink-0 text-accent group-hover:scale-125 transition-all duration-300">
+          <div className="gradient-card-subtle p-8 rounded-2xl card-hover group border-primary/40 animate-fade-in-up relative overflow-hidden" style={{animationDelay: '0.2s'}}>
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="flex items-start gap-6 relative z-10">
+              <div className="w-16 h-16 bg-gradient-to-br from-accent/40 to-accent/15 rounded-2xl flex items-center justify-center flex-shrink-0 text-accent group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-accent/30 transition-all duration-500">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
               <div className="flex-1">
-                <h4 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors duration-300">Silicon Engineering</h4>
-                <ul className="text-sm text-text-muted space-y-2">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-primary rounded-full mr-2 flex-shrink-0"></span>Architecture & Design</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-primary rounded-full mr-2 flex-shrink-0"></span>RTL Integration</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-primary rounded-full mr-2 flex-shrink-0"></span>Design Verification</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-primary rounded-full mr-2 flex-shrink-0"></span>FPGA Prototyping</li>
+                <h4 className="text-lg font-bold mb-3 group-hover:text-accent transition-colors duration-500">Silicon Engineering</h4>
+                <ul className="text-sm text-text-muted space-y-2 group-hover:text-text-secondary transition-colors duration-500">
+                  <li className="flex items-center"><span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-accent rounded-full mr-2.5 flex-shrink-0"></span>Architecture & Design</li>
+                  <li className="flex items-center"><span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-accent rounded-full mr-2.5 flex-shrink-0"></span>RTL Integration</li>
+                  <li className="flex items-center"><span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-accent rounded-full mr-2.5 flex-shrink-0"></span>Design Verification</li>
+                  <li className="flex items-center"><span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-accent rounded-full mr-2.5 flex-shrink-0"></span>FPGA Prototyping</li>
                 </ul>
               </div>
             </div>
