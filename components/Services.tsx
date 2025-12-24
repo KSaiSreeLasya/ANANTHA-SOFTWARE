@@ -52,14 +52,14 @@ const Services: React.FC = () => {
           </div>
 
           {/* AI/ML Development */}
-          <div className="p-12 border-b border-r border-white/10 flex gap-6">
-            <div className="w-16 h-16 bg-red-600/20 rounded flex items-center justify-center flex-shrink-0 text-red-400">
+          <div className="gradient-card p-10 rounded-xl card-hover flex gap-6 group">
+            <div className="w-16 h-16 bg-gradient-to-br from-red-600/30 to-red-600/10 rounded-lg flex items-center justify-center flex-shrink-0 text-red-400 group-hover:scale-110 transition-transform duration-300">
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path d="M13 10V3L4 14H11V21L20 10H13Z" strokeWidth="2" strokeLinecap="round" />
               </svg>
             </div>
-            <div>
-              <h4 className="text-xl font-bold mb-4">Advanced AI/ML Development</h4>
+            <div className="flex-1">
+              <h4 className="text-lg font-bold mb-3 group-hover:text-coral transition-colors duration-300">Advanced AI/ML Development</h4>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Our team excels in advanced AI/ML development, leveraging cutting-edge technologies to accelerate data science and provide valuable insights for your business.
               </p>
@@ -67,22 +67,22 @@ const Services: React.FC = () => {
           </div>
 
           {/* Advanced AI/ML - Tech Stack */}
-          <div className="p-12 border-b border-white/10 flex gap-6">
-            <div className="w-16 h-16 bg-rose-600/20 rounded flex items-center justify-center flex-shrink-0 text-rose-400">
+          <div className="gradient-card p-10 rounded-xl card-hover flex gap-6 group">
+            <div className="w-16 h-16 bg-gradient-to-br from-rose-600/30 to-rose-600/10 rounded-lg flex items-center justify-center flex-shrink-0 text-rose-400 group-hover:scale-110 transition-transform duration-300">
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path d="M13 10V3L4 14H11V21L20 10H13Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <div>
-              <h4 className="text-xl font-bold mb-4">Advanced AI/ML Development</h4>
+            <div className="flex-1">
+              <h4 className="text-lg font-bold mb-4 group-hover:text-coral transition-colors duration-300">Tech Stack & Cloud</h4>
               <div className="space-y-4">
                 <div>
-                  <p className="text-sm font-bold text-white mb-1">AI and Edge AI</p>
-                  <p className="text-xs text-gray-500">- NLP, LLM, RESPONSIBLE AI, GENERATIVE AI....</p>
+                  <p className="text-sm font-semibold text-white mb-1.5 flex items-center"><span className="w-2 h-2 bg-coral rounded-full mr-2"></span>AI and Edge AI</p>
+                  <p className="text-xs text-gray-500 ml-5">NLP, LLM, Responsible AI, Generative AI</p>
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-white mb-1">Cloud Technologies</p>
-                  <p className="text-xs text-gray-500">- Azure, AWS, Zoho, G-suite...</p>
+                  <p className="text-sm font-semibold text-white mb-1.5 flex items-center"><span className="w-2 h-2 bg-coral rounded-full mr-2"></span>Cloud Technologies</p>
+                  <p className="text-xs text-gray-500 ml-5">Azure, AWS, Zoho, G-suite</p>
                 </div>
               </div>
             </div>
