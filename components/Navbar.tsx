@@ -47,25 +47,25 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-morphism">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-morphism border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           {/* Logo */}
           <div
-            className="flex-shrink-0 cursor-pointer hover:opacity-90 transition-opacity duration-300 transform hover:scale-105"
+            className="flex-shrink-0 cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95"
             onClick={() => onNavigate('home')}
           >
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2Fdd826854f6f44d3b95695750dd149fd4%2F69ef4033ddb2424b84ea4261dc960c9c?format=webp&width=1200"
               alt="Anantha Software"
-              className="h-20 w-auto"
+              className="h-20 w-auto filter brightness-110"
             />
           </div>
 
           {/* Desktop Nav */}
           <div className="hidden lg:block">
-            <div className="ml-10 flex items-center space-x-1">
-              {navItems.map((item: any) => (
+            <div className="ml-10 flex items-center space-x-0.5">
+              {navItems.map((item: any, index: number) => (
                 <a
                   key={item.id}
                   href={item.external ? item.href : `#${item.id}`}
@@ -74,13 +74,15 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                   rel={item.external ? 'noopener noreferrer' : undefined}
                   className={`px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 relative group ${
                     activePage === item.id
-                      ? 'text-coral'
-                      : 'text-gray-300 hover:text-white'
+                      ? 'text-primary'
+                      : 'text-text-muted hover:text-text-secondary'
                   }`}
+                  style={{animation: `fadeInUp 0.5s ease-out ${0.05 * index}s backwards`}}
                 >
-                  {item.label}
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span className="relative z-10">{item.label}</span>
                   {activePage === item.id && (
-                    <div className="absolute bottom-0 left-4 right-4 h-0.5 bg-coral rounded-full"></div>
+                    <div className="absolute bottom-1 left-4 right-4 h-1 bg-gradient-to-r from-primary to-accent rounded-full animate-glow"></div>
                   )}
                 </a>
               ))}
