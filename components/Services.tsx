@@ -149,22 +149,22 @@ const Services: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-24 pt-20 border-t border-white/10">
-          <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4">Driving Technological Advancements</h3>
-            <div className="divider-coral w-12 mx-auto"></div>
+        <div className="mt-24 pt-20 border-t border-primary/20">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4">Proven Expertise & Impact</h3>
+            <div className="divider w-12 mx-auto"></div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[
-              { val: '4', label: 'Years of Expertise' },
-              { val: '3', label: 'Technology Partnerships' },
-              { val: '50+', label: 'Engineering Team' },
-              { val: '3', label: 'Global Presence' },
+              { val: '4+', label: 'Years of Excellence' },
+              { val: '50+', label: 'Team Members' },
+              { val: '3', label: 'Global Locations' },
+              { val: '100+', label: 'Projects Delivered' },
               { val: '2', label: 'Industry Awards' }
-            ].map(s => (
-              <div key={s.label} className="gradient-card p-8 rounded-xl text-center card-hover group">
-                <div className="text-4xl md:text-5xl font-black text-coral mb-3 group-hover:text-teal transition-colors duration-300">{s.val}</div>
-                <div className="text-xs uppercase tracking-widest text-gray-400 font-semibold">{s.label}</div>
+            ].map((s, i) => (
+              <div key={s.label} className="gradient-card-subtle p-8 rounded-2xl text-center card-hover group animate-fade-in-up border-primary/40" style={{animationDelay: `${0.1 * (i + 1)}s`}}>
+                <div className="text-4xl md:text-5xl font-black text-gradient mb-3 group-hover:scale-110 transition-transform duration-300">{s.val}</div>
+                <div className="text-xs uppercase tracking-wider text-text-muted font-semibold">{s.label}</div>
               </div>
             ))}
           </div>
