@@ -127,62 +127,62 @@ const Careers: React.FC = () => {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               {errorMsg && (
-                <div className="bg-red-500/10 border border-red-500/20 text-red-500 p-4 rounded-xl text-sm">
+                <div className="bg-red-500/20 border border-red-500/40 text-red-300 p-4 rounded-lg text-sm font-medium">
                   {errorMsg}
                 </div>
               )}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">First name *</label>
-                  <input 
-                    required 
-                    type="text" 
+                  <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">First name *</label>
+                  <input
+                    required
+                    type="text"
                     value={formData.firstName}
                     onChange={e => setFormData({...formData, firstName: e.target.value})}
-                    className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral transition-colors" 
+                    className="gradient-card w-full rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Last name *</label>
-                  <input 
-                    required 
-                    type="text" 
+                  <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Last name *</label>
+                  <input
+                    required
+                    type="text"
                     value={formData.lastName}
                     onChange={e => setFormData({...formData, lastName: e.target.value})}
-                    className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral transition-colors" 
+                    className="gradient-card w-full rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Email *</label>
-                  <input 
-                    required 
-                    type="email" 
+                  <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Email *</label>
+                  <input
+                    required
+                    type="email"
                     value={formData.email}
                     onChange={e => setFormData({...formData, email: e.target.value})}
-                    className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral transition-colors" 
+                    className="gradient-card w-full rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Phone</label>
-                  <input 
-                    type="tel" 
+                  <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Phone</label>
+                  <input
+                    type="tel"
                     value={formData.phone}
                     onChange={e => setFormData({...formData, phone: e.target.value})}
-                    className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral transition-colors" 
+                    className="gradient-card w-full rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Position *</label>
-                <select 
-                  required 
+                <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Position *</label>
+                <select
+                  required
                   value={formData.position}
                   onChange={e => setFormData({...formData, position: e.target.value})}
-                  className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral transition-colors appearance-none"
+                  className="gradient-card w-full rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all appearance-none"
                 >
                   <option value="" className="bg-black">Select Position</option>
                   <option value="vlsi" className="bg-black">VLSI Engineer</option>
@@ -193,31 +193,31 @@ const Careers: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Start Date</label>
+                <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Start Date</label>
                 <div className="grid grid-cols-3 gap-4">
-                  <input 
-                    type="number" 
-                    placeholder="Day" 
+                  <input
+                    type="number"
+                    placeholder="Day"
                     value={formData.day}
                     onChange={e => setFormData({...formData, day: e.target.value})}
-                    className="bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral" 
+                    className="gradient-card rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                   />
-                  <select 
+                  <select
                     value={formData.month}
                     onChange={e => setFormData({...formData, month: e.target.value})}
-                    className="bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral appearance-none"
+                    className="gradient-card rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all appearance-none"
                   >
                     <option value="" className="bg-black">Month</option>
                     {['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'].map((m, i) => (
                       <option key={m} value={m} className="bg-black">{['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][i]}</option>
                     ))}
                   </select>
-                  <input 
-                    type="number" 
-                    placeholder="Year" 
+                  <input
+                    type="number"
+                    placeholder="Year"
                     value={formData.year}
                     onChange={e => setFormData({...formData, year: e.target.value})}
-                    className="bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral" 
+                    className="gradient-card rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                   />
                 </div>
               </div>
