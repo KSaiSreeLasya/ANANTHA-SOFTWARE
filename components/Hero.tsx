@@ -30,9 +30,11 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center py-20">
         {/* Badge */}
         <div className="mb-8 inline-block animate-fade-in-up">
-          <div className="px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/15 to-primary/8 border border-primary/40 text-primary text-xs font-semibold uppercase tracking-widest flex items-center gap-2.5 backdrop-blur-sm hover:border-primary/60 hover:bg-gradient-to-r hover:from-primary/20 hover:to-primary/12 transition-all duration-500 shadow-lg shadow-primary/10">
-            <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-secondary rounded-full animate-pulse-scale"></span>
+          <div className="px-4 py-2 text-primary text-xs font-semibold uppercase tracking-widest flex items-center gap-2 group relative">
+            <span className="w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full animate-pulse-scale"></span>
             Transforming Industries
+            <div className="absolute -inset-2 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg -z-10"></div>
+            <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-500"></div>
           </div>
         </div>
 
