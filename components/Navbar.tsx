@@ -151,14 +151,15 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                 onClick={item.external ? undefined : (e) => handleLinkClick(e, item.id)}
                 target={item.external ? '_blank' : undefined}
                 rel={item.external ? 'noopener noreferrer' : undefined}
-                className={`block px-4 py-3.5 text-base font-semibold rounded-lg transition-all duration-300 group ${
+                className={`block px-4 py-3.5 text-base font-semibold rounded-lg transition-all duration-400 group relative overflow-hidden ${
                   activePage === item.id
-                    ? 'text-primary bg-primary/10 border-l-2 border-primary'
-                    : 'text-text-muted hover:text-primary hover:bg-primary/10'
+                    ? 'text-primary bg-primary/12 border-l-2 border-primary shadow-lg shadow-primary/20'
+                    : 'text-text-muted hover:text-primary hover:bg-primary/10 border-l-2 border-transparent hover:border-primary/50'
                 }`}
-                style={{animation: `slideInLeft 0.4s ease-out ${0.05 * index}s backwards`}}
+                style={{animation: `slideInLeft 0.5s ease-out ${0.06 * index}s backwards`}}
               >
-                {item.label}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
+                <span className="relative z-10">{item.label}</span>
               </a>
             ))}
             <div className="pt-6 border-t border-primary/20 flex flex-col space-y-3">
