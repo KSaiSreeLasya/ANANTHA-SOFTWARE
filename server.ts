@@ -1,6 +1,6 @@
-import express from 'express';
-import cors from 'cors';
-import sgMail from '@sendgrid/mail';
+const express = require('express');
+const cors = require('cors');
+const sgMail = require('@sendgrid/mail');
 
 const app = express();
 const PORT = 3001;
@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // Email sending endpoint for contact form
-app.post('/api/send-contact-email', async (req, res) => {
+app.post('/api/send-contact-email', async (req: any, res: any) => {
   try {
     const { name, email, message } = req.body;
 
@@ -46,7 +46,7 @@ app.post('/api/send-contact-email', async (req, res) => {
 });
 
 // Email sending endpoint for careers form
-app.post('/api/send-careers-email', async (req, res) => {
+app.post('/api/send-careers-email', async (req: any, res: any) => {
   try {
     const { firstName, lastName, email, phone, position, startDate, resumeUrl, linkedinUrl } = req.body;
 
@@ -82,7 +82,7 @@ app.post('/api/send-careers-email', async (req, res) => {
 });
 
 // Health check endpoint
-app.get('/api/health', (req, res) => {
+app.get('/api/health', (req: any, res: any) => {
   res.json({ status: 'ok' });
 });
 
