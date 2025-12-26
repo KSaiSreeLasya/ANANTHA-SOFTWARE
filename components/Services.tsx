@@ -1,6 +1,193 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Services: React.FC = () => {
+  const [expandedCategory, setExpandedCategory] = useState<string | null>('guidewire');
+
+  const servicePortfolios = [
+    {
+      id: 'guidewire',
+      name: 'Guidewire Services',
+      icon: '📋',
+      categories: [
+        {
+          service: 'Guidewire Core Platform Services',
+          platforms: 'PolicyCenter, BillingCenter, ClaimCenter, ContactManager, Digital Portals, Guidewire Cloud Platform (GWCP)',
+          offerings: 'Greenfield & brownfield implementations, legacy migration, on-prem to cloud migration, upgrades, cloud readiness, performance tuning'
+        },
+        {
+          service: 'Product & Underwriting Services',
+          platforms: 'Guidewire Product Model, Advanced Product Designer (APD)',
+          offerings: 'Product modeling, coverage & rating configuration, product rollout, regulatory alignment, new product launches'
+        },
+        {
+          service: 'SBT & Bureau Content Management',
+          platforms: 'ISO, AAIS, NCCI, SBT, ERC',
+          offerings: 'SBT adoption, bureau alignment, customization analysis, circular impact assessment, ERC integration & validation'
+        },
+        {
+          service: 'Digital & Integration Services',
+          platforms: 'Guidewire Digital (Jutro), Integration Framework, ACORD, REST/SOAP APIs',
+          offerings: 'Customer/agent portals, UX optimization, third-party integrations, ACORD messaging'
+        },
+        {
+          service: 'Data, Analytics & Reporting',
+          platforms: 'Guidewire DataHub, InfoCenter, Snowflake, Databricks, BigQuery',
+          offerings: 'Analytics & regulatory reporting, actuarial data extraction, enterprise data integration'
+        },
+        {
+          service: 'Testing, QA & Automation',
+          platforms: 'Automated Test Frameworks',
+          offerings: 'Functional, regression & performance testing, automation for product & rating validation, UAT support'
+        },
+        {
+          service: 'Guidewire AMS',
+          platforms: 'Policy, Billing & Claims Modules',
+          offerings: 'L2/L3 support, release management, incident handling, continuous optimization'
+        },
+        {
+          service: 'Cloud, DevOps & Security',
+          platforms: 'CI/CD, Cloud Automation Tools',
+          offerings: 'CI/CD setup, environment automation, cloud cost optimization, security & compliance reviews'
+        },
+        {
+          service: 'Advanced Capabilities',
+          platforms: 'AI/ML, GenAI, Analytics Accelerators',
+          offerings: 'AI underwriting, GenAI document ingestion, reusable accelerators, SBT automation'
+        },
+        {
+          service: 'Engagement Models',
+          platforms: 'Onshore–Offshore, Hybrid',
+          offerings: 'End-to-end delivery, staff augmentation, factory model, hybrid delivery'
+        }
+      ]
+    },
+    {
+      id: 'sap',
+      name: 'SAP Services',
+      icon: '🏢',
+      categories: [
+        {
+          service: 'SAP Advisory & Implementation',
+          platforms: 'SAP S/4HANA, RISE with SAP, GROW with SAP, SAP BTP',
+          offerings: 'S/4HANA Implementation & Migration (Brownfield/Bluefield), SAP Business Process Automation, SAP Digital Supply Chain Transformation, RISE/GROW with SAP Enablement'
+        },
+        {
+          service: 'Spend Management & Invoice Automation',
+          platforms: 'SAP VIM, SAP Ariba, OpenText',
+          offerings: 'VIM Deployment, Upgrade & Improvement Packs, VIM–Ariba Integration, Vendor Invoice Management for S/4HANA, AP Analytics & Executive Insights'
+        },
+        {
+          service: 'Data Management & Analytics',
+          platforms: 'SAP ILM, MDG, DaRT, BTP Analytics, AI Tools',
+          offerings: 'Data Archiving, Migration & Governance, Predictive Analytics & Forecasting, Data Privacy & Compliance Solutions, System Decommissioning'
+        },
+        {
+          service: 'SAP Application Management Services (AMS)',
+          platforms: 'SAP Solution Manager, Cloud AMS Tools',
+          offerings: 'Proactive System Monitoring, Flexible Support Packages, Continuous Enhancement & Optimization, Performance Tuning'
+        },
+        {
+          service: 'Cloud & Integration Services',
+          platforms: 'AWS, Azure, GCP, SAP Cloud, Terraform, Ansible',
+          offerings: 'Cloud Migration & Integration for SAP Ecosystem, DevOps Enablement & Automation, Infrastructure as Code (IaC), Cloud Cost Optimization'
+        }
+      ]
+    },
+    {
+      id: 'analytics',
+      name: 'Analytics Services',
+      icon: '📊',
+      categories: [
+        {
+          service: 'Cognitive Analytics (AI/ML)',
+          platforms: 'Neural Networks (CNN, RNN), PyTorch, Caffe, ONNX, TensorFlow, Keras, OpenCV, Scikit-Learn, NumPy, Pandas',
+          offerings: 'ML/DL Application development and testing, Federated learning apps, Natural Language Processing, Algorithm development, testing, Model onboarding, Quantization & Optimization, GPU benchmarking, Parallel programming (CUDA), ML compiler optimizations, NLP & Image processing, Resource management, Web & Marketing analytics'
+        },
+        {
+          service: 'Predictive/Prescriptive Analytics',
+          platforms: 'TensorFlow, Keras, OpenCV, Scikit-Learn, NumPy, Pandas',
+          offerings: 'Quality prediction, Forecasting, Advanced statistical modeling'
+        },
+        {
+          service: 'Descriptive/Diagnostic Analytics',
+          platforms: 'Python, R, Tableau, PowerBI, SPSS',
+          offerings: 'Data mining, Visualizations, Analysis & Reporting'
+        }
+      ]
+    },
+    {
+      id: 'genai',
+      name: 'Generative AI & LLMs Services',
+      icon: '🤖',
+      categories: [
+        {
+          service: 'Foundation & Language Models',
+          platforms: 'OpenAI (GPT-4, GPT-3.5), Anthropic Claude, Mistral AI, LangChain, LangGraph',
+          offerings: 'LLM fine-tuning & optimization, Custom LLM development, Prompt engineering, RAG system implementation'
+        },
+        {
+          service: 'AI Workflow & Agents',
+          platforms: 'Crew.AI, AutoGen, HuggingFace Transformers, PEFT, LoRA, QLoRA, ONNX Runtime, vLLM, TGI',
+          offerings: 'AI workflow design & development, Autonomous agent development, LLM monitoring & observability, Model quantization & deployment'
+        },
+        {
+          service: 'Vector & Knowledge Management',
+          platforms: 'Pinecone, Weaviate, ChromaDB, FAISS',
+          offerings: 'Context window optimization, Vector database integration, Knowledge base integration, Semantic search implementation'
+        },
+        {
+          service: 'Enterprise LLM Solutions',
+          platforms: 'Multi-modal LLM integration',
+          offerings: 'Enterprise LLM solutions, AI application development, Custom model fine-tuning, Production-ready deployments'
+        }
+      ]
+    },
+    {
+      id: 'dataeng',
+      name: 'Data Engineering Services',
+      icon: '⚙️',
+      categories: [
+        {
+          service: 'Data Acquisition',
+          platforms: 'Apache/Microsoft/Google/Amazon, SQOOP, Kafka, Flume, Nifi, Gobblin, Azure Data Factory, Pub/Sub, AWS Kinesis',
+          offerings: 'Batch processing, Streaming data, Data Pipelines, Data Lakes, Architectural design, Data migration & cleanup, Data Processing & Upgrades, Cluster Setup'
+        },
+        {
+          service: 'Data Processing',
+          platforms: 'MapReduce, Spark, Pig, Azure Databricks, HDInsight, Cloud Dataflow, Spark Streaming, Kafka, Flink, Storm, Samza',
+          offerings: 'Batch & streaming data processing, Big Data applications, ETL/ELT pipelines, Data Warehousing, Data Governance, Infrastructure upkeep'
+        },
+        {
+          service: 'Data Organization & Storage',
+          platforms: 'RedShift, Snowflake, BigQuery, Delta Lake',
+          offerings: 'Data Warehouse (DWH) design, Data Marts, Distributed storage, Cloud-native solutions'
+        }
+      ]
+    },
+    {
+      id: 'cloud',
+      name: 'Cloud Infrastructure Services',
+      icon: '☁️',
+      categories: [
+        {
+          service: 'Cloud Architectural Services',
+          platforms: 'Apache, Azure, GCP, AWS',
+          offerings: 'Ecosystem design, Application design, Cloud migration, HPC solutions, Virtualization (VmWare, Hyper-V, EC2), Serverless computing, PaaS/SecaaS/DaaS consulting, IaC, Infrastructure management & migration'
+        },
+        {
+          service: 'Cloud Development Services',
+          platforms: 'API Gateway, REST API, Lambda, Kubernetes',
+          offerings: 'Development, Deployment, Debugging, Containerization, Orchestration'
+        },
+        {
+          service: 'Cloud Maintenance Services',
+          platforms: 'Kubernetes, Ansible, ARM templates, Python, Terraform',
+          offerings: 'DevOps & CI/CD, Cloud orchestration, Automation, Operating cost management, Performance optimization'
+        }
+      ]
+    }
+  ];
+
   return (
     <div className="section-padding bg-gradient-to-b from-color-bg via-color-bg-light to-color-bg wavy-bg relative overflow-hidden">
       {/* Background Animation */}
@@ -9,6 +196,7 @@ const Services: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header Section */}
         <div className="text-center mb-20">
           <div className="inline-block mb-4 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/15 to-primary/8 border border-primary/40 text-primary text-xs font-semibold uppercase tracking-widest hover:border-primary/60 transition-all duration-500 shadow-lg shadow-primary/10">
             <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-secondary rounded-full inline-block mr-2.5 animate-pulse-scale"></span>
@@ -23,8 +211,8 @@ const Services: React.FC = () => {
           </p>
         </div>
 
-        {/* Services Grid - 2 columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        {/* Core Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
           {/* Integrated Hardware/Software */}
           <div className="gradient-card-subtle p-8 rounded-2xl card-hover group border-primary/40 animate-fade-in-up relative overflow-hidden" style={{animationDelay: '0.1s'}}>
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -135,24 +323,79 @@ const Services: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
 
-          {/* SAP Solutions */}
-          <div className="gradient-card-subtle p-8 rounded-2xl card-hover group border-primary/40 animate-fade-in-up relative overflow-hidden" style={{animationDelay: '0.7s'}}>
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="flex items-start gap-6 relative z-10">
-              <div className="w-16 h-16 bg-gradient-to-br from-accent/40 to-accent/15 rounded-2xl flex items-center justify-center flex-shrink-0 text-accent group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-accent/30 transition-all duration-500">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" strokeWidth="2" strokeLinecap="round" />
-                </svg>
-              </div>
-              <div className="flex-1">
-                <h4 className="text-lg font-bold mb-2 group-hover:text-accent transition-colors duration-500">SAP Solutions</h4>
-                <p className="text-text-muted text-sm leading-relaxed group-hover:text-text-secondary transition-colors duration-500">
-                  ERP implementation, customization, and support for enterprise resource planning systems.
-                </p>
-              </div>
-            </div>
+        {/* Service Portfolios Section */}
+        <div className="mt-24 pt-20 border-t border-primary/20">
+          <div className="text-center mb-12 animate-fade-in-up">
+            <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4">Detailed Service Portfolios</h3>
+            <div className="divider w-16 mx-auto hover:w-24 transition-all duration-500"></div>
           </div>
+
+          {/* Portfolio Tabs */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+            {servicePortfolios.map((portfolio, index) => (
+              <button
+                key={portfolio.id}
+                onClick={() => setExpandedCategory(expandedCategory === portfolio.id ? null : portfolio.id)}
+                className={`p-4 rounded-xl transition-all duration-400 card-hover group border ${
+                  expandedCategory === portfolio.id
+                    ? 'bg-gradient-to-br from-primary/30 to-primary/10 border-primary text-primary shadow-lg shadow-primary/20'
+                    : 'bg-gradient-card border-primary/30 text-text-secondary hover:border-primary hover:text-primary'
+                } animate-fade-in-up`}
+                style={{animationDelay: `${0.05 * index}s`}}
+              >
+                <div className="text-2xl mb-2">{portfolio.icon}</div>
+                <div className="text-xs md:text-sm font-bold uppercase tracking-wider text-center">{portfolio.name}</div>
+              </button>
+            ))}
+          </div>
+
+          {/* Expanded Portfolio Details */}
+          {expandedCategory && (
+            <div className="animate-fade-in-up">
+              {servicePortfolios.map((portfolio) => {
+                if (portfolio.id !== expandedCategory) return null;
+
+                return (
+                  <div key={portfolio.id} className="space-y-4">
+                    {portfolio.categories.map((category, idx) => (
+                      <div
+                        key={idx}
+                        className="gradient-card p-6 md:p-8 rounded-2xl border-primary/30 card-hover group animate-fade-in-up"
+                        style={{animationDelay: `${0.1 * idx}s`}}
+                      >
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                          {/* Service Name */}
+                          <div>
+                            <h4 className="text-base md:text-lg font-bold text-primary group-hover:text-secondary transition-colors duration-300 mb-2">
+                              {category.service}
+                            </h4>
+                          </div>
+
+                          {/* Platforms/Tools */}
+                          <div>
+                            <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">Platforms & Tools</p>
+                            <p className="text-sm text-text-secondary leading-relaxed">
+                              {category.platforms}
+                            </p>
+                          </div>
+
+                          {/* Offerings */}
+                          <div>
+                            <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">Services Offered</p>
+                            <p className="text-sm text-text-secondary leading-relaxed">
+                              {category.offerings}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         {/* Stats Section */}
