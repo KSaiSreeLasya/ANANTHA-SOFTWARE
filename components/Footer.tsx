@@ -74,7 +74,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </div>
             </div>
             <p className="text-xs text-text-muted leading-relaxed uppercase tracking-wider font-medium hover:text-text-secondary transition-colors duration-500">
-               ANANTHA SOFTWARE SOLUTIONS PVT LTD,<br />
+               ANANTHA SOFTWARE SOLUTIONS ,<br />
               <span className="text-text-muted/70">WeWork Rajapushpa Summit,</span><br />
               <span className="text-text-muted/70">Financial District, Hyderabad,</span><br />
               <span className="text-text-muted/70">Telangana 500032.</span>
