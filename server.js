@@ -1,6 +1,6 @@
-const express = require('express');
-const cors = require('cors');
-const sgMail = require('@sendgrid/mail');
+import express from 'express';
+import cors from 'cors';
+import sgMail from '@sendgrid/mail';
 
 const app = express();
 const PORT = 3001;
