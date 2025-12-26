@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { supabase } from '../lib/supabase';
 import { getClientIp, getUserAgent } from '../lib/ipService';
+import { sendCareersEmail } from '../lib/emailService';
 
 const Careers: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -88,6 +89,22 @@ const Careers: React.FC = () => {
           full: insertError
         });
         throw insertError;
+      }
+
+      // Send email notification
+      try {
+        await sendCareersEmail(
+          formData.firstName,
+          formData.lastName,
+          formData.email,
+          formData.phone,
+          formData.position,
+          startDate,
+          publicUrl,
+          formData.linkedin
+        );
+      } catch (emailError) {
+        console.warn('Email notification failed, but application was saved', emailError);
       }
 
       setIsSubmitted(true);

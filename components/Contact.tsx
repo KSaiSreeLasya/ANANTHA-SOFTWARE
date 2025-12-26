@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { supabase } from '../lib/supabase';
 import { getClientIp, getUserAgent } from '../lib/ipService';
+import { sendContactEmail } from '../lib/emailService';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -22,6 +23,7 @@ const Contact: React.FC = () => {
       const ipAddress = await getClientIp();
       const userAgent = getUserAgent();
 
+      // Save to Supabase
       const { error } = await supabase
         .from('contact_submissions')
         .insert([
@@ -35,6 +37,13 @@ const Contact: React.FC = () => {
         ]);
 
       if (error) throw error;
+
+      // Send email notification
+      try {
+        await sendContactEmail(formData.name, formData.email, formData.message);
+      } catch (emailError) {
+        console.warn('Email notification failed, but form was saved', emailError);
+      }
 
       setIsSuccess(true);
       setFormData({ name: '', email: '', message: '' });
