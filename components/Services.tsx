@@ -277,7 +277,8 @@ const Services: React.FC = () => {
             <div className="flex items-start gap-6 relative z-10">
               <div className="w-16 h-16 bg-gradient-to-br from-primary/40 to-primary/15 rounded-2xl flex items-center justify-center flex-shrink-0 text-primary group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-primary/30 transition-all duration-500">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path d="M10 20v-6h4v6m7-15H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-1 16H4v-5h12v5zm0-7H4V8h12v6z" strokeWidth="2" strokeLinecap="round" />
+                  <rect x="2" y="3" width="20" height="14" rx="2" strokeWidth="2" />
+                  <path d="M8 21h8M2 17h20" strokeWidth="2" strokeLinecap="round" />
                 </svg>
               </div>
               <div className="flex-1">
