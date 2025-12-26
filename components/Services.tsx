@@ -2,6 +2,28 @@ import React, { useState } from 'react';
 
 const Services: React.FC = () => {
   const [expandedCategory, setExpandedCategory] = useState<string | null>('guidewire');
+  const [expandedPlatforms, setExpandedPlatforms] = useState<Set<string>>(new Set());
+  const [expandedServices, setExpandedServices] = useState<Set<string>>(new Set());
+
+  const togglePlatformExpand = (categoryKey: string) => {
+    const newSet = new Set(expandedPlatforms);
+    if (newSet.has(categoryKey)) {
+      newSet.delete(categoryKey);
+    } else {
+      newSet.add(categoryKey);
+    }
+    setExpandedPlatforms(newSet);
+  };
+
+  const toggleServiceExpand = (categoryKey: string) => {
+    const newSet = new Set(expandedServices);
+    if (newSet.has(categoryKey)) {
+      newSet.delete(categoryKey);
+    } else {
+      newSet.add(categoryKey);
+    }
+    setExpandedServices(newSet);
+  };
 
   const servicePortfolios = [
     {
@@ -474,7 +496,7 @@ const Services: React.FC = () => {
                                 Platforms & Tools
                               </p>
                               <div className="flex flex-wrap gap-2 mb-4">
-                                {category.platforms.split(',').slice(0, 3).map((tool, i) => (
+                                {category.platforms.split(',').slice(0, expandedPlatforms.has(`${expandedCategory}-${idx}`) ? undefined : 3).map((tool, i) => (
                                   <span
                                     key={i}
                                     className="inline-block px-3 py-1.5 rounded-lg bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 text-text-secondary text-xs font-medium group-hover/col:border-primary/40 transition-colors duration-300"
@@ -483,9 +505,12 @@ const Services: React.FC = () => {
                                   </span>
                                 ))}
                                 {category.platforms.split(',').length > 3 && (
-                                  <span className="inline-block px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-primary text-xs font-medium">
-                                    +{category.platforms.split(',').length - 3} more
-                                  </span>
+                                  <button
+                                    onClick={() => togglePlatformExpand(`${expandedCategory}-${idx}`)}
+                                    className="inline-block px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-primary text-xs font-medium hover:bg-primary/20 hover:border-primary/40 transition-all duration-300 cursor-pointer"
+                                  >
+                                    {expandedPlatforms.has(`${expandedCategory}-${idx}`) ? '- Show less' : `+${category.platforms.split(',').length - 3} more`}
+                                  </button>
                                 )}
                               </div>
                               <p className="text-sm text-text-secondary leading-relaxed">
@@ -500,16 +525,20 @@ const Services: React.FC = () => {
                                 Services Offered
                               </p>
                               <ul className="space-y-2 mb-4">
-                                {category.offerings.split(',').slice(0, 3).map((offering, i) => (
+                                {category.offerings.split(',').slice(0, expandedServices.has(`${expandedCategory}-${idx}`) ? undefined : 3).map((offering, i) => (
                                   <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
                                     <span className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0"></span>
                                     {offering.trim()}
                                   </li>
                                 ))}
                                 {category.offerings.split(',').length > 3 && (
-                                  <li className="text-sm text-accent font-medium">
-                                    + {category.offerings.split(',').length - 3} more services
-                                  </li>
+                                  <button
+                                    onClick={() => toggleServiceExpand(`${expandedCategory}-${idx}`)}
+                                    className="flex items-start gap-2 text-sm text-accent font-medium hover:text-accent/80 transition-colors duration-300 cursor-pointer"
+                                  >
+                                    <span className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0"></span>
+                                    {expandedServices.has(`${expandedCategory}-${idx}`) ? '- Show less services' : `+ ${category.offerings.split(',').length - 3} more services`}
+                                  </button>
                                 )}
                               </ul>
                               <p className="text-sm text-text-secondary leading-relaxed">
