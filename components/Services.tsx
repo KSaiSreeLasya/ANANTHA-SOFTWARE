@@ -525,16 +525,20 @@ const Services: React.FC = () => {
                                 Services Offered
                               </p>
                               <ul className="space-y-2 mb-4">
-                                {category.offerings.split(',').slice(0, 3).map((offering, i) => (
+                                {category.offerings.split(',').slice(0, expandedServices.has(`${expandedCategory}-${idx}`) ? undefined : 3).map((offering, i) => (
                                   <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
                                     <span className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0"></span>
                                     {offering.trim()}
                                   </li>
                                 ))}
                                 {category.offerings.split(',').length > 3 && (
-                                  <li className="text-sm text-accent font-medium">
-                                    + {category.offerings.split(',').length - 3} more services
-                                  </li>
+                                  <button
+                                    onClick={() => toggleServiceExpand(`${expandedCategory}-${idx}`)}
+                                    className="flex items-start gap-2 text-sm text-accent font-medium hover:text-accent/80 transition-colors duration-300 cursor-pointer"
+                                  >
+                                    <span className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0"></span>
+                                    {expandedServices.has(`${expandedCategory}-${idx}`) ? '- Show less services' : `+ ${category.offerings.split(',').length - 3} more services`}
+                                  </button>
                                 )}
                               </ul>
                               <p className="text-sm text-text-secondary leading-relaxed">
