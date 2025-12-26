@@ -2,6 +2,28 @@ import React, { useState } from 'react';
 
 const Services: React.FC = () => {
   const [expandedCategory, setExpandedCategory] = useState<string | null>('guidewire');
+  const [expandedPlatforms, setExpandedPlatforms] = useState<Set<string>>(new Set());
+  const [expandedServices, setExpandedServices] = useState<Set<string>>(new Set());
+
+  const togglePlatformExpand = (categoryKey: string) => {
+    const newSet = new Set(expandedPlatforms);
+    if (newSet.has(categoryKey)) {
+      newSet.delete(categoryKey);
+    } else {
+      newSet.add(categoryKey);
+    }
+    setExpandedPlatforms(newSet);
+  };
+
+  const toggleServiceExpand = (categoryKey: string) => {
+    const newSet = new Set(expandedServices);
+    if (newSet.has(categoryKey)) {
+      newSet.delete(categoryKey);
+    } else {
+      newSet.add(categoryKey);
+    }
+    setExpandedServices(newSet);
+  };
 
   const servicePortfolios = [
     {
