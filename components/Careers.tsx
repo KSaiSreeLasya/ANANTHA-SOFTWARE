@@ -90,6 +90,32 @@ const Careers: React.FC = () => {
         throw insertError;
       }
 
+      // Send email notification
+      try {
+        const emailResponse = await fetch('http://localhost:3001/api/send-careers-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            phone: formData.phone,
+            position: formData.position,
+            startDate: startDate,
+            resumeUrl: publicUrl,
+            linkedinUrl: formData.linkedin,
+          }),
+        });
+
+        if (!emailResponse.ok) {
+          console.warn('Email notification failed, but application was saved');
+        }
+      } catch (emailError) {
+        console.warn('Email service unavailable, but application was saved', emailError);
+      }
+
       setIsSubmitted(true);
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error: any) {
