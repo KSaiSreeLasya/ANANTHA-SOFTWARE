@@ -359,67 +359,163 @@ const Services: React.FC = () => {
         </div>
 
         {/* Service Portfolios Section */}
-        <div className="mt-24 pt-20 border-t border-primary/20">
-          <div className="text-center mb-12 animate-fade-in-up">
-            <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4">Detailed Service Portfolios</h3>
-            <div className="divider w-16 mx-auto hover:w-24 transition-all duration-500"></div>
+        <div className="mt-24 pt-20 border-t border-primary/20 relative">
+          {/* Background decorations */}
+          <div className="absolute -top-32 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
+          <div className="absolute -bottom-32 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
+
+          <div className="text-center mb-16 animate-fade-in-up relative z-10">
+            <div className="inline-block mb-4 px-6 py-2.5 rounded-full bg-gradient-to-r from-primary/15 to-accent/15 border border-primary/40 text-primary text-xs font-bold uppercase tracking-widest">
+              <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-secondary rounded-full inline-block mr-3 animate-pulse-scale"></span>
+              Expertise Breakdown
+            </div>
+            <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-4 text-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text">
+              Service Portfolios
+            </h3>
+            <div className="divider w-20 mx-auto hover:w-32 transition-all duration-500"></div>
+            <p className="text-text-secondary text-base md:text-lg max-w-2xl mx-auto mt-6 font-medium">
+              Comprehensive solutions across multiple domains and technologies
+            </p>
           </div>
 
-          {/* Portfolio Tabs */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+          {/* Portfolio Tabs - Enhanced Design */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 mb-16 relative z-10">
             {servicePortfolios.map((portfolio, index) => (
               <button
                 key={portfolio.id}
                 onClick={() => setExpandedCategory(expandedCategory === portfolio.id ? null : portfolio.id)}
-                className={`p-4 rounded-xl transition-all duration-400 card-hover group border ${
+                className={`relative group overflow-hidden rounded-2xl transition-all duration-500 animate-fade-in-up ${
                   expandedCategory === portfolio.id
-                    ? 'bg-gradient-to-br from-primary/30 to-primary/10 border-primary text-primary shadow-lg shadow-primary/20'
-                    : 'bg-gradient-card border-primary/30 text-text-secondary hover:border-primary hover:text-primary'
-                } animate-fade-in-up`}
+                    ? 'shadow-2xl shadow-primary/40'
+                    : 'hover:shadow-xl hover:shadow-primary/20'
+                }`}
                 style={{animationDelay: `${0.05 * index}s`}}
               >
-                <div className="text-2xl mb-2">{portfolio.icon}</div>
-                <div className="text-xs md:text-sm font-bold uppercase tracking-wider text-center">{portfolio.name}</div>
+                <div className={`absolute inset-0 transition-all duration-500 ${
+                  expandedCategory === portfolio.id
+                    ? 'bg-gradient-to-br from-primary/40 via-primary/20 to-accent/20'
+                    : 'bg-gradient-to-br from-primary/10 to-accent/5 group-hover:from-primary/20 group-hover:to-accent/15'
+                }`}></div>
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
+                  expandedCategory === portfolio.id ? 'opacity-100' : ''
+                } bg-gradient-to-t from-primary/10 to-transparent`}></div>
+                <div className="relative p-5 md:p-6 border border-primary/40 rounded-2xl backdrop-blur-sm h-full flex flex-col items-center justify-center">
+                  <div className={`text-4xl mb-3 transform transition-transform duration-500 ${
+                    expandedCategory === portfolio.id ? 'scale-125' : 'group-hover:scale-110'
+                  }`}>{portfolio.icon}</div>
+                  <div className={`text-xs md:text-sm font-bold uppercase tracking-wider text-center transition-colors duration-300 ${
+                    expandedCategory === portfolio.id ? 'text-primary' : 'text-text-secondary group-hover:text-primary'
+                  }`}>{portfolio.name}</div>
+                  {expandedCategory === portfolio.id && (
+                    <div className="mt-2 w-8 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full animate-pulse"></div>
+                  )}
+                </div>
               </button>
             ))}
           </div>
 
-          {/* Expanded Portfolio Details */}
+          {/* Expanded Portfolio Details - Enhanced */}
           {expandedCategory && (
-            <div className="animate-fade-in-up">
+            <div className="animate-fade-in-up relative z-10">
               {servicePortfolios.map((portfolio) => {
                 if (portfolio.id !== expandedCategory) return null;
 
                 return (
-                  <div key={portfolio.id} className="space-y-4">
+                  <div key={portfolio.id} className="space-y-6">
+                    {/* Portfolio Title */}
+                    <div className="mb-8">
+                      <h4 className="text-3xl md:text-4xl font-black text-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text uppercase tracking-tight mb-4">
+                        {portfolio.name}
+                      </h4>
+                      <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+                    </div>
+
+                    {/* Service Cards Grid */}
                     {portfolio.categories.map((category, idx) => (
                       <div
                         key={idx}
-                        className="gradient-card p-6 md:p-8 rounded-2xl border-primary/30 card-hover group animate-fade-in-up"
+                        className="group relative overflow-hidden rounded-3xl border border-primary/30 backdrop-blur-sm hover:border-primary/60 transition-all duration-500 animate-fade-in-up"
                         style={{animationDelay: `${0.1 * idx}s`}}
                       >
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-                          {/* Service Name */}
-                          <div>
-                            <h4 className="text-base md:text-lg font-bold text-primary group-hover:text-secondary transition-colors duration-300 mb-2">
-                              {category.service}
-                            </h4>
+                        {/* Background Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                        {/* Animated Border Glow */}
+                        <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
+
+                        <div className="relative p-6 md:p-10">
+                          {/* Service Header */}
+                          <div className="mb-8">
+                            <div className="flex items-start gap-4 mb-4">
+                              <div className="w-12 h-12 bg-gradient-to-br from-primary/40 to-secondary/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
+                                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path d="M13 10V3L4 14h7v7l9-11h-7z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                              </div>
+                              <div className="flex-1">
+                                <h5 className="text-lg md:text-xl font-bold text-white group-hover:text-primary transition-colors duration-300 mb-2">
+                                  {category.service}
+                                </h5>
+                                <div className="flex flex-wrap gap-2">
+                                  <span className="inline-block px-3 py-1 rounded-full bg-primary/20 border border-primary/40 text-primary text-xs font-semibold uppercase tracking-wide">
+                                    Service
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                           </div>
 
-                          {/* Platforms/Tools */}
-                          <div>
-                            <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">Platforms & Tools</p>
-                            <p className="text-sm text-text-secondary leading-relaxed">
-                              {category.platforms}
-                            </p>
-                          </div>
+                          {/* Content Grid */}
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {/* Platforms/Tools */}
+                            <div className="border-l-2 border-primary/30 pl-6 group/col">
+                              <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3 flex items-center gap-2">
+                                <span className="w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full"></span>
+                                Platforms & Tools
+                              </p>
+                              <div className="flex flex-wrap gap-2 mb-4">
+                                {category.platforms.split(',').slice(0, 3).map((tool, i) => (
+                                  <span
+                                    key={i}
+                                    className="inline-block px-3 py-1.5 rounded-lg bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 text-text-secondary text-xs font-medium group-hover/col:border-primary/40 transition-colors duration-300"
+                                  >
+                                    {tool.trim()}
+                                  </span>
+                                ))}
+                                {category.platforms.split(',').length > 3 && (
+                                  <span className="inline-block px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-primary text-xs font-medium">
+                                    +{category.platforms.split(',').length - 3} more
+                                  </span>
+                                )}
+                              </div>
+                              <p className="text-sm text-text-secondary leading-relaxed">
+                                {category.platforms}
+                              </p>
+                            </div>
 
-                          {/* Offerings */}
-                          <div>
-                            <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">Services Offered</p>
-                            <p className="text-sm text-text-secondary leading-relaxed">
-                              {category.offerings}
-                            </p>
+                            {/* Services Offered */}
+                            <div className="border-l-2 border-accent/30 pl-6 group/col">
+                              <p className="text-xs font-bold text-accent uppercase tracking-widest mb-3 flex items-center gap-2">
+                                <span className="w-2 h-2 bg-gradient-to-r from-accent to-secondary rounded-full"></span>
+                                Services Offered
+                              </p>
+                              <ul className="space-y-2 mb-4">
+                                {category.offerings.split(',').slice(0, 3).map((offering, i) => (
+                                  <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
+                                    <span className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0"></span>
+                                    {offering.trim()}
+                                  </li>
+                                ))}
+                                {category.offerings.split(',').length > 3 && (
+                                  <li className="text-sm text-accent font-medium">
+                                    + {category.offerings.split(',').length - 3} more services
+                                  </li>
+                                )}
+                              </ul>
+                              <p className="text-sm text-text-secondary leading-relaxed">
+                                {category.offerings}
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
