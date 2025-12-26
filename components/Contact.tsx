@@ -40,23 +40,9 @@ const Contact: React.FC = () => {
 
       // Send email notification
       try {
-        const emailResponse = await fetch('http://localhost:3001/api/send-contact-email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            message: formData.message,
-          }),
-        });
-
-        if (!emailResponse.ok) {
-          console.warn('Email notification failed, but form was saved');
-        }
+        await sendContactEmail(formData.name, formData.email, formData.message);
       } catch (emailError) {
-        console.warn('Email service unavailable, but form was saved', emailError);
+        console.warn('Email notification failed, but form was saved', emailError);
       }
 
       setIsSuccess(true);
