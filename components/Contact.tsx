@@ -22,6 +22,7 @@ const Contact: React.FC = () => {
       const ipAddress = await getClientIp();
       const userAgent = getUserAgent();
 
+      // Save to Supabase
       const { error } = await supabase
         .from('contact_submissions')
         .insert([
@@ -35,6 +36,27 @@ const Contact: React.FC = () => {
         ]);
 
       if (error) throw error;
+
+      // Send email notification
+      try {
+        const emailResponse = await fetch('http://localhost:3001/api/send-contact-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+          }),
+        });
+
+        if (!emailResponse.ok) {
+          console.warn('Email notification failed, but form was saved');
+        }
+      } catch (emailError) {
+        console.warn('Email service unavailable, but form was saved', emailError);
+      }
 
       setIsSuccess(true);
       setFormData({ name: '', email: '', message: '' });
