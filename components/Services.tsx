@@ -272,8 +272,16 @@ const Services: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="flex items-start gap-6 relative z-10">
               <div className="w-16 h-16 bg-gradient-to-br from-secondary/40 to-secondary/15 rounded-2xl flex items-center justify-center flex-shrink-0 text-secondary group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-secondary/30 transition-all duration-500">
-                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <circle cx="8" cy="6" r="1.5" fill="currentColor" />
+                  <circle cx="16" cy="6" r="1.5" fill="currentColor" />
+                  <circle cx="12" cy="14" r="1.5" fill="currentColor" />
+                  <circle cx="8" cy="18" r="1.5" fill="currentColor" />
+                  <circle cx="16" cy="18" r="1.5" fill="currentColor" />
+                  <line x1="8" y1="7.5" x2="12" y2="12.5" strokeWidth="1.5" />
+                  <line x1="16" y1="7.5" x2="12" y2="12.5" strokeWidth="1.5" />
+                  <line x1="12" y1="15.5" x2="8" y2="16.5" strokeWidth="1.5" />
+                  <line x1="12" y1="15.5" x2="16" y2="16.5" strokeWidth="1.5" />
                 </svg>
               </div>
               <div className="flex-1">
