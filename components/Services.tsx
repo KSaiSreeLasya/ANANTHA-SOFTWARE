@@ -340,19 +340,20 @@ const Services: React.FC = () => {
           </div>
 
           {/* Cloud Services */}
-          <div className="gradient-card-subtle p-8 rounded-2xl card-hover group border-primary/40 animate-fade-in-up relative overflow-hidden" style={{animationDelay: '0.5s'}}>
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="flex items-start gap-6 relative z-10">
-              <div className="w-16 h-16 bg-gradient-to-br from-accent/40 to-accent/15 rounded-2xl flex items-center justify-center flex-shrink-0 text-accent group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-accent/30 transition-all duration-500">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="gradient-card-subtle p-8 md:p-10 rounded-3xl card-hover group border-primary/40 animate-fade-in-up relative overflow-hidden transform hover:-translate-y-3" style={{animationDelay: '0.5s'}}>
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-accent/0 via-accent/20 to-accent/0 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-600 -z-10"></div>
+            <div className="flex items-start gap-6 md:gap-8 relative z-10">
+              <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-accent/50 to-accent/20 rounded-3xl flex items-center justify-center flex-shrink-0 text-accent group-hover:scale-125 group-hover:shadow-2xl group-hover:shadow-accent/40 transition-all duration-600">
+                <svg className="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path d="M19 13c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2v-2c0-1.1.9-2 2-2" strokeWidth="1.5" strokeLinecap="round" />
                   <path d="M12 6c-2.76 0-5 2.24-5 5 0 1.16.39 2.24 1.05 3.1M12 6c2.76 0 5 2.24 5 5-.66.86-1.05 1.94-1.05 3.1" strokeWidth="1.5" strokeLinecap="round" />
                   <circle cx="12" cy="11" r="1.5" fill="currentColor" />
                 </svg>
               </div>
               <div className="flex-1">
-                <h4 className="text-lg font-bold mb-2 group-hover:text-accent transition-colors duration-500">Cloud Services</h4>
-                <p className="text-text-muted text-sm leading-relaxed group-hover:text-text-secondary transition-colors duration-500">
+                <h4 className="text-lg md:text-xl font-bold mb-3 group-hover:text-accent transition-colors duration-500 tracking-tight">Cloud Services</h4>
+                <p className="text-text-muted text-sm md:text-base leading-relaxed group-hover:text-text-secondary transition-colors duration-500 font-light">
                   AWS, Azure, and GCP deployment, management, and optimization for enterprise infrastructure.
                 </p>
               </div>
