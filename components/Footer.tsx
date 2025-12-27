@@ -81,20 +81,23 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </p>
           </div>
 
-          {/* Quick Navigation */}
+          {/* Quick Navigation - Enhanced */}
           <div className="animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            <h4 className="text-white font-bold mb-8 text-sm uppercase tracking-widest">Navigation</h4>
-            <ul className="space-y-3">
+            <h4 className="text-white font-bold mb-10 text-sm uppercase tracking-widest">Navigation</h4>
+            <ul className="space-y-4">
               {navLinks.map((link, idx) => (
                 <li key={link.id}>
                   <button
                     onClick={() => onNavigate(link.id)}
-                    className="text-xs text-text-muted uppercase tracking-widest hover:text-primary transition-all duration-400 hover:translate-x-1 group relative px-3 py-2 rounded-md hover:bg-primary/10"
-                    style={{animation: `slideInLeft 0.5s ease-out ${0.05 * idx}s backwards`}}
+                    className="text-xs text-text-muted uppercase tracking-widest hover:text-primary transition-all duration-500 hover:translate-x-2 group relative px-4 py-2.5 rounded-lg hover:bg-gradient-to-r hover:from-primary/15 hover:to-primary/8"
+                    style={{animation: `slideInLeft 0.6s ease-out ${0.06 * idx}s backwards`}}
                   >
-                    <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 blur-sm rounded-md -z-10"></div>
-                    <span className="relative z-10">{link.label}</span>
-                    <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-400"></div>
+                    <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/15 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg rounded-lg -z-10"></div>
+                    <span className="relative z-10 flex items-center gap-2">
+                      <span className="w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-2 transition-all duration-500"></span>
+                      {link.label}
+                    </span>
+                    <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-500"></div>
                   </button>
                 </li>
               ))}
