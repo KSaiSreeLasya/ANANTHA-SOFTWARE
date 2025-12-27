@@ -93,10 +93,12 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
           <span className="block text-gradient animate-fade-in-up relative" style={{animationDelay: '0.4s', animationDuration: '0.9s', background: 'linear-gradient(120deg, #3b82f6 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 8s ease infinite', fontWeight: 900, lineHeight: '1.05'}}>Reality</span>
         </h1>
 
-        {/* Subheading */}
-        <p className="text-lg md:text-2xl text-text-secondary max-w-4xl mx-auto mb-18 font-light leading-relaxed animate-fade-in-up group" style={{animationDelay: '0.35s', animationDuration: '0.8s', letterSpacing: '0.5px', fontWeight: '300'}}>
-          Cutting-edge solutions in VLSI, AI/ML, and Software Engineering. Empowering businesses to innovate, scale, and lead their industries with advanced technology partnerships.
-          <div className="absolute -inset-8 bg-gradient-to-r from-secondary/0 via-secondary/12 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl rounded-xl -z-10 pointer-events-none"></div>
+        {/* Subheading with Enhanced Typography */}
+        <p className="text-lg md:text-xl lg:text-2xl text-text-secondary max-w-4xl mx-auto mb-24 font-light leading-relaxed animate-fade-in-up group" style={{animationDelay: '0.35s', animationDuration: '0.9s', letterSpacing: '0.3px', fontWeight: '300', lineHeight: '1.8'}}>
+          <span className="text-text font-medium">Cutting-edge solutions</span> in VLSI, AI/ML, and Software Engineering.
+          <br className="hidden md:block" />
+          Empowering businesses to innovate, scale, and lead their industries with advanced technology partnerships.
+          <div className="absolute -inset-8 bg-gradient-to-r from-secondary/0 via-secondary/15 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl rounded-xl -z-10 pointer-events-none"></div>
         </p>
 
         {/* CTA Buttons */}
