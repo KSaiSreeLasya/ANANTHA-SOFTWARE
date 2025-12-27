@@ -64,39 +64,45 @@ const App: React.FC = () => {
         return (
           <div className="animate-in fade-in duration-700">
             <Hero navigateTo={navigateTo} />
-            <div className="bg-gradient-to-b from-[#0a0a0a] via-[#0f1419] to-[#0a0a0a] py-32 border-t border-primary/10 relative overflow-hidden">
+            <div className="bg-gradient-to-b from-[#030712] via-[#0f1419] to-[#030712] py-40 border-t border-primary/15 relative overflow-hidden" style={{boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.05)'}}>
               {/* Background decorative elements */}
               <div className="absolute inset-0 overflow-hidden -z-10">
-                <div className="absolute top-0 left-1/4 w-72 h-72 bg-primary/8 rounded-full mix-blend-screen filter blur-3xl opacity-40 animate-float" style={{animation: 'float 20s ease-in-out infinite'}}></div>
-                <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/8 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-float-slow" style={{animation: 'floatSlow 25s ease-in-out infinite'}}></div>
+                <div className="absolute top-0 left-1/4 w-80 h-80 bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float" style={{animation: 'float 20s ease-in-out infinite'}}></div>
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-40 animate-float-slow" style={{animation: 'floatSlow 25s ease-in-out infinite'}}></div>
+                <div className="absolute top-1/2 right-10 w-72 h-72 bg-secondary/8 rounded-full mix-blend-screen filter blur-3xl opacity-30" style={{animation: 'float 22s ease-in-out infinite 3s'}}></div>
               </div>
 
               <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-                <div className="inline-block mb-8 animate-fade-in-up" style={{animationDuration: '0.8s'}}>
-                  <div className="px-6 py-2 text-primary text-xs font-semibold uppercase tracking-widest border border-primary/30 rounded-full bg-primary/8 backdrop-blur-sm">
+                <div className="inline-block mb-10 animate-fade-in-up" style={{animationDuration: '0.8s'}}>
+                  <div className="px-7 py-3 text-primary text-xs font-bold uppercase tracking-widest border border-primary/40 rounded-full bg-gradient-to-r from-primary/12 to-primary/6 backdrop-blur-lg" style={{boxShadow: '0 0 30px rgba(31, 111, 235, 0.15)'}}>
                     Our Core Strength
                   </div>
                 </div>
 
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 uppercase tracking-tight animate-fade-in-up" style={{animationDelay: '0.1s', animationDuration: '0.8s'}}>
-                  <span className="text-gradient inline-block" style={{backgroundImage: 'linear-gradient(135deg, #1f6feb 0%, #00d4ff 50%, #8b5cf6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>Excellence in Engineering</span>
+                <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-10 uppercase tracking-tight animate-fade-in-up" style={{animationDelay: '0.1s', animationDuration: '0.8s', lineHeight: '1.1'}}>
+                  <span className="text-gradient inline-block" style={{backgroundImage: 'linear-gradient(135deg, #1f6feb 0%, #00d4ff 50%, #8b5cf6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 6s ease infinite'}}>Excellence in Engineering</span>
                 </h2>
 
-                <div className="h-1 w-24 bg-gradient-to-r from-primary via-accent to-secondary mx-auto mb-12 animate-fade-in-up rounded-full" style={{animationDelay: '0.2s', animationDuration: '0.8s', boxShadow: '0 0 20px rgba(31, 111, 235, 0.4)'}}></div>
+                <div className="h-1.5 w-32 bg-gradient-to-r from-primary via-accent to-secondary mx-auto mb-14 animate-fade-in-up rounded-full" style={{animationDelay: '0.2s', animationDuration: '0.8s', boxShadow: '0 0 30px rgba(31, 111, 235, 0.4)'}}></div>
 
-                <p className="text-text-secondary max-w-3xl mx-auto leading-relaxed text-lg animate-fade-in-up group" style={{animationDelay: '0.3s', animationDuration: '0.8s'}}>
+                <p className="text-text-secondary max-w-4xl mx-auto leading-relaxed text-lg md:text-xl animate-fade-in-up group" style={{animationDelay: '0.3s', animationDuration: '0.8s', letterSpacing: '0.3px'}}>
                   Anantha Software is a global leader in Silicon Engineering and Integrated Solutions.
                   We specialize in VLSI, AI/ML development, and bespoke software applications, driving innovation across industries.
-                  <div className="absolute -inset-4 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-lg -z-10 pointer-events-none"></div>
+                  <div className="absolute -inset-6 bg-gradient-to-r from-primary/0 via-primary/8 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl rounded-xl -z-10 pointer-events-none"></div>
                 </p>
 
-                <div className="mt-16 animate-fade-in-up" style={{animationDelay: '0.4s', animationDuration: '0.8s'}}>
+                <div className="mt-20 animate-fade-in-up" style={{animationDelay: '0.4s', animationDuration: '0.8s'}}>
                   <button
                     onClick={() => navigateTo('services')}
-                    className="px-12 py-5 border-2 border-primary text-primary font-bold rounded-lg uppercase tracking-widest text-sm transition-all duration-400 relative group overflow-hidden hover:bg-primary/10 hover:shadow-lg hover:shadow-primary/30 hover:scale-105 active:scale-95 bg-gradient-to-r from-primary/5 to-primary/2"
+                    className="px-14 py-6 border-2.5 border-primary text-primary font-bold rounded-xl uppercase tracking-widest text-sm transition-all duration-500 relative group overflow-hidden hover:bg-gradient-to-r hover:from-primary/20 hover:to-primary/10 hover:shadow-lg hover:shadow-primary/40 hover:scale-110 active:scale-95 bg-gradient-to-r from-primary/8 to-primary/3"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
-                    <span className="relative z-10">Explore Our Expertise</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
+                    <span className="relative z-10 flex items-center justify-center gap-3">
+                      Explore Our Expertise
+                      <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </span>
                   </button>
                 </div>
               </div>
