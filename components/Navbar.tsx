@@ -75,17 +75,17 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                   onClick={item.external ? undefined : (e) => handleLinkClick(e, item.id)}
                   target={item.external ? '_blank' : undefined}
                   rel={item.external ? 'noopener noreferrer' : undefined}
-                  className={`px-5 py-2.5 text-sm font-semibold transition-all duration-500 relative group border-b-2 rounded-lg ${
+                  className={`px-6 py-2.5 text-sm font-semibold transition-all duration-500 relative group border-b-2 rounded-xl overflow-hidden ${
                     activePage === item.id
-                      ? 'text-secondary border-b-secondary bg-gradient-to-b from-secondary/14 to-secondary/6'
-                      : 'text-text-muted border-b-transparent hover:text-secondary hover:border-b-secondary/60 hover:bg-gradient-to-b from-secondary/12 to-secondary/5'
+                      ? 'text-secondary border-b-secondary bg-gradient-to-br from-secondary/18 to-secondary/8 shadow-lg shadow-secondary/20'
+                      : 'text-text-muted border-b-transparent hover:text-secondary hover:border-b-secondary/60 hover:bg-gradient-to-br from-secondary/14 to-secondary/6 hover:shadow-md hover:shadow-secondary/15'
                   }`}
                   style={{animation: `fadeInUp 0.6s ease-out ${0.06 * index}s backwards`}}
                 >
-                  <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/15 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm rounded-lg -z-10"></div>
-                  <span className="relative z-10">{item.label}</span>
+                  <div className="absolute -inset-2 bg-gradient-to-r from-secondary/0 via-secondary/20 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg rounded-lg -z-10"></div>
+                  <span className="relative z-10 flex items-center justify-center">{item.label}</span>
                   {activePage === item.id && (
-                    <div className="absolute -bottom-0.5 left-0 right-0 h-1.5 bg-gradient-to-r from-secondary via-accent to-secondary animate-glow rounded-full" style={{boxShadow: '0 0 20px rgba(251, 191, 36, 0.6)'}}></div>
+                    <div className="absolute -bottom-0.5 left-0 right-0 h-1.5 bg-gradient-to-r from-secondary via-accent to-secondary animate-glow rounded-full" style={{boxShadow: '0 0 25px rgba(251, 191, 36, 0.7)'}}></div>
                   )}
                 </a>
               ))}
