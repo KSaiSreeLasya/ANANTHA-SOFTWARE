@@ -104,17 +104,17 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Newsletter - Enhanced */}
           <div className="animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-            <h4 className="text-white font-bold mb-8 text-sm uppercase tracking-widest">Stay Updated</h4>
+            <h4 className="text-white font-bold mb-10 text-sm uppercase tracking-widest">Stay Updated</h4>
             {newsletterSuccess ? (
-              <div className="bg-gradient-to-r from-tertiary/30 to-tertiary/10 border border-tertiary/40 text-tertiary p-4 rounded-lg text-xs text-center font-medium animate-pulse-scale shadow-lg shadow-tertiary/20">
+              <div className="bg-gradient-to-r from-tertiary/35 to-tertiary/12 border border-tertiary/50 text-tertiary p-5 rounded-xl text-xs text-center font-bold animate-pulse-scale shadow-lg shadow-tertiary/25 uppercase tracking-wide">
                 ✓ Thanks for subscribing!
               </div>
             ) : (
-              <form className="space-y-3" onSubmit={handleNewsletterSubmit}>
+              <form className="space-y-4 group" onSubmit={handleNewsletterSubmit}>
                 {newsletterError && (
-                  <div className="bg-red-500/20 border border-red-500/40 text-red-400 p-3 rounded-lg text-xs text-center font-medium animate-pulse-smooth">
+                  <div className="bg-red-500/25 border border-red-500/50 text-red-300 p-4 rounded-lg text-xs text-center font-bold animate-pulse-smooth uppercase tracking-wide">
                     {newsletterError}
                   </div>
                 )}
@@ -124,12 +124,12 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   placeholder="name@company.com"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
-                  className="gradient-card px-4 py-3 outline-none focus:border-primary focus:shadow-lg focus:shadow-primary/30 w-full text-white text-xs rounded-lg transition-all duration-400"
+                  className="gradient-card px-5 py-3.5 outline-none focus:border-primary focus:shadow-xl focus:shadow-primary/40 w-full text-white text-xs rounded-lg transition-all duration-500 placeholder:text-text-muted/50 focus:bg-gradient-to-br focus:from-primary/10 focus:to-primary/5"
                 />
                 <button
                   type="submit"
                   disabled={newsletterSubmitting}
-                  className="btn-primary btn-primary-solid rounded-lg w-full text-[10px] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-400 hover:shadow-lg hover:shadow-primary/30"
+                  className="btn-primary btn-primary-solid rounded-lg w-full text-[11px] font-bold uppercase tracking-wider disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-500 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-1"
                 >
                   {newsletterSubmitting ? 'Subscribing...' : 'Subscribe'}
                 </button>
