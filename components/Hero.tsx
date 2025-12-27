@@ -126,7 +126,7 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
         </div>
 
         {/* Stats Row */}
-        <div className="mt-28 grid grid-cols-3 gap-6 md:gap-10 max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: '0.6s', animationDuration: '0.8s'}}>
+        <div className="mt-32 grid grid-cols-3 gap-8 md:gap-12 max-w-4xl mx-auto animate-fade-in-up" style={{animationDelay: '0.6s', animationDuration: '0.8s'}}>
           {[
             { value: '4+', label: 'Years', delay: 0 },
             { value: '50+', label: 'Team Members', delay: 0.1 },
@@ -134,14 +134,15 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
           ].map((stat, i) => (
             <div
               key={i}
-              className="text-center group/stat cursor-default relative p-8 rounded-2xl border border-primary/25 hover:border-primary/60 transition-all duration-500 bg-gradient-to-br from-primary/10 to-primary/4 hover:from-primary/18 hover:to-primary/10 overflow-hidden backdrop-blur-lg"
+              className="text-center group/stat cursor-default relative p-10 rounded-3xl border border-secondary/35 hover:border-secondary/70 transition-all duration-600 bg-gradient-to-br from-secondary/12 to-secondary/5 hover:from-secondary/20 hover:to-secondary/12 overflow-hidden backdrop-blur-xl"
               style={{animation: 'fadeInUp 0.8s ease-out', animationDelay: `${0.65 + stat.delay}s`, animationFillMode: 'both'}}
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-transparent to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/25 to-primary/0 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500 blur-xl -z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-secondary/20 via-transparent to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-600 rounded-3xl"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-600 blur-xl -z-10"></div>
+              <div className="absolute top-0 right-0 w-24 h-24 bg-secondary/15 rounded-full mix-blend-screen filter blur-2xl opacity-0 group-hover/stat:opacity-100 transition-opacity duration-600 -z-10"></div>
               <div className="relative z-10">
-                <div className="text-4xl md:text-5xl font-black text-gradient group-hover/stat:scale-120 transition-transform duration-500 inline-block">{stat.value}</div>
-                <div className="text-xs text-text-muted uppercase tracking-widest font-bold group-hover/stat:text-primary transition-colors duration-500 mt-3 letter-spacing-wide">{stat.label}</div>
+                <div className="text-5xl md:text-6xl font-black bg-gradient-to-r from-secondary to-accent bg-clip-text group-hover/stat:scale-125 transition-transform duration-600 inline-block" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>{stat.value}</div>
+                <div className="text-xs text-text-muted uppercase tracking-widest font-bold group-hover/stat:text-secondary transition-colors duration-600 mt-4">{stat.label}</div>
               </div>
             </div>
           ))}
