@@ -39,12 +39,12 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center py-20">
         {/* Badge */}
-        <div className="mb-8 inline-block animate-fade-in-up" style={{animationDuration: '0.8s'}}>
-          <div className="px-6 py-3 text-primary text-xs font-semibold uppercase tracking-widest flex items-center gap-3 group relative backdrop-blur-lg border border-primary/30 rounded-full bg-primary/8">
-            <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-secondary rounded-full animate-pulse-scale"></span>
+        <div className="mb-12 inline-block animate-fade-in-up" style={{animationDuration: '0.8s'}}>
+          <div className="px-7 py-3.5 text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-3 group relative backdrop-blur-lg border border-primary/40 rounded-full bg-gradient-to-r from-primary/12 to-primary/6" style={{boxShadow: '0 0 30px rgba(31, 111, 235, 0.15)'}}>
+            <span className="w-3 h-3 bg-gradient-to-r from-primary to-secondary rounded-full animate-pulse-scale"></span>
             <span className="text-primary">Transforming Industries</span>
-            <div className="absolute -inset-2 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg -z-10"></div>
-            <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-500"></div>
+            <div className="absolute -inset-2 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg -z-10"></div>
+            <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-500 rounded-full"></div>
           </div>
         </div>
 
