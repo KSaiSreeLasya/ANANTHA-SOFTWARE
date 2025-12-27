@@ -86,7 +86,7 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
               <span className="absolute -inset-6 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl rounded-xl"></span>
               <span className="relative hover:text-secondary transition-colors duration-500">Transforming</span>
             </span>
-            <span className="inline-block text-gradient ml-3 mr-3 hover:scale-110 transition-transform duration-500" style={{animation: 'gradient-shift 8s ease infinite', backgroundImage: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 900}}>Innovation</span>
+            <span className="inline-block ml-3 mr-3 hover:scale-110 transition-transform duration-500" style={{animation: 'gradient-shift 8s ease infinite', background: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 900, display: 'inline-block'}}>Innovation</span>
             <br />
             <span className="text-text-secondary font-light">Into</span>
           </span>
