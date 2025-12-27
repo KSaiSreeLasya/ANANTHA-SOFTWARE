@@ -91,15 +91,15 @@ const App: React.FC = () => {
                   <div className="absolute -inset-8 bg-gradient-to-r from-secondary/0 via-secondary/12 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-600 blur-2xl rounded-xl -z-10 pointer-events-none"></div>
                 </p>
 
-                <div className="mt-20 animate-fade-in-up" style={{animationDelay: '0.4s', animationDuration: '0.8s'}}>
+                <div className="mt-24 animate-fade-in-up" style={{animationDelay: '0.4s', animationDuration: '0.8s'}}>
                   <button
                     onClick={() => navigateTo('services')}
-                    className="px-14 py-6 border-2.5 border-primary text-primary font-bold rounded-xl uppercase tracking-widest text-sm transition-all duration-500 relative group overflow-hidden hover:bg-gradient-to-r hover:from-primary/20 hover:to-primary/10 hover:shadow-lg hover:shadow-primary/40 hover:scale-110 active:scale-95 bg-gradient-to-r from-primary/8 to-primary/3"
+                    className="px-16 py-6 border-2.5 border-secondary text-secondary font-bold rounded-2xl uppercase tracking-wider text-sm transition-all duration-600 relative group overflow-hidden hover:bg-gradient-to-r hover:from-secondary/22 hover:to-secondary/12 hover:shadow-lg hover:shadow-secondary/40 hover:scale-110 active:scale-95 bg-gradient-to-r from-secondary/10 to-secondary/4"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
                     <span className="relative z-10 flex items-center justify-center gap-3">
                       Explore Our Expertise
-                      <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
                     </span>
