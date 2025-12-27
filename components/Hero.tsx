@@ -101,28 +101,30 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
           <div className="absolute -inset-8 bg-gradient-to-r from-secondary/0 via-secondary/15 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl rounded-xl -z-10 pointer-events-none"></div>
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-10 items-center animate-fade-in-up" style={{animationDelay: '0.5s', animationDuration: '0.8s'}}>
+        {/* CTA Buttons with Enhanced Hover States */}
+        <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 items-center animate-fade-in-up" style={{animationDelay: '0.5s', animationDuration: '0.9s'}}>
           <button
             onClick={() => navigateTo('services')}
-            className="btn-primary-gold btn-primary-solid rounded-2xl px-14 py-6 text-xs font-bold uppercase tracking-wider shadow-glow hover:shadow-2xl transform transition-all hover:scale-110 active:scale-95 duration-500 relative group overflow-hidden"
+            className="btn-primary-gold btn-primary-solid rounded-3xl px-16 py-6 text-xs font-bold uppercase tracking-widest shadow-glow hover:shadow-2xl transform transition-all hover:scale-110 active:scale-95 duration-500 relative group overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
-            <span className="relative z-10 flex items-center gap-3">
-              Explore Services
-              <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
+            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <span className="relative z-10 flex items-center gap-3 justify-center">
+              <span className="relative">Explore Services</span>
+              <svg className="w-5 h-5 group-hover:translate-x-3 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </span>
           </button>
           <button
             onClick={() => navigateTo('contact')}
-            className="btn-primary-outline-gold rounded-2xl px-14 py-6 text-xs font-bold uppercase tracking-wider transform transition-all hover:scale-110 active:scale-95 duration-500 relative group overflow-hidden border-2.5"
+            className="btn-primary-outline-gold rounded-3xl px-16 py-6 text-xs font-bold uppercase tracking-widest transform transition-all hover:scale-110 active:scale-95 duration-500 relative group overflow-hidden border-2.5"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
-            <span className="relative z-10 flex items-center gap-3">
-              Let's Talk
-              <svg className="w-5 h-5 group-hover:rotate-12 transition-transform duration-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="absolute inset-0 bg-gradient-to-r from-secondary/0 via-secondary/40 to-secondary/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
+            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-secondary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <span className="relative z-10 flex items-center gap-3 justify-center">
+              <span className="relative">Let's Talk</span>
+              <svg className="w-5 h-5 group-hover:rotate-12 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </span>
