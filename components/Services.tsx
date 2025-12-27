@@ -407,35 +407,35 @@ const Services: React.FC = () => {
           </div>
 
           {/* Portfolio Tabs - Enhanced Design */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 mb-16 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-5 mb-20 relative z-10">
             {servicePortfolios.map((portfolio, index) => (
               <button
                 key={portfolio.id}
                 onClick={() => setExpandedCategory(expandedCategory === portfolio.id ? null : portfolio.id)}
-                className={`relative group overflow-hidden rounded-2xl transition-all duration-500 animate-fade-in-up ${
+                className={`relative group overflow-hidden rounded-3xl transition-all duration-600 animate-fade-in-up transform hover:-translate-y-2 ${
                   expandedCategory === portfolio.id
-                    ? 'shadow-2xl shadow-primary/40'
-                    : 'hover:shadow-xl hover:shadow-primary/20'
+                    ? 'shadow-2xl shadow-primary/50 -translate-y-2 scale-105'
+                    : 'hover:shadow-2xl hover:shadow-primary/30'
                 }`}
                 style={{animationDelay: `${0.05 * index}s`}}
               >
-                <div className={`absolute inset-0 transition-all duration-500 ${
+                <div className={`absolute inset-0 transition-all duration-600 ${
                   expandedCategory === portfolio.id
-                    ? 'bg-gradient-to-br from-primary/40 via-primary/20 to-accent/20'
-                    : 'bg-gradient-to-br from-primary/10 to-accent/5 group-hover:from-primary/20 group-hover:to-accent/15'
+                    ? 'bg-gradient-to-br from-primary/50 via-primary/30 to-accent/25'
+                    : 'bg-gradient-to-br from-primary/15 to-accent/8 group-hover:from-primary/25 group-hover:to-accent/15'
                 }`}></div>
-                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-600 ${
                   expandedCategory === portfolio.id ? 'opacity-100' : ''
-                } bg-gradient-to-t from-primary/10 to-transparent`}></div>
-                <div className="relative p-5 md:p-6 border border-primary/40 rounded-2xl backdrop-blur-sm h-full flex flex-col items-center justify-center">
-                  <div className={`text-4xl mb-3 transform transition-transform duration-500 ${
-                    expandedCategory === portfolio.id ? 'scale-125' : 'group-hover:scale-110'
+                } bg-gradient-to-t from-primary/15 to-transparent`}></div>
+                <div className="relative p-6 md:p-8 border border-primary/40 rounded-3xl backdrop-blur-sm h-full flex flex-col items-center justify-center gap-3">
+                  <div className={`text-5xl md:text-6xl transform transition-all duration-600 ${
+                    expandedCategory === portfolio.id ? 'scale-150' : 'group-hover:scale-125'
                   }`}>{portfolio.icon}</div>
-                  <div className={`text-xs md:text-sm font-bold uppercase tracking-wider text-center transition-colors duration-300 ${
+                  <div className={`text-xs md:text-sm font-bold uppercase tracking-widest text-center transition-all duration-400 ${
                     expandedCategory === portfolio.id ? 'text-primary' : 'text-text-secondary group-hover:text-primary'
                   }`}>{portfolio.name}</div>
                   {expandedCategory === portfolio.id && (
-                    <div className="mt-2 w-8 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full animate-pulse"></div>
+                    <div className="mt-3 w-10 h-1.5 bg-gradient-to-r from-primary via-secondary to-accent rounded-full animate-pulse"></div>
                   )}
                 </div>
               </button>
