@@ -47,9 +47,9 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-[#030712]/95 via-[#0f1419]/90 to-[#030712]/85 backdrop-blur-xl border-b border-primary/15 shadow-lg" style={{boxShadow: '0 8px 32px rgba(31, 111, 235, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.05)'}}>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-[#0f172a]/96 via-[#1e293b]/92 to-[#0f172a]/88 backdrop-blur-xl border-b border-secondary/25 shadow-lg" style={{boxShadow: '0 8px 32px rgba(251, 191, 36, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.06)'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-24 items-center">
+        <div className="flex justify-between h-24 items-center gap-8">
           {/* Logo */}
           <div
             className="flex-shrink-0 cursor-pointer transition-all duration-500 hover:scale-110 active:scale-95 group"
