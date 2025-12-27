@@ -53,23 +53,24 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
           <div className="max-w-4xl mx-auto relative group">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/12 via-accent/8 to-secondary/10 opacity-0 group-hover:opacity-100 transition-all duration-700 blur-3xl -z-10 rounded-3xl"></div>
             <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/30 via-accent/25 to-secondary/25 opacity-0 group-hover:opacity-100 blur-xl -z-20 rounded-3xl transition-opacity duration-700"></div>
-            <div className="flex flex-col items-center text-center space-y-6 py-20 px-10 relative border border-primary/30 group-hover:border-primary/60 bg-gradient-to-br from-primary/12 to-primary/5 rounded-3xl backdrop-blur-xl transition-all duration-500 overflow-hidden">
-              <div className="absolute top-0 right-0 w-96 h-96 bg-primary/8 rounded-full mix-blend-screen filter blur-3xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
-              <h3 className="text-2xl md:text-3xl font-black group-hover:text-primary transition-colors duration-500 w-full flex flex-col items-center justify-center relative z-10">
-                Anantha Software is now <span className="text-gradient bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text animate-gradient-shift inline-block mt-2" style={{backgroundSize: '200% 200%'}}>ASOCSEMI</span>
+            <div className="flex flex-col items-center text-center space-y-6 py-24 px-12 relative border border-secondary/40 group-hover:border-secondary/80 bg-gradient-to-br from-secondary/14 to-secondary/6 rounded-3xl backdrop-blur-xl transition-all duration-600 overflow-hidden">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/12 rounded-full mix-blend-screen filter blur-3xl opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
+              <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
+              <h3 className="text-3xl md:text-4xl font-black group-hover:text-secondary transition-colors duration-600 w-full flex flex-col items-center justify-center relative z-10 letter-spacing-tight">
+                Anantha Software is now <span className="text-gradient bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text animate-gradient-shift inline-block mt-3" style={{backgroundSize: '200% 200%', animation: 'gradient-shift 8s ease infinite'}}>ASOCSEMI</span>
               </h3>
-              <div className="h-1.5 w-32 bg-gradient-to-r from-transparent via-primary to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-500 rounded-full relative z-10" style={{boxShadow: '0 0 20px rgba(31, 111, 235, 0.3)'}}></div>
-              <p className="text-sm md:text-base text-text-muted leading-relaxed uppercase tracking-wider font-semibold group-hover:text-text-secondary transition-colors duration-500 max-w-2xl relative z-10">
+              <div className="h-2 w-40 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-600 rounded-full relative z-10" style={{boxShadow: '0 0 30px rgba(251, 191, 36, 0.4)'}}></div>
+              <p className="text-sm md:text-base text-text-secondary leading-relaxed uppercase tracking-wider font-medium group-hover:text-text-primary transition-colors duration-600 max-w-2xl relative z-10">
                 Transitioning to ASOCSEMI! We are excited to introduce our expanded semiconductor and engineering services. Our commitment to excellence drives us to deliver top-tier technology.
               </p>
               <button
                 onClick={() => window.open('https://www.asocsemi.com/', '_blank')}
-                className="mt-6 px-10 py-4 btn-primary btn-primary-outline rounded-xl text-xs font-bold uppercase tracking-[0.15em] transform hover:scale-110 active:scale-95 transition-all duration-400 group/btn overflow-hidden relative z-10"
+                className="mt-8 px-12 py-5 btn-primary-outline-gold rounded-2xl text-xs font-bold uppercase tracking-wider transform hover:scale-110 active:scale-95 transition-all duration-500 group/btn overflow-hidden relative z-10 border-2.5"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/25 to-primary/0 transform -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 ease-in-out"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 transform -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 ease-in-out"></div>
                 <span className="relative z-10 flex items-center gap-2">
                   Explore ASOCSEMI
-                  <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </span>
