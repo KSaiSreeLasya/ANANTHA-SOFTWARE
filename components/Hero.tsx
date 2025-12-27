@@ -131,24 +131,27 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
           </button>
         </div>
 
-        {/* Stats Row */}
-        <div className="mt-32 grid grid-cols-3 gap-8 md:gap-12 max-w-4xl mx-auto animate-fade-in-up" style={{animationDelay: '0.6s', animationDuration: '0.8s'}}>
+        {/* Enhanced Stats Row with 3D Effects */}
+        <div className="mt-40 grid grid-cols-3 gap-6 md:gap-10 max-w-4xl mx-auto animate-fade-in-up" style={{animationDelay: '0.6s', animationDuration: '0.9s'}}>
           {[
-            { value: '4+', label: 'Years', delay: 0 },
-            { value: '50+', label: 'Team Members', delay: 0.1 },
-            { value: '3', label: 'Continents', delay: 0.2 }
+            { value: '4+', label: 'Years', delay: 0, icon: '📅' },
+            { value: '50+', label: 'Team Members', delay: 0.1, icon: '👥' },
+            { value: '3', label: 'Continents', delay: 0.2, icon: '🌍' }
           ].map((stat, i) => (
             <div
               key={i}
-              className="text-center group/stat cursor-default relative p-10 rounded-3xl border border-secondary/35 hover:border-secondary/70 transition-all duration-600 bg-gradient-to-br from-secondary/12 to-secondary/5 hover:from-secondary/20 hover:to-secondary/12 overflow-hidden backdrop-blur-xl"
-              style={{animation: 'fadeInUp 0.8s ease-out', animationDelay: `${0.65 + stat.delay}s`, animationFillMode: 'both'}}
+              className="text-center group/stat cursor-default relative p-8 md:p-12 rounded-3xl border border-secondary/35 hover:border-secondary/70 transition-all duration-600 bg-gradient-to-br from-secondary/14 to-secondary/6 hover:from-secondary/25 hover:to-secondary/15 overflow-hidden backdrop-blur-xl transform hover:-translate-y-2"
+              style={{animation: 'fadeInUp 0.9s ease-out', animationDelay: `${0.65 + stat.delay}s`, animationFillMode: 'both', perspective: '1000px'}}
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-secondary/20 via-transparent to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-600 rounded-3xl"></div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-600 blur-xl -z-10"></div>
-              <div className="absolute top-0 right-0 w-24 h-24 bg-secondary/15 rounded-full mix-blend-screen filter blur-2xl opacity-0 group-hover/stat:opacity-100 transition-opacity duration-600 -z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-secondary/25 via-transparent to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-700 rounded-3xl"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/40 to-secondary/0 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-600 blur-2xl -z-10"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/20 rounded-full mix-blend-screen filter blur-3xl opacity-0 group-hover/stat:opacity-60 transition-opacity duration-700 -z-10"></div>
+              <div className="absolute bottom-0 left-0 w-28 h-28 bg-accent/15 rounded-full mix-blend-screen filter blur-2xl opacity-0 group-hover/stat:opacity-40 transition-opacity duration-700 -z-10"></div>
+
               <div className="relative z-10">
-                <div className="text-5xl md:text-6xl font-black bg-gradient-to-r from-secondary to-accent bg-clip-text group-hover/stat:scale-125 transition-transform duration-600 inline-block" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>{stat.value}</div>
-                <div className="text-xs text-text-muted uppercase tracking-widest font-bold group-hover/stat:text-secondary transition-colors duration-600 mt-4">{stat.label}</div>
+                <div className="text-5xl mb-4 group-hover/stat:scale-125 transition-transform duration-600 inline-block">{stat.icon}</div>
+                <div className="text-5xl md:text-7xl font-black bg-gradient-to-r from-secondary via-accent to-secondary bg-clip-text group-hover/stat:scale-110 transition-transform duration-600 inline-block mb-4" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundSize: '200% 200%', animation: 'gradient-shift 6s ease infinite'}}>{stat.value}</div>
+                <div className="text-xs text-text-muted uppercase tracking-widest font-bold group-hover/stat:text-secondary transition-colors duration-600 mt-6">{stat.label}</div>
               </div>
             </div>
           ))}
