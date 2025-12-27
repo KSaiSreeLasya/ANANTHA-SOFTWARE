@@ -7,22 +7,22 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
   return (
     <div className="relative min-h-[100vh] flex flex-col justify-center items-center overflow-hidden bg-gradient-to-b from-color-bg via-color-bg-light to-color-bg">
-      {/* Animated Background Spheres - Premium */}
+      {/* Animated Background Spheres - Premium Gold Theme */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Large Primary Sphere */}
-        <div className="absolute top-10 left-5 w-96 h-96 bg-gradient-to-br from-primary/30 via-primary/15 to-primary/5 rounded-full mix-blend-screen filter blur-3xl opacity-60 animate-float-slow" style={{animation: 'floatSlow 14s ease-in-out infinite'}}></div>
+        {/* Large Primary Sphere - Deep Blue */}
+        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-primary/40 via-primary/20 to-primary/8 rounded-full mix-blend-screen filter blur-3xl opacity-70 animate-float-slow" style={{animation: 'floatSlow 16s ease-in-out infinite'}}></div>
 
-        {/* Secondary Accent Sphere */}
-        <div className="absolute top-32 right-0 w-80 h-80 bg-gradient-to-bl from-accent/25 via-accent/10 to-accent/2 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float" style={{animation: 'float 16s ease-in-out infinite 2s'}}></div>
+        {/* Secondary Gold Sphere */}
+        <div className="absolute top-40 right-0 w-80 h-80 bg-gradient-to-bl from-secondary/30 via-secondary/15 to-secondary/5 rounded-full mix-blend-screen filter blur-3xl opacity-60 animate-float" style={{animation: 'float 18s ease-in-out infinite 2s'}}></div>
 
-        {/* Tertiary Cyan Sphere */}
-        <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-gradient-to-tr from-secondary/20 to-secondary/5 rounded-full mix-blend-screen filter blur-3xl opacity-45 animate-float" style={{animation: 'float 18s ease-in-out infinite 4s'}}></div>
+        {/* Tertiary Teal Sphere */}
+        <div className="absolute bottom-10 left-1/3 w-72 h-72 bg-gradient-to-tr from-accent/25 to-accent/8 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float" style={{animation: 'float 20s ease-in-out infinite 4s'}}></div>
 
-        {/* Corner Accent Sphere */}
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-bl from-accent/15 to-primary/5 rounded-full mix-blend-screen filter blur-3xl opacity-35 animate-float-slow" style={{animation: 'floatSlow 22s ease-in-out infinite 3s'}}></div>
+        {/* Gold Accent Sphere */}
+        <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-gradient-to-bl from-secondary/20 to-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-45 animate-float-slow" style={{animation: 'floatSlow 24s ease-in-out infinite 3s'}}></div>
 
-        {/* Extra Bottom Accent */}
-        <div className="absolute -bottom-32 right-10 w-96 h-96 bg-gradient-to-t from-primary/20 to-transparent rounded-full mix-blend-screen filter blur-3xl opacity-40" style={{animation: 'float 24s ease-in-out infinite 6s'}}></div>
+        {/* Extra Bottom Gold */}
+        <div className="absolute -bottom-20 right-20 w-96 h-96 bg-gradient-to-t from-secondary/25 to-transparent rounded-full mix-blend-screen filter blur-3xl opacity-50" style={{animation: 'float 26s ease-in-out infinite 6s'}}></div>
       </div>
 
       {/* Grid Background */}
@@ -39,88 +39,95 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center py-20">
         {/* Badge */}
-        <div className="mb-8 inline-block animate-fade-in-up" style={{animationDuration: '0.8s'}}>
-          <div className="px-6 py-3 text-primary text-xs font-semibold uppercase tracking-widest flex items-center gap-3 group relative backdrop-blur-lg border border-primary/30 rounded-full bg-primary/8">
-            <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-secondary rounded-full animate-pulse-scale"></span>
-            <span className="text-primary">Transforming Industries</span>
-            <div className="absolute -inset-2 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg -z-10"></div>
-            <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-500"></div>
+        <div className="mb-14 inline-block animate-fade-in-up" style={{animationDuration: '0.8s'}}>
+          <div className="px-8 py-4 text-secondary text-xs font-bold uppercase tracking-widest flex items-center gap-3 group relative backdrop-blur-xl border border-secondary/50 rounded-full bg-gradient-to-r from-secondary/16 to-secondary/8" style={{boxShadow: '0 0 40px rgba(251, 191, 36, 0.25)'}}>
+            <span className="w-3.5 h-3.5 bg-gradient-to-r from-secondary to-accent rounded-full animate-pulse-scale"></span>
+            <span className="text-secondary">Transforming Industries</span>
+            <div className="absolute -inset-2 bg-gradient-to-r from-secondary/0 via-secondary/15 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-600 blur-lg -z-10"></div>
+            <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-full transition-all duration-600 rounded-full"></div>
           </div>
         </div>
 
         {/* ASOCSEMI Banner */}
-        <div className="mb-16 w-full px-4 animate-fade-in-up" style={{animationDelay: '0.1s', animationDuration: '0.8s'}}>
-          <div className="max-w-3xl mx-auto relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/8 via-accent/6 to-secondary/8 opacity-0 group-hover:opacity-100 transition-all duration-700 blur-3xl -z-10 rounded-2xl"></div>
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 opacity-0 group-hover:opacity-100 blur-lg -z-20 rounded-2xl transition-opacity duration-700"></div>
-            <div className="flex flex-col items-center text-center space-y-5 py-16 px-8 relative border border-primary/20 group-hover:border-primary/50 bg-gradient-to-br from-primary/8 to-primary/3 rounded-2xl backdrop-blur-md transition-all duration-500">
-              <h3 className="text-xl md:text-2xl font-bold group-hover:text-primary transition-colors duration-500 w-full flex flex-col items-center justify-center">
-                Anantha Software is now <span className="text-gradient bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text animate-gradient-shift inline-block" style={{backgroundSize: '200% 200%'}}>ASOCSEMI</span>
+        <div className="mb-20 w-full px-4 animate-fade-in-up" style={{animationDelay: '0.1s', animationDuration: '0.8s'}}>
+          <div className="max-w-4xl mx-auto relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/12 via-accent/8 to-secondary/10 opacity-0 group-hover:opacity-100 transition-all duration-700 blur-3xl -z-10 rounded-3xl"></div>
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/30 via-accent/25 to-secondary/25 opacity-0 group-hover:opacity-100 blur-xl -z-20 rounded-3xl transition-opacity duration-700"></div>
+            <div className="flex flex-col items-center text-center space-y-6 py-24 px-12 relative border border-secondary/40 group-hover:border-secondary/80 bg-gradient-to-br from-secondary/14 to-secondary/6 rounded-3xl backdrop-blur-xl transition-all duration-600 overflow-hidden">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/12 rounded-full mix-blend-screen filter blur-3xl opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
+              <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
+              <h3 className="text-3xl md:text-4xl font-black group-hover:text-secondary transition-colors duration-600 w-full flex flex-col items-center justify-center relative z-10 letter-spacing-tight">
+                Anantha Software is now <span className="text-gradient bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text animate-gradient-shift inline-block mt-3" style={{backgroundSize: '200% 200%', animation: 'gradient-shift 8s ease infinite'}}>ASOCSEMI</span>
               </h3>
-              <div className="h-1 w-24 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500 rounded-full"></div>
-              <p className="text-xs md:text-sm text-text-muted leading-relaxed uppercase tracking-wider font-medium group-hover:text-text-secondary transition-colors duration-500 max-w-xl">
+              <div className="h-2 w-40 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-600 rounded-full relative z-10" style={{boxShadow: '0 0 30px rgba(251, 191, 36, 0.4)'}}></div>
+              <p className="text-sm md:text-base text-text-secondary leading-relaxed uppercase tracking-wider font-medium group-hover:text-text-primary transition-colors duration-600 max-w-2xl relative z-10">
                 Transitioning to ASOCSEMI! We are excited to introduce our expanded semiconductor and engineering services. Our commitment to excellence drives us to deliver top-tier technology.
               </p>
               <button
                 onClick={() => window.open('https://www.asocsemi.com/', '_blank')}
-                className="mt-4 px-8 py-3 btn-primary btn-primary-outline rounded-lg text-xs font-bold uppercase tracking-[0.15em] transform hover:scale-105 active:scale-95 transition-all duration-400 group/btn overflow-hidden"
+                className="mt-8 px-12 py-5 btn-primary-outline-gold rounded-2xl text-xs font-bold uppercase tracking-wider transform hover:scale-110 active:scale-95 transition-all duration-500 group/btn overflow-hidden relative z-10 border-2.5"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 transform -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 ease-in-out"></div>
-                <span className="relative z-10">Explore ASOCSEMI</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 transform -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 ease-in-out"></div>
+                <span className="relative z-10 flex items-center gap-2">
+                  Explore ASOCSEMI
+                  <svg className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </span>
               </button>
             </div>
           </div>
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] mb-8 uppercase" style={{animationDuration: '1s'}}>
-          <span className="block text-text group animate-fade-in-up" style={{animationDelay: '0.2s', animationDuration: '0.8s', marginBottom: '0.25rem'}}>
+        <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.92] mb-12 uppercase" style={{animationDuration: '1s'}}>
+          <span className="block text-text group animate-fade-in-up" style={{animationDelay: '0.2s', animationDuration: '0.8s', marginBottom: '0.4rem', letterSpacing: '-0.02em'}}>
             <span className="inline-block relative">
-              <span className="absolute -inset-4 bg-gradient-to-r from-primary/0 via-primary/15 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-lg"></span>
-              <span className="relative">Delivering</span>
+              <span className="absolute -inset-4 bg-gradient-to-r from-secondary/0 via-secondary/25 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl rounded-xl"></span>
+              <span className="relative">Transforming</span>
             </span>
-            <span className="inline-block text-primary ml-2 mr-2" style={{animation: 'gradient-shift 6s ease infinite', backgroundImage: 'linear-gradient(135deg, #1f6feb 0%, #8b5cf6 50%, #00d4ff 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>Excellence</span>
-            In
+            <span className="inline-block text-gradient ml-4 mr-4" style={{animation: 'gradient-shift 8s ease infinite', backgroundImage: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>Innovation</span>
+            <br />Into
           </span>
-          <span className="block text-primary animate-fade-in-up" style={{animationDelay: '0.4s', animationDuration: '0.8s', background: 'linear-gradient(135deg, #1f6feb 0%, #00d4ff 50%, #8b5cf6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 6s ease infinite'}}>Engineering & Technology</span>
+          <span className="block text-gradient animate-fade-in-up" style={{animationDelay: '0.4s', animationDuration: '0.8s', background: 'linear-gradient(120deg, #3b82f6 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 8s ease infinite', letterSpacing: '-0.02em'}}>Reality</span>
         </h1>
 
         {/* Subheading */}
-        <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-12 font-medium leading-relaxed animate-fade-in-up group" style={{animationDelay: '0.35s', animationDuration: '0.8s'}}>
+        <p className="text-lg md:text-2xl text-text-secondary max-w-4xl mx-auto mb-18 font-light leading-relaxed animate-fade-in-up group" style={{animationDelay: '0.35s', animationDuration: '0.8s', letterSpacing: '0.5px', fontWeight: '300'}}>
           Cutting-edge solutions in VLSI, AI/ML, and Software Engineering. Empowering businesses to innovate, scale, and lead their industries with advanced technology partnerships.
-          <div className="absolute -inset-4 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-lg -z-10 pointer-events-none"></div>
+          <div className="absolute -inset-8 bg-gradient-to-r from-secondary/0 via-secondary/12 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl rounded-xl -z-10 pointer-events-none"></div>
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-6 items-center animate-fade-in-up" style={{animationDelay: '0.5s', animationDuration: '0.8s'}}>
+        <div className="flex flex-col sm:flex-row justify-center gap-10 items-center animate-fade-in-up" style={{animationDelay: '0.5s', animationDuration: '0.8s'}}>
           <button
             onClick={() => navigateTo('services')}
-            className="btn-primary btn-primary-solid rounded-lg px-10 py-4 text-sm font-bold uppercase tracking-widest shadow-glow hover:shadow-2xl transform transition-all hover:scale-105 active:scale-95 duration-400 relative group overflow-hidden"
+            className="btn-primary-gold btn-primary-solid rounded-2xl px-14 py-6 text-xs font-bold uppercase tracking-wider shadow-glow hover:shadow-2xl transform transition-all hover:scale-110 active:scale-95 duration-500 relative group overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
-            <span className="relative z-10 flex items-center gap-2">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
+            <span className="relative z-10 flex items-center gap-3">
               Explore Services
-              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </span>
           </button>
           <button
             onClick={() => navigateTo('contact')}
-            className="btn-primary btn-primary-outline rounded-lg px-10 py-4 text-sm font-bold uppercase tracking-widest transform transition-all hover:scale-105 active:scale-95 duration-400 relative group overflow-hidden"
+            className="btn-primary-outline-gold rounded-2xl px-14 py-6 text-xs font-bold uppercase tracking-wider transform transition-all hover:scale-110 active:scale-95 duration-500 relative group overflow-hidden border-2.5"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
-            <span className="relative z-10 flex items-center gap-2">
+            <div className="absolute inset-0 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
+            <span className="relative z-10 flex items-center gap-3">
               Let's Talk
-              <svg className="w-4 h-4 group-hover:rotate-12 transition-transform duration-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <svg className="w-5 h-5 group-hover:rotate-12 transition-transform duration-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </span>
           </button>
         </div>
 
         {/* Stats Row */}
-        <div className="mt-24 grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.6s', animationDuration: '0.8s'}}>
+        <div className="mt-32 grid grid-cols-3 gap-8 md:gap-12 max-w-4xl mx-auto animate-fade-in-up" style={{animationDelay: '0.6s', animationDuration: '0.8s'}}>
           {[
             { value: '4+', label: 'Years', delay: 0 },
             { value: '50+', label: 'Team Members', delay: 0.1 },
@@ -128,14 +135,15 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
           ].map((stat, i) => (
             <div
               key={i}
-              className="text-center group/stat cursor-default relative p-6 rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-400 bg-gradient-to-br from-primary/8 to-primary/3 hover:from-primary/15 hover:to-primary/8 overflow-hidden backdrop-blur-sm"
+              className="text-center group/stat cursor-default relative p-10 rounded-3xl border border-secondary/35 hover:border-secondary/70 transition-all duration-600 bg-gradient-to-br from-secondary/12 to-secondary/5 hover:from-secondary/20 hover:to-secondary/12 overflow-hidden backdrop-blur-xl"
               style={{animation: 'fadeInUp 0.8s ease-out', animationDelay: `${0.65 + stat.delay}s`, animationFillMode: 'both'}}
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500 blur-lg -z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-secondary/20 via-transparent to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-600 rounded-3xl"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-600 blur-xl -z-10"></div>
+              <div className="absolute top-0 right-0 w-24 h-24 bg-secondary/15 rounded-full mix-blend-screen filter blur-2xl opacity-0 group-hover/stat:opacity-100 transition-opacity duration-600 -z-10"></div>
               <div className="relative z-10">
-                <div className="text-3xl md:text-4xl font-black text-gradient group-hover/stat:scale-110 transition-transform duration-400 inline-block">{stat.value}</div>
-                <div className="text-xs text-text-muted uppercase tracking-widest font-semibold group-hover/stat:text-primary transition-colors duration-400 mt-2">{stat.label}</div>
+                <div className="text-5xl md:text-6xl font-black bg-gradient-to-r from-secondary to-accent bg-clip-text group-hover/stat:scale-125 transition-transform duration-600 inline-block" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>{stat.value}</div>
+                <div className="text-xs text-text-muted uppercase tracking-widest font-bold group-hover/stat:text-secondary transition-colors duration-600 mt-4">{stat.label}</div>
               </div>
             </div>
           ))}
