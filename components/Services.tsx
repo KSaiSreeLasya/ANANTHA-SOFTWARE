@@ -462,14 +462,14 @@ const Services: React.FC = () => {
                     {portfolio.categories.map((category, idx) => (
                       <div
                         key={idx}
-                        className="group relative overflow-hidden rounded-3xl border border-primary/30 backdrop-blur-sm hover:border-primary/60 transition-all duration-500 animate-fade-in-up"
+                        className="group relative overflow-hidden rounded-3xl border border-primary/30 backdrop-blur-sm hover:border-primary/70 transition-all duration-600 animate-fade-in-up transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/30"
                         style={{animationDelay: `${0.1 * idx}s`}}
                       >
                         {/* Background Gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-accent/6 to-secondary/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                         {/* Animated Border Glow */}
-                        <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
+                        <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent opacity-0 group-hover:opacity-30 blur-2xl transition-opacity duration-600 -z-10"></div>
 
                         <div className="relative p-6 md:p-10">
                           {/* Service Header */}
