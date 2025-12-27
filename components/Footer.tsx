@@ -59,25 +59,25 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
     <footer className="bg-gradient-to-t from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] border-t border-white/10 pt-24 pb-12 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
 
-          {/* Company Info */}
-          <div className="space-y-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-            <div className="cursor-pointer group transition-all transform duration-500 hover:scale-110" onClick={() => onNavigate('home')}>
+          {/* Company Info - Enhanced */}
+          <div className="space-y-8 animate-fade-in-up group" style={{animationDelay: '0.1s'}}>
+            <div className="cursor-pointer transition-all transform duration-600 hover:scale-110 hover:-translate-y-2" onClick={() => onNavigate('home')}>
               <div className="relative">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Fdd826854f6f44d3b95695750dd149fd4%2F69ef4033ddb2424b84ea4261dc960c9c?format=webp&width=1200"
                   alt="Anantha Software"
-                  className="h-24 w-auto group-hover:brightness-125 transition-all duration-500"
+                  className="h-24 w-auto group-hover:brightness-150 transition-all duration-600"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg blur-xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/15 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-600 rounded-lg blur-2xl"></div>
               </div>
             </div>
-            <p className="text-xs text-text-muted leading-relaxed uppercase tracking-wider font-medium hover:text-text-secondary transition-colors duration-500">
-               ANANTHA SOFTWARE SOLUTIONS ,<br />
-              <span className="text-text-muted/70">WeWork Rajapushpa Summit,</span><br />
-              <span className="text-text-muted/70">Financial District, Hyderabad,</span><br />
-              <span className="text-text-muted/70">Telangana 500032.</span>
+            <p className="text-xs text-text-muted leading-relaxed uppercase tracking-widest font-medium group-hover:text-text-secondary transition-colors duration-600">
+               ANANTHA SOFTWARE SOLUTIONS<br />
+              <span className="text-text-muted/70 text-[10px]">WeWork Rajapushpa Summit,</span><br />
+              <span className="text-text-muted/70 text-[10px]">Financial District, Hyderabad,</span><br />
+              <span className="text-text-muted/70 text-[10px]">Telangana 500032.</span>
             </p>
           </div>
 
