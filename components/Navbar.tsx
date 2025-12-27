@@ -90,33 +90,33 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                 </a>
               ))}
 
-              <div className="ml-8 flex items-center space-x-4 pl-8 border-l border-secondary/30">
+              <div className="ml-8 flex items-center space-x-4 pl-8 border-l border-secondary/25">
                 {user ? (
                   <>
-                    <div className="flex items-center space-x-2.5 text-text-secondary group cursor-default px-3 py-2 rounded-lg bg-secondary/10 border border-secondary/30">
+                    <div className="flex items-center space-x-3 text-text-secondary group cursor-default px-4 py-2.5 rounded-xl bg-gradient-to-r from-secondary/12 to-secondary/8 border border-secondary/35 hover:border-secondary/50 transition-all duration-500 hover:shadow-md hover:shadow-secondary/10">
                       <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-secondary to-accent animate-pulse-scale"></div>
                       <span className="text-xs font-semibold uppercase tracking-wider group-hover:text-secondary transition-colors duration-500">{getUserDisplayName()}</span>
                     </div>
                     <button
                       onClick={handleLogout}
-                      className="text-sm font-semibold text-text-muted hover:text-secondary transition-all duration-500 group relative px-4 py-2.5 rounded-lg hover:bg-secondary/12 border border-transparent hover:border-secondary/35"
+                      className="text-sm font-semibold text-text-muted hover:text-secondary transition-all duration-500 group relative px-5 py-2.5 rounded-xl hover:bg-secondary/12 border border-transparent hover:border-secondary/35 hover:shadow-md hover:shadow-secondary/10"
                     >
                       <span className="relative z-10">Logout</span>
-                      <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-[calc(100%-8px)] transition-all duration-500 rounded-full"></div>
+                      <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-[calc(100%-10px)] transition-all duration-500 rounded-full"></div>
                     </button>
                   </>
                 ) : (
                   <>
                     <button
                       onClick={() => onNavigate('login')}
-                      className="flex items-center text-xs font-bold text-secondary hover:text-yellow-300 transition-all duration-500 group relative px-6 py-3 rounded-lg hover:bg-secondary/18 border border-secondary/50 uppercase tracking-wider"
+                      className="flex items-center text-xs font-bold text-secondary hover:text-yellow-300 transition-all duration-500 group relative px-7 py-3 rounded-xl hover:bg-gradient-to-br hover:from-secondary/20 hover:to-secondary/10 border border-secondary/50 hover:border-secondary/70 uppercase tracking-wider hover:shadow-lg hover:shadow-secondary/20"
                     >
-                      <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/25 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm rounded-lg -z-10"></div>
-                      <svg className="w-4 h-4 mr-2 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500" fill="currentColor" viewBox="0 0 20 20">
+                      <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg rounded-lg -z-10"></div>
+                      <svg className="w-4 h-4 mr-2.5 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                       </svg>
                       <span className="relative z-10">Log In</span>
-                      <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-[calc(100%-12px)] transition-all duration-500 rounded-full"></div>
+                      <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-[calc(100%-14px)] transition-all duration-500 rounded-full"></div>
                     </button>
                   </>
                 )}
