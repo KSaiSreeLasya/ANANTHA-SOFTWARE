@@ -262,11 +262,12 @@ const Services: React.FC = () => {
           </div>
 
           {/* Silicon Engineering */}
-          <div className="gradient-card-subtle p-8 rounded-2xl card-hover group border-primary/40 animate-fade-in-up relative overflow-hidden" style={{animationDelay: '0.2s'}}>
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="flex items-start gap-6 relative z-10">
-              <div className="w-16 h-16 bg-gradient-to-br from-accent/40 to-accent/15 rounded-2xl flex items-center justify-center flex-shrink-0 text-accent group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-accent/30 transition-all duration-500">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="gradient-card-subtle p-8 md:p-10 rounded-3xl card-hover group border-primary/40 animate-fade-in-up relative overflow-hidden transform hover:-translate-y-3" style={{animationDelay: '0.2s'}}>
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-accent/0 via-accent/20 to-accent/0 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-600 -z-10"></div>
+            <div className="flex items-start gap-6 md:gap-8 relative z-10">
+              <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-accent/50 to-accent/20 rounded-3xl flex items-center justify-center flex-shrink-0 text-accent group-hover:scale-125 group-hover:shadow-2xl group-hover:shadow-accent/40 transition-all duration-600">
+                <svg className="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <rect x="7" y="7" width="10" height="10" rx="1" strokeWidth="1.5" />
                   <line x1="12" y1="3" x2="12" y2="5" strokeWidth="1.5" strokeLinecap="round" />
                   <line x1="12" y1="19" x2="12" y2="21" strokeWidth="1.5" strokeLinecap="round" />
@@ -279,12 +280,12 @@ const Services: React.FC = () => {
                 </svg>
               </div>
               <div className="flex-1">
-                <h4 className="text-lg font-bold mb-3 group-hover:text-accent transition-colors duration-500">Silicon Engineering</h4>
-                <ul className="text-sm text-text-muted space-y-2 group-hover:text-text-secondary transition-colors duration-500">
-                  <li className="flex items-center"><span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-accent rounded-full mr-2.5 flex-shrink-0"></span>Architecture & Design</li>
-                  <li className="flex items-center"><span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-accent rounded-full mr-2.5 flex-shrink-0"></span>RTL Integration</li>
-                  <li className="flex items-center"><span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-accent rounded-full mr-2.5 flex-shrink-0"></span>Design Verification</li>
-                  <li className="flex items-center"><span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-accent rounded-full mr-2.5 flex-shrink-0"></span>FPGA Prototyping</li>
+                <h4 className="text-lg md:text-xl font-bold mb-3 group-hover:text-accent transition-colors duration-500 tracking-tight">Silicon Engineering</h4>
+                <ul className="text-sm md:text-base text-text-muted space-y-2.5 group-hover:text-text-secondary transition-colors duration-500 font-light">
+                  <li className="flex items-center gap-2"><span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-accent rounded-full flex-shrink-0"></span><span>Architecture & Design</span></li>
+                  <li className="flex items-center gap-2"><span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-accent rounded-full flex-shrink-0"></span><span>RTL Integration</span></li>
+                  <li className="flex items-center gap-2"><span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-accent rounded-full flex-shrink-0"></span><span>Design Verification</span></li>
+                  <li className="flex items-center gap-2"><span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-accent rounded-full flex-shrink-0"></span><span>FPGA Prototyping</span></li>
                 </ul>
               </div>
             </div>
