@@ -319,19 +319,20 @@ const Services: React.FC = () => {
           </div>
 
           {/* Software Development */}
-          <div className="gradient-card-subtle p-8 rounded-2xl card-hover group border-primary/40 animate-fade-in-up relative overflow-hidden" style={{animationDelay: '0.4s'}}>
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="flex items-start gap-6 relative z-10">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary/40 to-primary/15 rounded-2xl flex items-center justify-center flex-shrink-0 text-primary group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-primary/30 transition-all duration-500">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="gradient-card-subtle p-8 md:p-10 rounded-3xl card-hover group border-primary/40 animate-fade-in-up relative overflow-hidden transform hover:-translate-y-3" style={{animationDelay: '0.4s'}}>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-600 -z-10"></div>
+            <div className="flex items-start gap-6 md:gap-8 relative z-10">
+              <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-primary/50 to-primary/20 rounded-3xl flex items-center justify-center flex-shrink-0 text-primary group-hover:scale-125 group-hover:shadow-2xl group-hover:shadow-primary/40 transition-all duration-600">
+                <svg className="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path d="M8 7l-5 5 5 5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M16 7l5 5-5 5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M13 4l-2 16" strokeWidth="1.5" strokeLinecap="round" />
                 </svg>
               </div>
               <div className="flex-1">
-                <h4 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors duration-500">Software Development</h4>
-                <p className="text-text-muted text-sm leading-relaxed group-hover:text-text-secondary transition-colors duration-500">
+                <h4 className="text-lg md:text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-500 tracking-tight">Software Development</h4>
+                <p className="text-text-muted text-sm md:text-base leading-relaxed group-hover:text-text-secondary transition-colors duration-500 font-light">
                   Web, mobile, and enterprise solutions with emphasis on scalability, security, and peak performance.
                 </p>
               </div>
