@@ -79,16 +79,16 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.95] mb-10 uppercase" style={{animationDuration: '1s'}}>
-          <span className="block text-text group animate-fade-in-up" style={{animationDelay: '0.2s', animationDuration: '0.8s', marginBottom: '0.35rem'}}>
+        <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.92] mb-12 uppercase" style={{animationDuration: '1s'}}>
+          <span className="block text-text group animate-fade-in-up" style={{animationDelay: '0.2s', animationDuration: '0.8s', marginBottom: '0.4rem', letterSpacing: '-0.02em'}}>
             <span className="inline-block relative">
-              <span className="absolute -inset-4 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl rounded-xl"></span>
-              <span className="relative">Delivering</span>
+              <span className="absolute -inset-4 bg-gradient-to-r from-secondary/0 via-secondary/25 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl rounded-xl"></span>
+              <span className="relative">Transforming</span>
             </span>
-            <span className="inline-block text-gradient ml-3 mr-3" style={{animation: 'gradient-shift 6s ease infinite', backgroundImage: 'linear-gradient(135deg, #1f6feb 0%, #8b5cf6 50%, #00d4ff 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>Excellence</span>
-            <br />In
+            <span className="inline-block text-gradient ml-4 mr-4" style={{animation: 'gradient-shift 8s ease infinite', backgroundImage: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>Innovation</span>
+            <br />Into
           </span>
-          <span className="block text-gradient animate-fade-in-up" style={{animationDelay: '0.4s', animationDuration: '0.8s', background: 'linear-gradient(135deg, #1f6feb 0%, #00d4ff 50%, #8b5cf6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 6s ease infinite'}}>Engineering & Technology</span>
+          <span className="block text-gradient animate-fade-in-up" style={{animationDelay: '0.4s', animationDuration: '0.8s', background: 'linear-gradient(120deg, #3b82f6 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 8s ease infinite', letterSpacing: '-0.02em'}}>Reality</span>
         </h1>
 
         {/* Subheading */}
