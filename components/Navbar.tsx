@@ -144,8 +144,8 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-gradient-to-b from-primary/8 via-primary/4 to-transparent border-b border-primary/20 animate-slide-in-down">
-          <div className="px-4 pt-2 pb-8 space-y-1">
+        <div className="lg:hidden bg-gradient-to-b from-primary/12 via-primary/6 to-primary/2 border-b border-primary/25 animate-slide-in-down" style={{boxShadow: '0 8px 32px rgba(31, 111, 235, 0.1)'}}>
+          <div className="px-4 pt-3 pb-8 space-y-2">
             {navItems.map((item: any, index: number) => (
               <a
                 key={item.id}
@@ -153,38 +153,38 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                 onClick={item.external ? undefined : (e) => handleLinkClick(e, item.id)}
                 target={item.external ? '_blank' : undefined}
                 rel={item.external ? 'noopener noreferrer' : undefined}
-                className={`block px-4 py-3 text-base font-semibold transition-all duration-400 group relative border-l-2 ${
+                className={`block px-4 py-3.5 text-base font-semibold transition-all duration-400 group relative border-l-3 rounded-r-lg ${
                   activePage === item.id
-                    ? 'text-primary border-l-primary'
-                    : 'text-text-muted hover:text-primary border-l-transparent hover:border-l-primary/50'
+                    ? 'text-primary border-l-primary bg-gradient-to-r from-primary/15 to-primary/5'
+                    : 'text-text-muted hover:text-primary border-l-transparent hover:border-l-primary/60 hover:bg-gradient-to-r from-primary/10 to-primary/5'
                 }`}
                 style={{animation: `slideInLeft 0.5s ease-out ${0.06 * index}s backwards`}}
               >
                 <span className="relative z-10">{item.label}</span>
               </a>
             ))}
-            <div className="pt-6 border-t border-primary/20 flex flex-col space-y-3">
+            <div className="pt-6 border-t border-primary/25 flex flex-col space-y-3">
               {user ? (
                 <>
-                  <div className="px-4 py-3 flex items-center space-x-2 text-text-secondary group cursor-default">
-                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-accent animate-pulse-scale"></div>
-                    <span className="text-sm font-medium group-hover:text-primary transition-colors duration-400">{getUserDisplayName()}</span>
+                  <div className="px-4 py-3.5 flex items-center space-x-2.5 text-text-secondary group cursor-default rounded-lg bg-primary/10 border border-primary/25">
+                    <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-primary to-accent animate-pulse-scale"></div>
+                    <span className="text-xs font-semibold uppercase tracking-wider group-hover:text-primary transition-colors duration-400">{getUserDisplayName()}</span>
                   </div>
                   <button
                     onClick={handleLogout}
-                    className="text-left px-4 py-3 text-text-muted font-medium hover:text-primary transition-colors duration-400 group relative"
+                    className="text-left px-4 py-3.5 text-text-muted font-semibold hover:text-primary transition-all duration-400 group relative rounded-lg hover:bg-primary/10 border border-transparent hover:border-primary/30 uppercase text-xs tracking-wider"
                   >
                     Logout
-                    <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary group-hover:w-8 transition-all duration-400"></div>
+                    <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-accent group-hover:w-8 transition-all duration-400 rounded-full"></div>
                   </button>
                 </>
               ) : (
                 <button
                   onClick={() => onNavigate('login')}
-                  className="text-left px-4 py-3 text-primary font-semibold hover:text-primary-light transition-colors duration-400 group relative"
+                  className="text-left px-4 py-3.5 text-primary font-bold hover:text-primary-light transition-all duration-400 group relative rounded-lg hover:bg-primary/15 border border-primary/40 uppercase text-xs tracking-wider"
                 >
                   Log In
-                  <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary group-hover:w-12 transition-all duration-400"></div>
+                  <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-accent group-hover:w-12 transition-all duration-400 rounded-full"></div>
                 </button>
               )}
             </div>
