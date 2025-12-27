@@ -361,11 +361,12 @@ const Services: React.FC = () => {
           </div>
 
           {/* Data Engineering */}
-          <div className="gradient-card-subtle p-8 rounded-2xl card-hover group border-primary/40 animate-fade-in-up relative overflow-hidden" style={{animationDelay: '0.6s'}}>
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="flex items-start gap-6 relative z-10">
-              <div className="w-16 h-16 bg-gradient-to-br from-secondary/40 to-secondary/15 rounded-2xl flex items-center justify-center flex-shrink-0 text-secondary group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-secondary/30 transition-all duration-500">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="gradient-card-subtle p-8 md:p-10 rounded-3xl card-hover group border-primary/40 animate-fade-in-up relative overflow-hidden transform hover:-translate-y-3" style={{animationDelay: '0.6s'}}>
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/20 to-secondary/0 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-600 -z-10"></div>
+            <div className="flex items-start gap-6 md:gap-8 relative z-10">
+              <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-secondary/50 to-secondary/20 rounded-3xl flex items-center justify-center flex-shrink-0 text-secondary group-hover:scale-125 group-hover:shadow-2xl group-hover:shadow-secondary/40 transition-all duration-600">
+                <svg className="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <cylinder x="3" y="6" r="3" h="4" strokeWidth="1.5" />
                   <ellipse cx="6" cy="6" rx="3" ry="1.5" strokeWidth="1.5" />
                   <path d="M3 10v4c0 .83 1.34 1.5 3 1.5s3-.67 3-1.5v-4" strokeWidth="1.5" />
@@ -376,8 +377,8 @@ const Services: React.FC = () => {
                 </svg>
               </div>
               <div className="flex-1">
-                <h4 className="text-lg font-bold mb-2 group-hover:text-secondary transition-colors duration-500">Data Engineering</h4>
-                <p className="text-text-muted text-sm leading-relaxed group-hover:text-text-secondary transition-colors duration-500">
+                <h4 className="text-lg md:text-xl font-bold mb-3 group-hover:text-secondary transition-colors duration-500 tracking-tight">Data Engineering</h4>
+                <p className="text-text-muted text-sm md:text-base leading-relaxed group-hover:text-text-secondary transition-colors duration-500 font-light">
                   Data pipelines, ETL/ELT, data warehousing, and real-time analytics for data-driven decisions.
                 </p>
               </div>
