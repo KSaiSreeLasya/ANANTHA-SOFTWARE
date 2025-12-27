@@ -86,9 +86,9 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
         </h1>
 
         {/* Subheading */}
-        <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-12 font-medium leading-relaxed animate-fade-in-up group" style={{animationDelay: '0.35s', animationDuration: '0.8s'}}>
+        <p className="text-lg md:text-2xl text-text-secondary max-w-4xl mx-auto mb-16 font-medium leading-relaxed animate-fade-in-up group" style={{animationDelay: '0.35s', animationDuration: '0.8s', letterSpacing: '0.3px'}}>
           Cutting-edge solutions in VLSI, AI/ML, and Software Engineering. Empowering businesses to innovate, scale, and lead their industries with advanced technology partnerships.
-          <div className="absolute -inset-4 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-lg -z-10 pointer-events-none"></div>
+          <div className="absolute -inset-6 bg-gradient-to-r from-primary/0 via-primary/8 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl rounded-xl -z-10 pointer-events-none"></div>
         </p>
 
         {/* CTA Buttons */}
