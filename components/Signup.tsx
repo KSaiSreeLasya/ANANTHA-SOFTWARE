@@ -121,12 +121,19 @@ const Signup: React.FC<SignupProps> = ({ onNavigate, onAuthSuccess }) => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] pt-32 pb-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-      <div className="w-full max-w-md">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-3">Create Account</h1>
-          <p className="text-gray-400 text-lg">Join our community today</p>
+    <div className="relative min-h-screen bg-gradient-to-b from-[#0f172a] via-[#1e293b] to-[#0f172a] pt-32 pb-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center overflow-hidden">
+      {/* Animated Background Spheres */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-primary/25 via-primary/12 to-primary/5 rounded-full mix-blend-screen filter blur-3xl opacity-60 animate-float-slow"></div>
+        <div className="absolute top-40 right-0 w-80 h-80 bg-gradient-to-bl from-secondary/20 via-secondary/10 to-secondary/3 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float"></div>
+        <div className="absolute bottom-10 left-1/3 w-72 h-72 bg-gradient-to-tr from-accent/15 to-accent/5 rounded-full mix-blend-screen filter blur-3xl opacity-40 animate-float"></div>
+      </div>
+
+      <div className="w-full max-w-md relative z-10">
+        {/* Header - Enhanced */}
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-4 tracking-tight" style={{letterSpacing: '-0.02em'}}>Create Account</h1>
+          <p className="text-text-secondary text-lg md:text-xl font-light" style={{letterSpacing: '0.3px'}}>Join our community today</p>
         </div>
 
         {/* Signup Form */}
