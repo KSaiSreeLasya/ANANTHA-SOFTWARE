@@ -137,17 +137,17 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             )}
           </div>
 
-          {/* Social */}
+          {/* Social - Enhanced */}
           <div className="animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-            <h4 className="text-white font-bold mb-8 text-sm uppercase tracking-widest">Connect</h4>
-            <div className="flex space-x-4 mb-8">
-              <button className="w-12 h-12 rounded-full border-2 border-primary/40 flex items-center justify-center text-text-muted hover:text-white hover:border-primary bg-primary/8 hover:bg-primary/20 transition-all duration-400 transform hover:scale-110 hover:shadow-lg hover:shadow-primary/40 group active:scale-95 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-white/15 to-primary/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                <svg className="w-5 h-5 group-hover:rotate-12 transition-transform duration-400 relative z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <h4 className="text-white font-bold mb-10 text-sm uppercase tracking-widest">Connect</h4>
+            <div className="flex space-x-5 mb-10">
+              <button className="w-14 h-14 rounded-full border-2 border-primary/50 flex items-center justify-center text-text-secondary hover:text-white hover:border-primary bg-gradient-to-br from-primary/15 to-primary/8 hover:from-primary/30 hover:to-primary/15 transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/50 group active:scale-95 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-white/20 to-primary/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-800"></div>
+                <svg className="w-6 h-6 group-hover:rotate-12 transition-transform duration-500 relative z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
               </button>
             </div>
-            <p className="text-[10px] text-text-muted uppercase tracking-widest font-semibold hover:text-text-secondary transition-colors duration-500">
-               Work with us — <button onClick={() => onNavigate('careers')} className="text-primary hover:text-secondary transition-colors duration-400 font-bold">View Openings</button>
+            <p className="text-[10px] text-text-muted uppercase tracking-widest font-bold group hover:text-text-secondary transition-colors duration-500">
+               Work with us — <button onClick={() => onNavigate('careers')} className="text-secondary hover:text-yellow-300 transition-colors duration-400 font-bold">View Openings</button>
             </p>
           </div>
         </div>
