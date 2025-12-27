@@ -144,7 +144,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-gradient-to-b from-primary/12 via-primary/6 to-primary/2 border-b border-primary/25 animate-slide-in-down" style={{boxShadow: '0 8px 32px rgba(31, 111, 235, 0.1)'}}>
+        <div className="lg:hidden bg-gradient-to-b from-secondary/14 via-secondary/7 to-secondary/3 border-b border-secondary/30 animate-slide-in-down" style={{boxShadow: '0 8px 32px rgba(251, 191, 36, 0.12)'}}>
           <div className="px-4 pt-3 pb-8 space-y-2">
             {navItems.map((item: any, index: number) => (
               <a
@@ -153,38 +153,38 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                 onClick={item.external ? undefined : (e) => handleLinkClick(e, item.id)}
                 target={item.external ? '_blank' : undefined}
                 rel={item.external ? 'noopener noreferrer' : undefined}
-                className={`block px-4 py-3.5 text-base font-semibold transition-all duration-400 group relative border-l-3 rounded-r-lg ${
+                className={`block px-4 py-3.5 text-base font-semibold transition-all duration-500 group relative border-l-3 rounded-r-lg ${
                   activePage === item.id
-                    ? 'text-primary border-l-primary bg-gradient-to-r from-primary/15 to-primary/5'
-                    : 'text-text-muted hover:text-primary border-l-transparent hover:border-l-primary/60 hover:bg-gradient-to-r from-primary/10 to-primary/5'
+                    ? 'text-secondary border-l-secondary bg-gradient-to-r from-secondary/16 to-secondary/6'
+                    : 'text-text-muted hover:text-secondary border-l-transparent hover:border-l-secondary/60 hover:bg-gradient-to-r from-secondary/12 to-secondary/5'
                 }`}
                 style={{animation: `slideInLeft 0.5s ease-out ${0.06 * index}s backwards`}}
               >
                 <span className="relative z-10">{item.label}</span>
               </a>
             ))}
-            <div className="pt-6 border-t border-primary/25 flex flex-col space-y-3">
+            <div className="pt-6 border-t border-secondary/30 flex flex-col space-y-3">
               {user ? (
                 <>
-                  <div className="px-4 py-3.5 flex items-center space-x-2.5 text-text-secondary group cursor-default rounded-lg bg-primary/10 border border-primary/25">
-                    <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-primary to-accent animate-pulse-scale"></div>
-                    <span className="text-xs font-semibold uppercase tracking-wider group-hover:text-primary transition-colors duration-400">{getUserDisplayName()}</span>
+                  <div className="px-4 py-3.5 flex items-center space-x-2.5 text-text-secondary group cursor-default rounded-lg bg-secondary/12 border border-secondary/35">
+                    <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-secondary to-accent animate-pulse-scale"></div>
+                    <span className="text-xs font-semibold uppercase tracking-wider group-hover:text-secondary transition-colors duration-500">{getUserDisplayName()}</span>
                   </div>
                   <button
                     onClick={handleLogout}
-                    className="text-left px-4 py-3.5 text-text-muted font-semibold hover:text-primary transition-all duration-400 group relative rounded-lg hover:bg-primary/10 border border-transparent hover:border-primary/30 uppercase text-xs tracking-wider"
+                    className="text-left px-4 py-3.5 text-text-muted font-semibold hover:text-secondary transition-all duration-500 group relative rounded-lg hover:bg-secondary/12 border border-transparent hover:border-secondary/35 uppercase text-xs tracking-wider"
                   >
                     Logout
-                    <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-accent group-hover:w-8 transition-all duration-400 rounded-full"></div>
+                    <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-8 transition-all duration-500 rounded-full"></div>
                   </button>
                 </>
               ) : (
                 <button
                   onClick={() => onNavigate('login')}
-                  className="text-left px-4 py-3.5 text-primary font-bold hover:text-primary-light transition-all duration-400 group relative rounded-lg hover:bg-primary/15 border border-primary/40 uppercase text-xs tracking-wider"
+                  className="text-left px-4 py-3.5 text-secondary font-bold hover:text-yellow-300 transition-all duration-500 group relative rounded-lg hover:bg-secondary/16 border border-secondary/50 uppercase text-xs tracking-wider"
                 >
                   Log In
-                  <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-accent group-hover:w-12 transition-all duration-400 rounded-full"></div>
+                  <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-12 transition-all duration-500 rounded-full"></div>
                 </button>
               )}
             </div>
