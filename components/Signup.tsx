@@ -121,19 +121,29 @@ const Signup: React.FC<SignupProps> = ({ onNavigate, onAuthSuccess }) => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] pt-32 pb-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-      <div className="w-full max-w-md">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-3">Create Account</h1>
-          <p className="text-gray-400 text-lg">Join our community today</p>
+    <div className="relative min-h-screen bg-gradient-to-b from-[#0f172a] via-[#1e293b] to-[#0f172a] pt-32 pb-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center overflow-hidden">
+      {/* Animated Background Spheres */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-primary/25 via-primary/12 to-primary/5 rounded-full mix-blend-screen filter blur-3xl opacity-60 animate-float-slow"></div>
+        <div className="absolute top-40 right-0 w-80 h-80 bg-gradient-to-bl from-secondary/20 via-secondary/10 to-secondary/3 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float"></div>
+        <div className="absolute bottom-10 left-1/3 w-72 h-72 bg-gradient-to-tr from-accent/15 to-accent/5 rounded-full mix-blend-screen filter blur-3xl opacity-40 animate-float"></div>
+      </div>
+
+      <div className="w-full max-w-md relative z-10">
+        {/* Header - Enhanced */}
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-4 tracking-tight" style={{letterSpacing: '-0.02em'}}>Create Account</h1>
+          <p className="text-text-secondary text-lg md:text-xl font-light" style={{letterSpacing: '0.3px'}}>Join our community today</p>
         </div>
 
-        {/* Signup Form */}
-        <form onSubmit={handleSignup} className="space-y-5">
+        {/* Signup Form - Enhanced */}
+        <form onSubmit={handleSignup} className="space-y-6 bg-gradient-to-br from-secondary/14 to-secondary/6 rounded-3xl p-8 md:p-12 border border-secondary/40 backdrop-blur-xl relative overflow-hidden animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          {/* Animated Border Glow */}
+          <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
+
           {/* Error Message */}
           {error && (
-            <div className="bg-red-500/10 border border-red-500 text-red-400 px-4 py-3 rounded-lg text-sm animate-in fade-in">
+            <div className="bg-red-500/20 border border-red-500/50 text-red-300 px-5 py-4 rounded-2xl text-sm animate-in fade-in font-medium uppercase tracking-wide">
               {error}
             </div>
           )}
@@ -141,7 +151,7 @@ const Signup: React.FC<SignupProps> = ({ onNavigate, onAuthSuccess }) => {
           {/* First Name & Last Name Row */}
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label htmlFor="firstName" className="block text-sm font-medium text-white mb-2">
+              <label htmlFor="firstName" className="block text-xs font-bold text-secondary uppercase tracking-widest mb-2">
                 First Name
               </label>
               <input
@@ -152,11 +162,11 @@ const Signup: React.FC<SignupProps> = ({ onNavigate, onAuthSuccess }) => {
                 onChange={handleInputChange}
                 placeholder="John"
                 required
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all duration-300"
+                className="w-full px-4 py-3 bg-gradient-to-br from-primary/12 to-primary/6 border border-secondary/40 rounded-xl text-text placeholder-text-muted/50 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/30 transition-all duration-500 backdrop-blur-sm font-medium text-sm"
               />
             </div>
             <div>
-              <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">
+              <label htmlFor="lastName" className="block text-xs font-bold text-secondary uppercase tracking-widest mb-2">
                 Last Name
               </label>
               <input
@@ -167,14 +177,14 @@ const Signup: React.FC<SignupProps> = ({ onNavigate, onAuthSuccess }) => {
                 onChange={handleInputChange}
                 placeholder="Doe"
                 required
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all duration-300"
+                className="w-full px-4 py-3 bg-gradient-to-br from-primary/12 to-primary/6 border border-secondary/40 rounded-xl text-text placeholder-text-muted/50 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/30 transition-all duration-500 backdrop-blur-sm font-medium text-sm"
               />
             </div>
           </div>
 
           {/* Email Field */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+            <label htmlFor="email" className="block text-xs font-bold text-secondary uppercase tracking-widest mb-2">
               Email Address
             </label>
             <input
@@ -185,13 +195,13 @@ const Signup: React.FC<SignupProps> = ({ onNavigate, onAuthSuccess }) => {
               onChange={handleInputChange}
               placeholder="you@example.com"
               required
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all duration-300"
+              className="w-full px-5 py-3.5 bg-gradient-to-br from-primary/12 to-primary/6 border border-secondary/40 rounded-xl text-text placeholder-text-muted/50 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/30 transition-all duration-500 backdrop-blur-sm font-medium"
             />
           </div>
 
           {/* Company Field */}
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
+            <label htmlFor="company" className="block text-xs font-bold text-secondary uppercase tracking-widest mb-2">
               Company (Optional)
             </label>
             <input
@@ -201,13 +211,13 @@ const Signup: React.FC<SignupProps> = ({ onNavigate, onAuthSuccess }) => {
               value={formData.company}
               onChange={handleInputChange}
               placeholder="Your company name"
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all duration-300"
+              className="w-full px-5 py-3.5 bg-gradient-to-br from-primary/12 to-primary/6 border border-secondary/40 rounded-xl text-text placeholder-text-muted/50 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/30 transition-all duration-500 backdrop-blur-sm font-medium"
             />
           </div>
 
           {/* Password Field */}
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-white mb-2">
+            <label htmlFor="password" className="block text-xs font-bold text-secondary uppercase tracking-widest mb-2">
               Password
             </label>
             <div className="relative">
@@ -219,12 +229,12 @@ const Signup: React.FC<SignupProps> = ({ onNavigate, onAuthSuccess }) => {
                 onChange={handleInputChange}
                 placeholder="••••••••"
                 required
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all duration-300"
+                className="w-full px-5 py-3.5 bg-gradient-to-br from-primary/12 to-primary/6 border border-secondary/40 rounded-xl text-text placeholder-text-muted/50 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/30 transition-all duration-500 backdrop-blur-sm font-medium"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-text-muted hover:text-secondary transition-colors duration-300"
               >
                 {showPassword ? (
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -238,12 +248,12 @@ const Signup: React.FC<SignupProps> = ({ onNavigate, onAuthSuccess }) => {
                 )}
               </button>
             </div>
-            <p className="text-xs text-gray-500 mt-1">At least 8 characters</p>
+            <p className="text-xs text-text-muted/70 mt-2 font-medium">At least 8 characters</p>
           </div>
 
           {/* Confirm Password Field */}
           <div>
-            <label htmlFor="confirmPassword" className="block text-sm font-medium text-white mb-2">
+            <label htmlFor="confirmPassword" className="block text-xs font-bold text-secondary uppercase tracking-widest mb-2">
               Confirm Password
             </label>
             <div className="relative">
@@ -255,12 +265,12 @@ const Signup: React.FC<SignupProps> = ({ onNavigate, onAuthSuccess }) => {
                 onChange={handleInputChange}
                 placeholder="••••••••"
                 required
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all duration-300"
+                className="w-full px-5 py-3.5 bg-gradient-to-br from-primary/12 to-primary/6 border border-secondary/40 rounded-xl text-text placeholder-text-muted/50 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/30 transition-all duration-500 backdrop-blur-sm font-medium"
               />
               <button
                 type="button"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-text-muted hover:text-secondary transition-colors duration-300"
               >
                 {showConfirmPassword ? (
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -277,52 +287,55 @@ const Signup: React.FC<SignupProps> = ({ onNavigate, onAuthSuccess }) => {
           </div>
 
           {/* Terms & Conditions */}
-          <label className="flex items-start text-sm text-gray-400 hover:text-white cursor-pointer">
+          <label className="flex items-start text-sm text-text-secondary hover:text-secondary cursor-pointer transition-colors duration-300 font-medium group">
             <input
               type="checkbox"
               name="agreeToTerms"
               checked={formData.agreeToTerms}
               onChange={handleInputChange}
-              className="w-4 h-4 bg-white/5 border border-white/10 rounded text-coral focus:ring-coral cursor-pointer mt-0.5"
+              className="w-4 h-4 bg-secondary/20 border border-secondary/50 rounded text-secondary focus:ring-secondary cursor-pointer accent-secondary mt-1 flex-shrink-0"
             />
             <span className="ml-3">
               I agree to the{' '}
-              <a href="#" className="text-coral hover:underline">
+              <a href="#" className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
                 Terms of Service
               </a>{' '}
               and{' '}
-              <a href="#" className="text-coral hover:underline">
+              <a href="#" className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
                 Privacy Policy
               </a>
             </span>
           </label>
 
-          {/* Sign Up Button */}
+          {/* Sign Up Button - Premium Style */}
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-3 bg-coral text-white font-bold rounded-lg hover:bg-coral/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest text-sm"
+            className="w-full py-4 bg-gradient-to-r from-secondary to-accent text-primary font-bold rounded-xl hover:shadow-2xl hover:shadow-secondary/40 transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest text-sm transform hover:scale-105 active:scale-95 relative group overflow-hidden"
           >
-            {isLoading ? 'Creating Account...' : 'Create Account'}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
+            <span className="relative z-10">
+              {isLoading ? 'Creating Account...' : 'Create Account'}
+            </span>
           </button>
 
           {/* Divider */}
-          <div className="relative">
+          <div className="relative my-2">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-white/10"></div>
+              <div className="w-full border-t border-secondary/25"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-[#0a0a0a] text-gray-400">or</span>
+              <span className="px-3 bg-gradient-to-br from-secondary/14 to-secondary/6 text-text-secondary font-bold uppercase tracking-wider">or</span>
             </div>
           </div>
 
           {/* Login Link */}
-          <p className="text-center text-gray-400">
+          <p className="text-center text-text-secondary font-medium">
             Already have an account?{' '}
             <button
               type="button"
               onClick={() => onNavigate('login')}
-              className="text-coral font-medium hover:text-coral/80 transition-colors"
+              className="text-secondary hover:text-accent transition-colors duration-300 font-bold uppercase tracking-wider"
             >
               Sign in
             </button>

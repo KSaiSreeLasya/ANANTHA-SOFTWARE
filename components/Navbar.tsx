@@ -75,48 +75,48 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                   onClick={item.external ? undefined : (e) => handleLinkClick(e, item.id)}
                   target={item.external ? '_blank' : undefined}
                   rel={item.external ? 'noopener noreferrer' : undefined}
-                  className={`px-5 py-2.5 text-sm font-semibold transition-all duration-500 relative group border-b-2 rounded-lg ${
+                  className={`px-6 py-2.5 text-sm font-semibold transition-all duration-500 relative group border-b-2 rounded-xl overflow-hidden ${
                     activePage === item.id
-                      ? 'text-secondary border-b-secondary bg-gradient-to-b from-secondary/14 to-secondary/6'
-                      : 'text-text-muted border-b-transparent hover:text-secondary hover:border-b-secondary/60 hover:bg-gradient-to-b from-secondary/12 to-secondary/5'
+                      ? 'text-secondary border-b-secondary bg-gradient-to-br from-secondary/18 to-secondary/8 shadow-lg shadow-secondary/20'
+                      : 'text-text-muted border-b-transparent hover:text-secondary hover:border-b-secondary/60 hover:bg-gradient-to-br from-secondary/14 to-secondary/6 hover:shadow-md hover:shadow-secondary/15'
                   }`}
                   style={{animation: `fadeInUp 0.6s ease-out ${0.06 * index}s backwards`}}
                 >
-                  <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/15 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm rounded-lg -z-10"></div>
-                  <span className="relative z-10">{item.label}</span>
+                  <div className="absolute -inset-2 bg-gradient-to-r from-secondary/0 via-secondary/20 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg rounded-lg -z-10"></div>
+                  <span className="relative z-10 flex items-center justify-center">{item.label}</span>
                   {activePage === item.id && (
-                    <div className="absolute -bottom-0.5 left-0 right-0 h-1.5 bg-gradient-to-r from-secondary via-accent to-secondary animate-glow rounded-full" style={{boxShadow: '0 0 20px rgba(251, 191, 36, 0.6)'}}></div>
+                    <div className="absolute -bottom-0.5 left-0 right-0 h-1.5 bg-gradient-to-r from-secondary via-accent to-secondary animate-glow rounded-full" style={{boxShadow: '0 0 25px rgba(251, 191, 36, 0.7)'}}></div>
                   )}
                 </a>
               ))}
 
-              <div className="ml-8 flex items-center space-x-4 pl-8 border-l border-secondary/30">
+              <div className="ml-8 flex items-center space-x-4 pl-8 border-l border-secondary/25">
                 {user ? (
                   <>
-                    <div className="flex items-center space-x-2.5 text-text-secondary group cursor-default px-3 py-2 rounded-lg bg-secondary/10 border border-secondary/30">
+                    <div className="flex items-center space-x-3 text-text-secondary group cursor-default px-4 py-2.5 rounded-xl bg-gradient-to-r from-secondary/12 to-secondary/8 border border-secondary/35 hover:border-secondary/50 transition-all duration-500 hover:shadow-md hover:shadow-secondary/10">
                       <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-secondary to-accent animate-pulse-scale"></div>
                       <span className="text-xs font-semibold uppercase tracking-wider group-hover:text-secondary transition-colors duration-500">{getUserDisplayName()}</span>
                     </div>
                     <button
                       onClick={handleLogout}
-                      className="text-sm font-semibold text-text-muted hover:text-secondary transition-all duration-500 group relative px-4 py-2.5 rounded-lg hover:bg-secondary/12 border border-transparent hover:border-secondary/35"
+                      className="text-sm font-semibold text-text-muted hover:text-secondary transition-all duration-500 group relative px-5 py-2.5 rounded-xl hover:bg-secondary/12 border border-transparent hover:border-secondary/35 hover:shadow-md hover:shadow-secondary/10"
                     >
                       <span className="relative z-10">Logout</span>
-                      <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-[calc(100%-8px)] transition-all duration-500 rounded-full"></div>
+                      <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-[calc(100%-10px)] transition-all duration-500 rounded-full"></div>
                     </button>
                   </>
                 ) : (
                   <>
                     <button
                       onClick={() => onNavigate('login')}
-                      className="flex items-center text-xs font-bold text-secondary hover:text-yellow-300 transition-all duration-500 group relative px-6 py-3 rounded-lg hover:bg-secondary/18 border border-secondary/50 uppercase tracking-wider"
+                      className="flex items-center text-xs font-bold text-secondary hover:text-yellow-300 transition-all duration-500 group relative px-7 py-3 rounded-xl hover:bg-gradient-to-br hover:from-secondary/20 hover:to-secondary/10 border border-secondary/50 hover:border-secondary/70 uppercase tracking-wider hover:shadow-lg hover:shadow-secondary/20"
                     >
-                      <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/25 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm rounded-lg -z-10"></div>
-                      <svg className="w-4 h-4 mr-2 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500" fill="currentColor" viewBox="0 0 20 20">
+                      <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg rounded-lg -z-10"></div>
+                      <svg className="w-4 h-4 mr-2.5 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                       </svg>
                       <span className="relative z-10">Log In</span>
-                      <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-[calc(100%-12px)] transition-all duration-500 rounded-full"></div>
+                      <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-[calc(100%-14px)] transition-all duration-500 rounded-full"></div>
                     </button>
                   </>
                 )}
