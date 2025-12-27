@@ -73,22 +73,22 @@ const App: React.FC = () => {
               </div>
 
               <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-                <div className="inline-block mb-10 animate-fade-in-up" style={{animationDuration: '0.8s'}}>
-                  <div className="px-7 py-3 text-primary text-xs font-bold uppercase tracking-widest border border-primary/40 rounded-full bg-gradient-to-r from-primary/12 to-primary/6 backdrop-blur-lg" style={{boxShadow: '0 0 30px rgba(31, 111, 235, 0.15)'}}>
+                <div className="inline-block mb-12 animate-fade-in-up" style={{animationDuration: '0.8s'}}>
+                  <div className="px-8 py-3.5 text-secondary text-xs font-bold uppercase tracking-widest border border-secondary/50 rounded-full bg-gradient-to-r from-secondary/14 to-secondary/6 backdrop-blur-xl" style={{boxShadow: '0 0 40px rgba(251, 191, 36, 0.25)'}}>
                     Our Core Strength
                   </div>
                 </div>
 
-                <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-10 uppercase tracking-tight animate-fade-in-up" style={{animationDelay: '0.1s', animationDuration: '0.8s', lineHeight: '1.1'}}>
-                  <span className="text-gradient inline-block" style={{backgroundImage: 'linear-gradient(135deg, #1f6feb 0%, #00d4ff 50%, #8b5cf6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 6s ease infinite'}}>Excellence in Engineering</span>
+                <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-12 uppercase tracking-tight animate-fade-in-up" style={{animationDelay: '0.1s', animationDuration: '0.8s', lineHeight: '1.1', letterSpacing: '-0.02em'}}>
+                  <span className="text-gradient inline-block" style={{backgroundImage: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 8s ease infinite'}}>Excellence in Engineering</span>
                 </h2>
 
-                <div className="h-1.5 w-32 bg-gradient-to-r from-primary via-accent to-secondary mx-auto mb-14 animate-fade-in-up rounded-full" style={{animationDelay: '0.2s', animationDuration: '0.8s', boxShadow: '0 0 30px rgba(31, 111, 235, 0.4)'}}></div>
+                <div className="h-2 w-40 bg-gradient-to-r from-secondary via-accent to-primary mx-auto mb-16 animate-fade-in-up rounded-full" style={{animationDelay: '0.2s', animationDuration: '0.8s', boxShadow: '0 0 40px rgba(251, 191, 36, 0.4)'}}></div>
 
-                <p className="text-text-secondary max-w-4xl mx-auto leading-relaxed text-lg md:text-xl animate-fade-in-up group" style={{animationDelay: '0.3s', animationDuration: '0.8s', letterSpacing: '0.3px'}}>
+                <p className="text-text-secondary max-w-4xl mx-auto leading-relaxed text-lg md:text-xl animate-fade-in-up group font-light" style={{animationDelay: '0.3s', animationDuration: '0.8s', letterSpacing: '0.4px', fontWeight: '300'}}>
                   Anantha Software is a global leader in Silicon Engineering and Integrated Solutions.
                   We specialize in VLSI, AI/ML development, and bespoke software applications, driving innovation across industries.
-                  <div className="absolute -inset-6 bg-gradient-to-r from-primary/0 via-primary/8 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl rounded-xl -z-10 pointer-events-none"></div>
+                  <div className="absolute -inset-8 bg-gradient-to-r from-secondary/0 via-secondary/12 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-600 blur-2xl rounded-xl -z-10 pointer-events-none"></div>
                 </p>
 
                 <div className="mt-20 animate-fade-in-up" style={{animationDelay: '0.4s', animationDuration: '0.8s'}}>
