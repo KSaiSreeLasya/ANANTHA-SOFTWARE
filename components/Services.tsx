@@ -218,18 +218,19 @@ const Services: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-20">
-          <div className="inline-block mb-4 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/15 to-primary/8 border border-primary/40 text-primary text-xs font-semibold uppercase tracking-widest hover:border-primary/60 transition-all duration-500 shadow-lg shadow-primary/10">
-            <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-secondary rounded-full inline-block mr-2.5 animate-pulse-scale"></span>
+        {/* Header Section - Enhanced */}
+        <div className="text-center mb-28">
+          <div className="inline-block mb-6 px-6 py-3 rounded-full bg-gradient-to-r from-primary/18 to-primary/10 border border-primary/50 text-primary text-xs font-bold uppercase tracking-widest hover:border-primary/80 hover:shadow-lg hover:shadow-primary/20 transition-all duration-500">
+            <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-secondary rounded-full inline-block mr-3 animate-pulse-scale"></span>
             Our Expertise
           </div>
-          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-8 animate-fade-in-up flex flex-col items-center justify-center">
-            <span>Comprehensive</span> <span className="text-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text animate-gradient-shift">Technology Solutions</span>
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-10 animate-fade-in-up flex flex-col items-center justify-center" style={{letterSpacing: '-0.025em', lineHeight: '1.05'}}>
+            <span className="text-text font-black">Comprehensive</span> <span className="text-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text animate-gradient-shift inline-block mt-2">Technology Solutions</span>
           </h2>
-          <div className="divider w-16 mx-auto mb-8 hover:w-24 transition-all duration-500"></div>
-          <p className="text-text-secondary max-w-3xl mx-auto text-lg leading-relaxed font-medium animate-fade-in-up hover:text-white transition-colors duration-500" style={{animationDelay: '0.1s'}}>
-            End-to-end engineering and software solutions designed for businesses that demand excellence and innovation.
+          <div className="divider w-20 mx-auto mb-12 hover:w-32 transition-all duration-500"></div>
+          <p className="text-text-secondary max-w-4xl mx-auto text-lg md:text-xl lg:text-2xl leading-relaxed font-light animate-fade-in-up hover:text-text-primary transition-colors duration-500 group" style={{animationDelay: '0.1s', letterSpacing: '0.3px', lineHeight: '1.8'}}>
+            End-to-end engineering and <span className="text-text font-medium">software solutions</span> designed for businesses that demand excellence and innovation.
+            <div className="absolute -inset-8 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl rounded-xl -z-10 pointer-events-none"></div>
           </p>
         </div>
 
