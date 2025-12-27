@@ -225,7 +225,7 @@ const Services: React.FC = () => {
             Our Expertise
           </div>
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-10 animate-fade-in-up flex flex-col items-center justify-center" style={{letterSpacing: '-0.025em', lineHeight: '1.05'}}>
-            <span className="text-text font-black">Comprehensive</span> <span className="text-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text animate-gradient-shift inline-block mt-2">Technology Solutions</span>
+            <span className="text-white font-black">Comprehensive</span> <span className="text-transparent bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text font-black text-5xl md:text-7xl lg:text-8xl inline-block mt-2" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 8s ease infinite'}}>Technology Solutions</span>
           </h2>
           <div className="divider w-20 mx-auto mb-12 hover:w-32 transition-all duration-500"></div>
           <p className="text-text-secondary max-w-4xl mx-auto text-lg md:text-xl lg:text-2xl leading-relaxed font-light animate-fade-in-up hover:text-text-primary transition-colors duration-500 group" style={{animationDelay: '0.1s', letterSpacing: '0.3px', lineHeight: '1.8'}}>
@@ -582,7 +582,7 @@ const Services: React.FC = () => {
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/15 to-primary/0 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-600 -z-10"></div>
                 <div className="relative z-10">
                   <div className="text-5xl md:text-6xl mb-4 group-hover:scale-125 transition-transform duration-600 inline-block">{s.icon}</div>
-                  <div className="text-5xl md:text-6xl font-black text-gradient group-hover:scale-110 transition-transform duration-600 mb-4" style={{backgroundImage: 'linear-gradient(135deg, #1e3a8a 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 6s ease infinite'}}>{s.val}</div>
+                  <div className="text-5xl md:text-6xl font-black text-transparent group-hover:scale-110 transition-transform duration-600 mb-4" style={{backgroundImage: 'linear-gradient(135deg, #1e3a8a 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 6s ease infinite'}}>{s.val}</div>
                   <div className="text-xs md:text-sm uppercase tracking-widest text-text-muted group-hover:text-primary font-bold transition-colors duration-600">{s.label}</div>
                 </div>
               </div>
