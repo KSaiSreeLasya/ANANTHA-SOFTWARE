@@ -67,7 +67,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
 
           {/* Desktop Nav */}
           <div className="hidden lg:block">
-            <div className="ml-10 flex items-center space-x-2">
+            <div className="ml-12 flex items-center space-x-1">
               {navItems.map((item: any, index: number) => (
                 <a
                   key={item.id}
@@ -75,17 +75,17 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                   onClick={item.external ? undefined : (e) => handleLinkClick(e, item.id)}
                   target={item.external ? '_blank' : undefined}
                   rel={item.external ? 'noopener noreferrer' : undefined}
-                  className={`px-4 py-2 text-sm font-semibold transition-all duration-400 relative group border-b-2 rounded-md ${
+                  className={`px-5 py-2.5 text-sm font-semibold transition-all duration-400 relative group border-b-2 rounded-lg ${
                     activePage === item.id
-                      ? 'text-primary border-b-primary'
-                      : 'text-text-muted border-b-transparent hover:text-primary hover:border-b-primary/50 hover:bg-primary/10'
+                      ? 'text-primary border-b-primary bg-gradient-to-b from-primary/12 to-primary/6'
+                      : 'text-text-muted border-b-transparent hover:text-primary hover:border-b-primary/60 hover:bg-gradient-to-b from-primary/10 to-primary/5'
                   }`}
                   style={{animation: `fadeInUp 0.6s ease-out ${0.06 * index}s backwards`}}
                 >
-                  <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 blur-sm rounded-md -z-10"></div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/12 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 blur-sm rounded-lg -z-10"></div>
                   <span className="relative z-10">{item.label}</span>
                   {activePage === item.id && (
-                    <div className="absolute -bottom-0.5 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-accent to-primary animate-glow" style={{boxShadow: '0 0 10px rgba(31, 111, 235, 0.4)'}}></div>
+                    <div className="absolute -bottom-0.5 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary animate-glow rounded-full" style={{boxShadow: '0 0 15px rgba(31, 111, 235, 0.5)'}}></div>
                   )}
                 </a>
               ))}
