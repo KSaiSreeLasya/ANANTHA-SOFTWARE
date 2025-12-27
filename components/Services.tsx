@@ -473,19 +473,19 @@ const Services: React.FC = () => {
 
                         <div className="relative p-6 md:p-10">
                           {/* Service Header */}
-                          <div className="mb-8">
-                            <div className="flex items-start gap-4 mb-4">
-                              <div className="w-12 h-12 bg-gradient-to-br from-primary/40 to-secondary/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
-                                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <div className="mb-10">
+                            <div className="flex items-start gap-5 mb-4">
+                              <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary/50 to-secondary/25 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-125 group-hover:shadow-xl group-hover:shadow-primary/35 transition-all duration-600">
+                                <svg className="w-8 h-8 md:w-10 md:h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path d="M13 10V3L4 14h7v7l9-11h-7z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                               </div>
                               <div className="flex-1">
-                                <h5 className="text-lg md:text-xl font-bold text-white group-hover:text-primary transition-colors duration-300 mb-2">
+                                <h5 className="text-xl md:text-2xl font-bold text-white group-hover:text-primary transition-colors duration-400 mb-3 tracking-tight">
                                   {category.service}
                                 </h5>
                                 <div className="flex flex-wrap gap-2">
-                                  <span className="inline-block px-3 py-1 rounded-full bg-primary/20 border border-primary/40 text-primary text-xs font-semibold uppercase tracking-wide">
+                                  <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-primary/25 to-primary/15 border border-primary/50 text-primary text-xs font-bold uppercase tracking-wider hover:border-primary/70 transition-all duration-300">
                                     Service
                                   </span>
                                 </div>
