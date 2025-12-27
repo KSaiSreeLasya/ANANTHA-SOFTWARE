@@ -73,18 +73,21 @@ const Login: React.FC<LoginProps> = ({ onNavigate, onAuthSuccess }) => {
           <p className="text-text-secondary text-lg md:text-xl font-light" style={{letterSpacing: '0.3px'}}>Sign in to your account</p>
         </div>
 
-        {/* Login Form */}
-        <form onSubmit={handleLogin} className="space-y-6">
+        {/* Login Form - Enhanced */}
+        <form onSubmit={handleLogin} className="space-y-7 bg-gradient-to-br from-secondary/14 to-secondary/6 rounded-3xl p-8 md:p-12 border border-secondary/40 backdrop-blur-xl relative overflow-hidden animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          {/* Animated Border Glow */}
+          <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
+
           {/* Error Message */}
           {error && (
-            <div className="bg-red-500/10 border border-red-500 text-red-400 px-4 py-3 rounded-lg text-sm animate-in fade-in">
+            <div className="bg-red-500/20 border border-red-500/50 text-red-300 px-5 py-4 rounded-2xl text-sm animate-in fade-in font-medium uppercase tracking-wide">
               {error}
             </div>
           )}
 
           {/* Email Field */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+            <label htmlFor="email" className="block text-sm font-bold text-secondary uppercase tracking-widest mb-3">
               Email Address
             </label>
             <input
@@ -94,13 +97,13 @@ const Login: React.FC<LoginProps> = ({ onNavigate, onAuthSuccess }) => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
               required
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all duration-300"
+              className="w-full px-5 py-3.5 bg-gradient-to-br from-primary/12 to-primary/6 border border-secondary/40 rounded-xl text-text placeholder-text-muted/50 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/30 transition-all duration-500 backdrop-blur-sm font-medium"
             />
           </div>
 
           {/* Password Field */}
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-white mb-2">
+            <label htmlFor="password" className="block text-sm font-bold text-secondary uppercase tracking-widest mb-3">
               Password
             </label>
             <div className="relative">
@@ -111,12 +114,12 @@ const Login: React.FC<LoginProps> = ({ onNavigate, onAuthSuccess }) => {
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
                 required
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all duration-300"
+                className="w-full px-5 py-3.5 bg-gradient-to-br from-primary/12 to-primary/6 border border-secondary/40 rounded-xl text-text placeholder-text-muted/50 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/30 transition-all duration-500 backdrop-blur-sm font-medium"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-text-muted hover:text-secondary transition-colors duration-300"
               >
                 {showPassword ? (
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -134,48 +137,51 @@ const Login: React.FC<LoginProps> = ({ onNavigate, onAuthSuccess }) => {
 
           {/* Remember Me & Forgot Password */}
           <div className="flex items-center justify-between text-sm">
-            <label className="flex items-center text-gray-400 hover:text-white cursor-pointer">
+            <label className="flex items-center text-text-secondary hover:text-secondary cursor-pointer transition-colors duration-300 font-medium">
               <input
                 type="checkbox"
-                className="w-4 h-4 bg-white/5 border border-white/10 rounded text-coral focus:ring-coral cursor-pointer"
+                className="w-4 h-4 bg-secondary/20 border border-secondary/50 rounded text-secondary focus:ring-secondary cursor-pointer accent-secondary"
               />
-              <span className="ml-2">Remember me</span>
+              <span className="ml-2.5">Remember me</span>
             </label>
             <button
               type="button"
               onClick={() => onNavigate('forgot-password')}
-              className="text-coral hover:text-coral/80 transition-colors font-medium"
+              className="text-secondary hover:text-accent transition-colors duration-300 font-bold uppercase tracking-wider text-xs"
             >
               Forgot password?
             </button>
           </div>
 
-          {/* Login Button */}
+          {/* Login Button - Premium Style */}
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-3 bg-coral text-white font-bold rounded-lg hover:bg-coral/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest text-sm"
+            className="w-full py-4 bg-gradient-to-r from-secondary to-accent text-primary font-bold rounded-xl hover:shadow-2xl hover:shadow-secondary/40 transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest text-sm transform hover:scale-105 active:scale-95 relative group overflow-hidden"
           >
-            {isLoading ? 'Signing in...' : 'Sign In'}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
+            <span className="relative z-10">
+              {isLoading ? 'Signing in...' : 'Sign In'}
+            </span>
           </button>
 
           {/* Divider */}
-          <div className="relative">
+          <div className="relative my-2">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-white/10"></div>
+              <div className="w-full border-t border-secondary/25"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-[#0a0a0a] text-gray-400">or</span>
+              <span className="px-3 bg-gradient-to-br from-secondary/14 to-secondary/6 text-text-secondary font-bold uppercase tracking-wider">or</span>
             </div>
           </div>
 
           {/* Sign Up Link */}
-          <p className="text-center text-gray-400">
+          <p className="text-center text-text-secondary font-medium">
             Don't have an account?{' '}
             <button
               type="button"
               onClick={() => onNavigate('signup')}
-              className="text-coral font-medium hover:text-coral/80 transition-colors"
+              className="text-secondary hover:text-accent transition-colors duration-300 font-bold uppercase tracking-wider"
             >
               Sign up
             </button>
@@ -183,13 +189,13 @@ const Login: React.FC<LoginProps> = ({ onNavigate, onAuthSuccess }) => {
         </form>
 
         {/* Footer Info */}
-        <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm text-gray-500">
+        <div className="mt-16 pt-10 border-t border-secondary/25 text-center text-xs text-text-muted font-medium uppercase tracking-widest animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           By signing in, you agree to our{' '}
-          <a href="#" className="text-coral hover:underline">
+          <a href="#" className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
             Terms of Service
           </a>{' '}
           and{' '}
-          <a href="#" className="text-coral hover:underline">
+          <a href="#" className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
             Privacy Policy
           </a>
         </div>
