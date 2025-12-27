@@ -292,11 +292,12 @@ const Services: React.FC = () => {
           </div>
 
           {/* AI/ML Development */}
-          <div className="gradient-card-subtle p-8 rounded-2xl card-hover group border-primary/40 animate-fade-in-up relative overflow-hidden" style={{animationDelay: '0.3s'}}>
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="flex items-start gap-6 relative z-10">
-              <div className="w-16 h-16 bg-gradient-to-br from-secondary/40 to-secondary/15 rounded-2xl flex items-center justify-center flex-shrink-0 text-secondary group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-secondary/30 transition-all duration-500">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="gradient-card-subtle p-8 md:p-10 rounded-3xl card-hover group border-primary/40 animate-fade-in-up relative overflow-hidden transform hover:-translate-y-3" style={{animationDelay: '0.3s'}}>
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/20 to-secondary/0 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-600 -z-10"></div>
+            <div className="flex items-start gap-6 md:gap-8 relative z-10">
+              <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-secondary/50 to-secondary/20 rounded-3xl flex items-center justify-center flex-shrink-0 text-secondary group-hover:scale-125 group-hover:shadow-2xl group-hover:shadow-secondary/40 transition-all duration-600">
+                <svg className="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <circle cx="8" cy="6" r="1.5" fill="currentColor" />
                   <circle cx="16" cy="6" r="1.5" fill="currentColor" />
                   <circle cx="12" cy="14" r="1.5" fill="currentColor" />
@@ -309,8 +310,8 @@ const Services: React.FC = () => {
                 </svg>
               </div>
               <div className="flex-1">
-                <h4 className="text-lg font-bold mb-2 group-hover:text-secondary transition-colors duration-500">AI/ML Development</h4>
-                <p className="text-text-muted text-sm leading-relaxed group-hover:text-text-secondary transition-colors duration-500">
+                <h4 className="text-lg md:text-xl font-bold mb-3 group-hover:text-secondary transition-colors duration-500 tracking-tight">AI/ML Development</h4>
+                <p className="text-text-muted text-sm md:text-base leading-relaxed group-hover:text-text-secondary transition-colors duration-500 font-light">
                   Advanced AI/ML solutions leveraging NLP, LLM, and Generative AI to drive business innovation and insights.
                 </p>
               </div>
