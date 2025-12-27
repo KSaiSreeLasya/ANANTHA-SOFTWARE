@@ -152,11 +152,11 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        <div className="pt-12 border-t border-primary/20 flex flex-col md:flex-row justify-between items-center text-[10px] text-text-muted uppercase tracking-widest space-y-4 md:space-y-0 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-          <p className="font-medium hover:text-primary transition-colors duration-500">© 2024 Anantha Software Solutions. All Rights Reserved.</p>
+        <div className="pt-16 border-t border-primary/25 flex flex-col md:flex-row justify-between items-center text-[10px] text-text-muted uppercase tracking-widest space-y-5 md:space-y-0 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+          <p className="font-bold hover:text-primary transition-colors duration-500">© 2024 Anantha Software Solutions. All Rights Reserved.</p>
           <div className="flex space-x-8">
-            <button className="text-text-muted hover:text-primary transition-all duration-400 font-medium border-b border-transparent hover:border-primary">Privacy Policy</button>
-            <button className="text-text-muted hover:text-primary transition-all duration-400 font-medium border-b border-transparent hover:border-primary">Terms</button>
+            <button className="text-text-muted hover:text-secondary transition-all duration-500 font-bold border-b-2 border-transparent hover:border-secondary hover:text-secondary px-2 py-1">Privacy Policy</button>
+            <button className="text-text-muted hover:text-secondary transition-all duration-500 font-bold border-b-2 border-transparent hover:border-secondary hover:text-secondary px-2 py-1">Terms</button>
           </div>
         </div>
       </div>
