@@ -353,10 +353,12 @@
 
         /* Text Gradient */
         .text-gradient {
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 50%, var(--color-secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            background-size: 200% 200%;
+            animation: gradient-shift 6s ease infinite;
         }
 
         /* Animations */
