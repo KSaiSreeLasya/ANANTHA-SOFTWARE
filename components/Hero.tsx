@@ -90,7 +90,7 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
             <br />
             <span className="text-text-secondary font-light">Into</span>
           </span>
-          <span className="block text-gradient animate-fade-in-up relative" style={{animationDelay: '0.4s', animationDuration: '0.9s', background: 'linear-gradient(120deg, #3b82f6 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 8s ease infinite', fontWeight: 900, lineHeight: '1.05'}}>Reality</span>
+          <span className="block animate-fade-in-up relative" style={{animationDelay: '0.4s', animationDuration: '0.9s', background: 'linear-gradient(120deg, #3b82f6 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 8s ease infinite', fontWeight: 900, lineHeight: '1.05', display: 'block'}}>Reality</span>
         </h1>
 
         {/* Subheading with Enhanced Typography */}
