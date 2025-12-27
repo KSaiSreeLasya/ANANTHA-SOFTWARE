@@ -150,7 +150,7 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
 
               <div className="relative z-10">
                 <div className="text-5xl mb-4 group-hover/stat:scale-125 transition-transform duration-600 inline-block">{stat.icon}</div>
-                <div className="text-5xl md:text-7xl font-black text-transparent bg-gradient-to-r from-secondary via-accent to-secondary bg-clip-text group-hover/stat:scale-110 transition-transform duration-600 inline-block mb-4" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundSize: '200% 200%', animation: 'gradient-shift 6s ease infinite'}}>{stat.value}</div>
+                <div className="text-5xl md:text-7xl font-black group-hover/stat:scale-110 transition-transform duration-600 inline-block mb-4" style={{background: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', animation: 'gradient-shift 6s ease infinite', display: 'inline-block'}}>{stat.value}</div>
                 <div className="text-xs text-text-muted uppercase tracking-widest font-bold group-hover/stat:text-secondary transition-colors duration-600 mt-6">{stat.label}</div>
               </div>
             </div>
