@@ -225,7 +225,7 @@ const Services: React.FC = () => {
             Our Expertise
           </div>
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-10 animate-fade-in-up flex flex-col items-center justify-center" style={{letterSpacing: '-0.025em', lineHeight: '1.05'}}>
-            <span className="text-white font-black">Comprehensive</span> <span className="text-white font-black text-5xl md:text-7xl lg:text-8xl inline-block mt-2 px-6 md:px-8 py-2 md:py-4 bg-gradient-to-r from-red-500 to-red-600 rounded-lg">Technology Solutions</span>
+            <span className="text-white font-black">Comprehensive</span> <span className="font-black inline-block mt-2" style={{fontSize: 'inherit', color: 'white', background: 'linear-gradient(135deg, #ef4444, #dc2626)', padding: '12px 24px', borderRadius: '8px', display: 'inline-block'}}>Technology Solutions</span>
           </h2>
           <div className="divider w-20 mx-auto mb-12 hover:w-32 transition-all duration-500"></div>
           <p className="text-text-secondary max-w-4xl mx-auto text-lg md:text-xl lg:text-2xl leading-relaxed font-light animate-fade-in-up hover:text-text-primary transition-colors duration-500 group" style={{animationDelay: '0.1s', letterSpacing: '0.3px', lineHeight: '1.8'}}>
