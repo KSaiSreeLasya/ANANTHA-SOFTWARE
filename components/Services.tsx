@@ -569,7 +569,7 @@ const Services: React.FC = () => {
             <h3 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-6">Proven Expertise & Impact</h3>
             <div className="divider w-20 mx-auto hover:w-32 transition-all duration-500"></div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {[
               { val: '4+', label: 'Years of Excellence', icon: '⏱️' },
               { val: '50+', label: 'Team Members', icon: '👨‍💼' },
@@ -580,9 +580,9 @@ const Services: React.FC = () => {
               <div key={s.label} className="gradient-card-subtle p-8 md:p-10 rounded-3xl text-center card-hover group animate-fade-in-up border-primary/40 relative overflow-hidden transform hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/25" style={{animationDelay: `${0.1 * (i + 1)}s`}}>
                 <div className="absolute inset-0 bg-gradient-to-b from-primary/8 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/15 to-primary/0 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-600 -z-10"></div>
-                <div className="relative z-10">
-                  <div className="text-5xl md:text-6xl mb-4 group-hover:scale-125 transition-transform duration-600 inline-block">{s.icon}</div>
-                  <div className="text-5xl md:text-6xl font-black text-transparent group-hover:scale-110 transition-transform duration-600 mb-4" style={{backgroundImage: 'linear-gradient(135deg, #1e3a8a 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 6s ease infinite'}}>{s.val}</div>
+                <div className="relative z-10 flex flex-col items-center gap-3">
+                  <div className="text-5xl md:text-6xl group-hover:scale-125 transition-transform duration-600">{s.icon}</div>
+                  <div className="text-5xl md:text-6xl font-black text-transparent group-hover:scale-110 transition-transform duration-600" style={{backgroundImage: 'linear-gradient(135deg, #1e3a8a 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 6s ease infinite'}}>{s.val}</div>
                   <div className="text-xs md:text-sm uppercase tracking-widest text-text-muted group-hover:text-primary font-bold transition-colors duration-600">{s.label}</div>
                 </div>
               </div>

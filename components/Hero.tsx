@@ -148,10 +148,10 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
               <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/20 rounded-full mix-blend-screen filter blur-3xl opacity-0 group-hover/stat:opacity-60 transition-opacity duration-700 -z-10"></div>
               <div className="absolute bottom-0 left-0 w-28 h-28 bg-accent/15 rounded-full mix-blend-screen filter blur-2xl opacity-0 group-hover/stat:opacity-40 transition-opacity duration-700 -z-10"></div>
 
-              <div className="relative z-10">
-                <div className="text-5xl mb-4 group-hover/stat:scale-125 transition-transform duration-600 inline-block">{stat.icon}</div>
-                <div className="text-5xl md:text-7xl font-black group-hover/stat:scale-110 transition-transform duration-600 inline-block mb-4" style={{background: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', animation: 'gradient-shift 6s ease infinite', display: 'inline-block'}}>{stat.value}</div>
-                <div className="text-xs text-text-muted uppercase tracking-widest font-bold group-hover/stat:text-secondary transition-colors duration-600 mt-6">{stat.label}</div>
+              <div className="relative z-10 flex flex-col items-center gap-3">
+                <div className="text-5xl group-hover/stat:scale-125 transition-transform duration-600">{stat.icon}</div>
+                <div className="text-5xl md:text-7xl font-black group-hover/stat:scale-110 transition-transform duration-600" style={{background: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', animation: 'gradient-shift 6s ease infinite'}}>{stat.value}</div>
+                <div className="text-xs text-text-muted uppercase tracking-widest font-bold group-hover/stat:text-secondary transition-colors duration-600">{stat.label}</div>
               </div>
             </div>
           ))}
