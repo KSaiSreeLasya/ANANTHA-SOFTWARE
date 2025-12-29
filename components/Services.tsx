@@ -569,7 +569,7 @@ const Services: React.FC = () => {
             <h3 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-6">Proven Expertise & Impact</h3>
             <div className="divider w-20 mx-auto hover:w-32 transition-all duration-500"></div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {[
               { val: '4+', label: 'Years of Excellence', icon: '⏱️' },
               { val: '50+', label: 'Team Members', icon: '👨‍💼' },
