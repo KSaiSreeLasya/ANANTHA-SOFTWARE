@@ -57,7 +57,7 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
               <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/12 rounded-full mix-blend-screen filter blur-3xl opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
               <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
               <h3 className="text-3xl md:text-4xl font-black group-hover:text-secondary transition-colors duration-600 w-full flex flex-col items-center justify-center relative z-10 letter-spacing-tight">
-                Anantha Software is now <span className="inline-block mt-3 text-transparent bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text font-black text-3xl md:text-4xl" style={{backgroundSize: '200% 200%', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 8s ease infinite'}}>ASOCSEMI</span>
+                Anantha Software is now <span className="inline-block mt-3 font-black text-3xl md:text-4xl" style={{background: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', animation: 'gradient-shift 8s ease infinite'}}>ASOCSEMI</span>
               </h3>
               <div className="h-2 w-40 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-600 rounded-full relative z-10" style={{boxShadow: '0 0 30px rgba(251, 191, 36, 0.4)'}}></div>
               <p className="text-sm md:text-base text-text-secondary leading-relaxed uppercase tracking-wider font-medium group-hover:text-text-primary transition-colors duration-600 max-w-2xl relative z-10">
@@ -86,11 +86,11 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
               <span className="absolute -inset-6 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl rounded-xl"></span>
               <span className="relative hover:text-secondary transition-colors duration-500">Transforming</span>
             </span>
-            <span className="inline-block text-gradient ml-3 mr-3 hover:scale-110 transition-transform duration-500" style={{animation: 'gradient-shift 8s ease infinite', backgroundImage: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 900}}>Innovation</span>
+            <span className="inline-block ml-3 mr-3 hover:scale-110 transition-transform duration-500" style={{animation: 'gradient-shift 8s ease infinite', background: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 900, display: 'inline-block'}}>Innovation</span>
             <br />
             <span className="text-text-secondary font-light">Into</span>
           </span>
-          <span className="block text-gradient animate-fade-in-up relative" style={{animationDelay: '0.4s', animationDuration: '0.9s', background: 'linear-gradient(120deg, #3b82f6 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 8s ease infinite', fontWeight: 900, lineHeight: '1.05'}}>Reality</span>
+          <span className="block animate-fade-in-up relative" style={{animationDelay: '0.4s', animationDuration: '0.9s', background: 'linear-gradient(120deg, #3b82f6 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 8s ease infinite', fontWeight: 900, lineHeight: '1.05', display: 'block'}}>Reality</span>
         </h1>
 
         {/* Subheading with Enhanced Typography */}
@@ -150,7 +150,7 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
 
               <div className="relative z-10">
                 <div className="text-5xl mb-4 group-hover/stat:scale-125 transition-transform duration-600 inline-block">{stat.icon}</div>
-                <div className="text-5xl md:text-7xl font-black text-transparent bg-gradient-to-r from-secondary via-accent to-secondary bg-clip-text group-hover/stat:scale-110 transition-transform duration-600 inline-block mb-4" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundSize: '200% 200%', animation: 'gradient-shift 6s ease infinite'}}>{stat.value}</div>
+                <div className="text-5xl md:text-7xl font-black group-hover/stat:scale-110 transition-transform duration-600 inline-block mb-4" style={{background: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', animation: 'gradient-shift 6s ease infinite', display: 'inline-block'}}>{stat.value}</div>
                 <div className="text-xs text-text-muted uppercase tracking-widest font-bold group-hover/stat:text-secondary transition-colors duration-600 mt-6">{stat.label}</div>
               </div>
             </div>
