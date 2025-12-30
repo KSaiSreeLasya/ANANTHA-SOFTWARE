@@ -228,7 +228,7 @@ const Services: React.FC = () => {
             <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-white" style={{letterSpacing: '-0.025em', lineHeight: '1.1'}}>
               Comprehensive
             </h2>
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter" style={{letterSpacing: '-0.025em', lineHeight: '1.1', marginTop: '0.5rem', color: '#ffffff !important', opacity: '1 !important', visibility: 'visible !important', display: 'block !important'}}>
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter" style={{letterSpacing: '-0.025em', lineHeight: '1.1', marginTop: '0.5rem', color: '#ffffff !important', opacity: '1 !important', visibility: 'visible !important', display: 'block !important', backgroundColor: 'rgba(255, 0, 0, 0.5)'}}>
               Technology Solutions
             </h2>
           </div>
