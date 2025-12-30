@@ -47,7 +47,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-white via-gray-50 to-white backdrop-blur-xl border-b border-gray-200 shadow-lg" style={{boxShadow: '0 8px 32px rgba(31, 111, 235, 0.08), inset 0 1px 0 rgba(0, 0, 0, 0.06)'}}>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-white via-white to-white backdrop-blur-sm border-b border-slate-200 shadow-sm" style={{boxShadow: '0 4px 20px rgba(15, 23, 42, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8)'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-24 items-center gap-8">
           {/* Logo */}
