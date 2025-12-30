@@ -99,10 +99,10 @@ const App: React.FC = () => {
                   <div className="absolute -inset-8 bg-gradient-to-r from-secondary/0 via-secondary/8 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-600 blur-2xl rounded-xl -z-10 pointer-events-none"></div>
                 </div>
 
-                <div className="mt-24 animate-fade-in-up" style={{animationDelay: '0.4s', animationDuration: '0.8s'}}>
+                <div className="mt-24 animate-fade-in-up" style={{animationDelay: '0.4s', animationDuration: '0.7s'}}>
                   <button
                     onClick={() => navigateTo('services')}
-                    className="px-16 py-6 border-2.5 border-secondary text-secondary font-bold rounded-2xl uppercase tracking-wider text-sm transition-all duration-600 relative group overflow-hidden hover:bg-gradient-to-r hover:from-secondary/22 hover:to-secondary/12 hover:shadow-lg hover:shadow-secondary/40 hover:scale-110 active:scale-95 bg-gradient-to-r from-secondary/10 to-secondary/4"
+                    className="px-16 py-6 border-2.5 border-secondary text-secondary font-bold rounded-2xl uppercase tracking-wider text-sm transition-all duration-600 relative group overflow-hidden hover:bg-gradient-to-r hover:from-secondary/18 hover:to-secondary/10 hover:shadow-md hover:shadow-secondary/30 hover:scale-105 active:scale-98 bg-gradient-to-r from-secondary/8 to-secondary/3"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
                     <span className="relative z-10 flex items-center justify-center gap-3">
