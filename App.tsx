@@ -11,6 +11,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsAndConditions from './components/TermsAndConditions';
 
 const App: React.FC = () => {
   // Use state to track the current "page"
