@@ -224,10 +224,9 @@ const Services: React.FC = () => {
             <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-secondary rounded-full inline-block mr-3 animate-pulse-scale"></span>
             Our Expertise
           </div>
-          <div className="animate-fade-in-up overflow-visible">
-            <h2 className="flex flex-col items-center justify-center gap-2" style={{letterSpacing: '-0.025em'}}>
-              <span className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-white" style={{lineHeight: '1.1'}}>Comprehensive</span>
-              <span className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-white" style={{lineHeight: '1.1'}}>Technology Solutions</span>
+          <div className="animate-fade-in-up">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-white text-center" style={{letterSpacing: '-0.025em', lineHeight: '1.15'}}>
+              Comprehensive<br />Technology Solutions
             </h2>
           </div>
           <div className="divider w-20 mx-auto mb-12 hover:w-32 transition-all duration-500"></div>
