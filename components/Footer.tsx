@@ -83,13 +83,13 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
           {/* Quick Navigation - Enhanced */}
           <div className="animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            <h4 className="text-white font-bold mb-10 text-sm uppercase tracking-widest">Navigation</h4>
+            <h4 className="text-slate-900 font-bold mb-10 text-sm uppercase tracking-widest">Navigation</h4>
             <ul className="space-y-4">
               {navLinks.map((link, idx) => (
                 <li key={link.id}>
                   <button
                     onClick={() => onNavigate(link.id)}
-                    className="text-xs text-text-muted uppercase tracking-widest hover:text-primary transition-all duration-500 hover:translate-x-2 group relative px-4 py-2.5 rounded-lg hover:bg-gradient-to-r hover:from-primary/15 hover:to-primary/8"
+                    className="text-xs text-slate-600 uppercase tracking-widest hover:text-primary transition-all duration-500 hover:translate-x-2 group relative px-4 py-2.5 rounded-lg hover:bg-gradient-to-r hover:from-primary/10 hover:to-primary/5"
                     style={{animation: `slideInLeft 0.6s ease-out ${0.06 * idx}s backwards`}}
                   >
                     <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/15 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg rounded-lg -z-10"></div>
