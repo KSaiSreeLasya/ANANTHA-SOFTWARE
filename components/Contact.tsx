@@ -126,7 +126,7 @@ const Contact: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-4xl font-bold mb-3 text-white">Message Sent!</h3>
+                  <h3 className="text-4xl font-bold mb-3 text-text">Message Sent!</h3>
                   <p className="text-text-secondary font-medium">Thank you for reaching out. Our team will get back to you within 24 hours.</p>
                 </div>
               ) : (
