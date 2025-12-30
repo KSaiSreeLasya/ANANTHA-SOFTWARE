@@ -211,7 +211,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <div className="section-padding bg-gradient-to-b from-color-bg via-color-bg-light to-color-bg wavy-bg relative overflow-hidden">
+    <div className="section-padding wavy-bg relative overflow-hidden" style={{backgroundColor: '#FFFFF0'}}>
       {/* Background Animation */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/3 right-0 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-20 animate-float" style={{animation: 'float 15s ease-in-out infinite'}}></div>
