@@ -47,7 +47,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-[#0f172a]/96 via-[#1e293b]/92 to-[#0f172a]/88 backdrop-blur-xl border-b border-secondary/25 shadow-lg" style={{boxShadow: '0 8px 32px rgba(251, 191, 36, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.06)'}}>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-white via-gray-50 to-white backdrop-blur-xl border-b border-gray-200 shadow-lg" style={{boxShadow: '0 8px 32px rgba(31, 111, 235, 0.08), inset 0 1px 0 rgba(0, 0, 0, 0.06)'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-24 items-center gap-8">
           {/* Logo */}
@@ -77,8 +77,8 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                   rel={item.external ? 'noopener noreferrer' : undefined}
                   className={`px-6 py-2.5 text-sm font-semibold transition-all duration-500 relative group border-b-2 rounded-xl overflow-hidden ${
                     activePage === item.id
-                      ? 'text-secondary border-b-secondary bg-gradient-to-br from-secondary/18 to-secondary/8 shadow-lg shadow-secondary/20'
-                      : 'text-text-muted border-b-transparent hover:text-secondary hover:border-b-secondary/60 hover:bg-gradient-to-br from-secondary/14 to-secondary/6 hover:shadow-md hover:shadow-secondary/15'
+                      ? 'text-secondary border-b-secondary bg-gradient-to-br from-yellow-100 to-yellow-50 shadow-lg shadow-secondary/15'
+                      : 'text-gray-600 border-b-transparent hover:text-secondary hover:border-b-secondary/60 hover:bg-gradient-to-br from-yellow-50 to-yellow-25 hover:shadow-md hover:shadow-secondary/10'
                   }`}
                   style={{animation: `fadeInUp 0.6s ease-out ${0.06 * index}s backwards`}}
                 >
@@ -93,13 +93,13 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
               <div className="ml-8 flex items-center space-x-4 pl-8 border-l border-secondary/25">
                 {user ? (
                   <>
-                    <div className="flex items-center space-x-3 text-text-secondary group cursor-default px-4 py-2.5 rounded-xl bg-gradient-to-r from-secondary/12 to-secondary/8 border border-secondary/35 hover:border-secondary/50 transition-all duration-500 hover:shadow-md hover:shadow-secondary/10">
+                    <div className="flex items-center space-x-3 text-gray-700 group cursor-default px-4 py-2.5 rounded-xl bg-gradient-to-r from-yellow-100 to-yellow-50 border border-secondary/30 hover:border-secondary/50 transition-all duration-500 hover:shadow-md hover:shadow-secondary/10">
                       <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-secondary to-accent animate-pulse-scale"></div>
                       <span className="text-xs font-semibold uppercase tracking-wider group-hover:text-secondary transition-colors duration-500">{getUserDisplayName()}</span>
                     </div>
                     <button
                       onClick={handleLogout}
-                      className="text-sm font-semibold text-text-muted hover:text-secondary transition-all duration-500 group relative px-5 py-2.5 rounded-xl hover:bg-secondary/12 border border-transparent hover:border-secondary/35 hover:shadow-md hover:shadow-secondary/10"
+                      className="text-sm font-semibold text-gray-600 hover:text-secondary transition-all duration-500 group relative px-5 py-2.5 rounded-xl hover:bg-yellow-50 border border-transparent hover:border-secondary/35 hover:shadow-md hover:shadow-secondary/10"
                     >
                       <span className="relative z-10">Logout</span>
                       <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-[calc(100%-10px)] transition-all duration-500 rounded-full"></div>
@@ -144,7 +144,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-gradient-to-b from-secondary/14 via-secondary/7 to-secondary/3 border-b border-secondary/30 animate-slide-in-down" style={{boxShadow: '0 8px 32px rgba(251, 191, 36, 0.12)'}}>
+        <div className="lg:hidden bg-gradient-to-b from-gray-50 via-white to-white border-b border-gray-200 animate-slide-in-down" style={{boxShadow: '0 8px 32px rgba(31, 111, 235, 0.08)'}}>
           <div className="px-4 pt-3 pb-8 space-y-2">
             {navItems.map((item: any, index: number) => (
               <a
@@ -155,8 +155,8 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                 rel={item.external ? 'noopener noreferrer' : undefined}
                 className={`block px-4 py-3.5 text-base font-semibold transition-all duration-500 group relative border-l-3 rounded-r-lg ${
                   activePage === item.id
-                    ? 'text-secondary border-l-secondary bg-gradient-to-r from-secondary/16 to-secondary/6'
-                    : 'text-text-muted hover:text-secondary border-l-transparent hover:border-l-secondary/60 hover:bg-gradient-to-r from-secondary/12 to-secondary/5'
+                    ? 'text-secondary border-l-secondary bg-gradient-to-r from-yellow-100 to-yellow-50'
+                    : 'text-gray-600 hover:text-secondary border-l-transparent hover:border-l-secondary/60 hover:bg-gradient-to-r from-yellow-50 to-white'
                 }`}
                 style={{animation: `slideInLeft 0.5s ease-out ${0.06 * index}s backwards`}}
               >
@@ -166,13 +166,13 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
             <div className="pt-6 border-t border-secondary/30 flex flex-col space-y-3">
               {user ? (
                 <>
-                  <div className="px-4 py-3.5 flex items-center space-x-2.5 text-text-secondary group cursor-default rounded-lg bg-secondary/12 border border-secondary/35">
+                  <div className="px-4 py-3.5 flex items-center space-x-2.5 text-gray-700 group cursor-default rounded-lg bg-yellow-100 border border-secondary/30">
                     <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-secondary to-accent animate-pulse-scale"></div>
                     <span className="text-xs font-semibold uppercase tracking-wider group-hover:text-secondary transition-colors duration-500">{getUserDisplayName()}</span>
                   </div>
                   <button
                     onClick={handleLogout}
-                    className="text-left px-4 py-3.5 text-text-muted font-semibold hover:text-secondary transition-all duration-500 group relative rounded-lg hover:bg-secondary/12 border border-transparent hover:border-secondary/35 uppercase text-xs tracking-wider"
+                    className="text-left px-4 py-3.5 text-gray-600 font-semibold hover:text-secondary transition-all duration-500 group relative rounded-lg hover:bg-yellow-50 border border-transparent hover:border-secondary/35 uppercase text-xs tracking-wider"
                   >
                     Logout
                     <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-8 transition-all duration-500 rounded-full"></div>
@@ -181,7 +181,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
               ) : (
                 <button
                   onClick={() => onNavigate('login')}
-                  className="text-left px-4 py-3.5 text-secondary font-bold hover:text-yellow-300 transition-all duration-500 group relative rounded-lg hover:bg-secondary/16 border border-secondary/50 uppercase text-xs tracking-wider"
+                  className="text-left px-4 py-3.5 text-secondary font-bold hover:text-orange-600 transition-all duration-500 group relative rounded-lg hover:bg-yellow-50 border border-secondary/30 uppercase text-xs tracking-wider"
                 >
                   Log In
                   <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-12 transition-all duration-500 rounded-full"></div>
