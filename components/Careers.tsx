@@ -103,80 +103,95 @@ const Careers: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#0a0a0a] py-24 relative overflow-hidden">
+    <div className="bg-gradient-to-b from-color-bg via-color-bg-light to-color-bg section-padding relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-tl from-primary/8 via-transparent to-transparent rounded-full blur-3xl opacity-50 animate-float-slow"></div>
+      <div className="absolute bottom-1/4 -left-1/4 w-1/3 h-1/3 bg-gradient-to-br from-accent/8 via-transparent to-transparent rounded-full blur-3xl opacity-40 animate-float"></div>
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-[#0f0f0f] p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
-          <h2 className="text-2xl font-light mb-10 text-gray-300">Come work with us</h2>
+        {/* Header Section */}
+        <div className="mb-20 text-center animate-fade-in-up">
+          <p className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 inline-block">Join Our Team</p>
+          <h2 className="text-4xl md:text-5xl font-black mb-8 uppercase tracking-tight">Career Opportunities</h2>
+          <div className="h-1 w-16 bg-gradient-to-r from-primary via-accent to-primary mx-auto mb-8 rounded-full"></div>
+          <p className="text-text-secondary max-w-2xl mx-auto text-lg font-medium">Be part of a team revolutionizing technology, engineering, and innovation. We're building the future, one project at a time.</p>
+        </div>
+
+        <div className="gradient-card p-12 rounded-2xl card-hover border-primary/30 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+          <div className="mb-10">
+            <h3 className="text-3xl font-bold text-white">Application Form</h3>
+            <p className="text-text-muted mt-2">Fill out the form below and join our growing team of innovators.</p>
+          </div>
 
           {isSubmitted ? (
-            <div className="text-center py-20 animate-fade-in">
-              <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                 <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+            <div className="text-center py-20 animate-scale-in">
+              <div className="w-24 h-24 bg-gradient-to-br from-tertiary/30 to-tertiary/10 rounded-full flex items-center justify-center mx-auto mb-8 animate-glow shadow-lg shadow-tertiary/30">
+                 <svg className="w-12 h-12 text-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                  </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-2">Application Received!</h3>
-              <p className="text-gray-400">Our HR team will review your profile and get back to you soon.</p>
+              <h3 className="text-3xl font-bold mb-3 text-white">Application Received!</h3>
+              <p className="text-text-secondary font-medium">Our HR team will review your profile and reach out within 2-3 business days.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-7">
               {errorMsg && (
-                <div className="bg-red-500/10 border border-red-500/20 text-red-500 p-4 rounded-xl text-sm">
+                <div className="bg-red-500/20 border border-red-500/40 text-red-300 p-4 rounded-lg text-sm font-medium">
                   {errorMsg}
                 </div>
               )}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">First name *</label>
-                  <input 
-                    required 
-                    type="text" 
+                  <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">First name *</label>
+                  <input
+                    required
+                    type="text"
                     value={formData.firstName}
                     onChange={e => setFormData({...formData, firstName: e.target.value})}
-                    className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral transition-colors" 
+                    className="gradient-card w-full rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Last name *</label>
-                  <input 
-                    required 
-                    type="text" 
+                  <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Last name *</label>
+                  <input
+                    required
+                    type="text"
                     value={formData.lastName}
                     onChange={e => setFormData({...formData, lastName: e.target.value})}
-                    className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral transition-colors" 
+                    className="gradient-card w-full rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Email *</label>
-                  <input 
-                    required 
-                    type="email" 
+                  <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Email *</label>
+                  <input
+                    required
+                    type="email"
                     value={formData.email}
                     onChange={e => setFormData({...formData, email: e.target.value})}
-                    className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral transition-colors" 
+                    className="gradient-card w-full rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Phone</label>
-                  <input 
-                    type="tel" 
+                  <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Phone</label>
+                  <input
+                    type="tel"
                     value={formData.phone}
                     onChange={e => setFormData({...formData, phone: e.target.value})}
-                    className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral transition-colors" 
+                    className="gradient-card w-full rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Position *</label>
-                <select 
-                  required 
+                <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Position *</label>
+                <select
+                  required
                   value={formData.position}
                   onChange={e => setFormData({...formData, position: e.target.value})}
-                  className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral transition-colors appearance-none"
+                  className="gradient-card w-full rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all appearance-none"
                 >
                   <option value="" className="bg-black">Select Position</option>
                   <option value="vlsi" className="bg-black">VLSI Engineer</option>
@@ -187,76 +202,74 @@ const Careers: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Start Date</label>
+                <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Start Date</label>
                 <div className="grid grid-cols-3 gap-4">
-                  <input 
-                    type="number" 
-                    placeholder="Day" 
+                  <input
+                    type="number"
+                    placeholder="Day"
                     value={formData.day}
                     onChange={e => setFormData({...formData, day: e.target.value})}
-                    className="bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral" 
+                    className="gradient-card rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                   />
-                  <select 
+                  <select
                     value={formData.month}
                     onChange={e => setFormData({...formData, month: e.target.value})}
-                    className="bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral appearance-none"
+                    className="gradient-card rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all appearance-none"
                   >
                     <option value="" className="bg-black">Month</option>
                     {['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'].map((m, i) => (
                       <option key={m} value={m} className="bg-black">{['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][i]}</option>
                     ))}
                   </select>
-                  <input 
-                    type="number" 
-                    placeholder="Year" 
+                  <input
+                    type="number"
+                    placeholder="Year"
                     value={formData.year}
                     onChange={e => setFormData({...formData, year: e.target.value})}
-                    className="bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral" 
+                    className="gradient-card rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">UPLOAD RESUME *</label>
-                <div className="flex items-center space-x-4">
-                   <input 
-                     type="file" 
-                     ref={fileInputRef} 
-                     onChange={handleFileChange} 
-                     className="hidden" 
+                <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">UPLOAD RESUME *</label>
+                <div className="flex flex-col md:flex-row md:items-center gap-4">
+                   <input
+                     type="file"
+                     ref={fileInputRef}
+                     onChange={handleFileChange}
+                     className="hidden"
                      accept=".pdf,.doc,.docx"
                    />
-                   <button 
-                     type="button" 
+                   <button
+                     type="button"
                      onClick={() => fileInputRef.current?.click()}
-                     className="flex items-center space-x-2 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-full transition-all text-xs font-bold border border-white/5"
+                     className="btn-primary btn-primary-outline rounded-lg px-6 py-3 flex items-center justify-center space-x-2 text-xs w-full md:w-auto"
                    >
-                      <span>{resumeFile ? '✓' : '+'}</span>
+                      <span className="text-lg">{resumeFile ? '✓' : '+'}</span>
                       <span>{resumeFile ? resumeFile.name : 'Upload File'}</span>
                    </button>
-                   <span className="text-[10px] text-gray-600">PDF, DOC, DOCX up to 5MB</span>
+                   <span className="text-xs text-gray-500 md:whitespace-nowrap">PDF, DOC, DOCX up to 5MB</span>
                 </div>
               </div>
 
               <div>
-                <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">Link to LinkedIn</label>
-                <input 
-                  type="url" 
-                  placeholder="https://" 
+                <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Link to LinkedIn</label>
+                <input
+                  type="url"
+                  placeholder="https://"
                   value={formData.linkedin}
                   onChange={e => setFormData({...formData, linkedin: e.target.value})}
-                  className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 focus:outline-none focus:border-coral transition-colors" 
+                  className="gradient-card w-full rounded-lg px-4 py-3 focus:outline-none focus:border-coral focus:ring-1 focus:ring-coral/50 transition-all"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 font-bold text-sm uppercase tracking-widest transition-all rounded-full ${
-                  isSubmitting ? 'bg-gray-600 text-gray-400 cursor-not-allowed' : 'bg-white/20 hover:bg-white text-black'
-                }`}
+                className={`btn-primary btn-primary-solid rounded-lg w-full py-4 mt-2 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
-                {isSubmitting ? 'Submitting...' : 'Apply'}
+                {isSubmitting ? 'Submitting...' : 'Apply Now'}
               </button>
             </form>
           )}

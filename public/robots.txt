@@ -1,0 +1,26 @@
+# Robots.txt for Anantha Software
+# Allow search engines to crawl the website
+
+User-agent: *
+Allow: /
+Allow: /#/
+
+# Disallow private/admin areas if any
+Disallow: /admin
+Disallow: /private
+Disallow: /internal
+
+# Crawl delay to prevent server overload (optional)
+# Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://ananthasoftware.com/sitemap.xml
+
+# Specific rules for common search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
