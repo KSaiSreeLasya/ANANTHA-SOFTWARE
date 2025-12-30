@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { supabase } from '../lib/supabase';
 import { getClientIp, getUserAgent } from '../lib/ipService';
+import { sendContactFormEmail } from '../services/emailService';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -35,6 +36,9 @@ const Contact: React.FC = () => {
         ]);
 
       if (error) throw error;
+
+      // Send email notification
+      await sendContactFormEmail(formData.name, formData.email, formData.message);
 
       setIsSuccess(true);
       setFormData({ name: '', email: '', message: '' });

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import { supabase } from '../lib/supabase';
 import { useAuth } from '../lib/authContext';
+import { sendSignupEmail } from '../services/emailService';
 
 interface SignupProps {
   onNavigate: (page: string) => void;
@@ -97,6 +98,9 @@ const Signup: React.FC<SignupProps> = ({ onNavigate, onAuthSuccess }) => {
         if (insertError) {
           setError('Account created but profile setup failed: ' + insertError.message);
         } else {
+          // Send email notification
+          await sendSignupEmail(formData.firstName, formData.lastName, formData.email, formData.company);
+
           // Show success message and redirect
           if (onAuthSuccess) {
             onAuthSuccess();

@@ -57,7 +57,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   };
 
   return (
-    <footer className="bg-gradient-to-t from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] border-t border-white/10 pt-24 pb-12 mt-auto">
+    <footer className="bg-gradient-to-t from-gray-100 via-gray-50 to-white border-t border-gray-200 pt-24 pb-12 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
 
@@ -73,11 +73,11 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/15 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-600 rounded-lg blur-2xl"></div>
               </div>
             </div>
-            <p className="text-xs text-text-muted leading-relaxed uppercase tracking-widest font-medium group-hover:text-text-secondary transition-colors duration-600">
+            <p className="text-xs text-gray-600 leading-relaxed uppercase tracking-widest font-medium group-hover:text-gray-900 transition-colors duration-600">
                ANANTHA SOFTWARE SOLUTIONS<br />
-              <span className="text-text-muted/70 text-[10px]">WeWork Rajapushpa Summit,</span><br />
-              <span className="text-text-muted/70 text-[10px]">Financial District, Hyderabad,</span><br />
-              <span className="text-text-muted/70 text-[10px]">Telangana 500032.</span>
+              <span className="text-gray-500 text-[10px]">WeWork Rajapushpa Summit,</span><br />
+              <span className="text-gray-500 text-[10px]">Financial District, Hyderabad,</span><br />
+              <span className="text-gray-500 text-[10px]">Telangana 500032.</span>
             </p>
           </div>
 
@@ -124,7 +124,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   placeholder="name@company.com"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
-                  className="gradient-card px-5 py-3.5 outline-none focus:border-primary focus:shadow-xl focus:shadow-primary/40 w-full text-white text-xs rounded-lg transition-all duration-500 placeholder:text-text-muted/50 focus:bg-gradient-to-br focus:from-primary/10 focus:to-primary/5"
+                  className="gradient-card px-5 py-3.5 outline-none focus:border-primary focus:shadow-xl focus:shadow-primary/40 w-full text-white text-xs rounded-lg transition-all duration-500 placeholder:text-white focus:bg-gradient-to-br focus:from-primary/10 focus:to-primary/5"
                 />
                 <button
                   type="submit"

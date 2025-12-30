@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { supabase } from '../lib/supabase';
 import { getClientIp, getUserAgent } from '../lib/ipService';
+import { sendCareerApplicationEmail } from '../services/emailService';
 
 const Careers: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -89,6 +90,16 @@ const Careers: React.FC = () => {
         });
         throw insertError;
       }
+
+      // Send email notification
+      await sendCareerApplicationEmail(
+        formData.firstName,
+        formData.lastName,
+        formData.email,
+        formData.phone,
+        formData.position,
+        formData.linkedin
+      );
 
       setIsSubmitted(true);
       setTimeout(() => setIsSubmitted(false), 5000);
