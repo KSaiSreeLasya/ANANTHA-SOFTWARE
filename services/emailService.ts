@@ -1,40 +1,30 @@
-// Email service using Resend API
-const RESEND_API_KEY = import.meta.env.VITE_RESEND_API_KEY;
-const RECIPIENT_EMAIL = 'kottesaisreelasya@gmail.com';
-const SENDER_EMAIL = 'onboarding@resend.dev'; // Default Resend domain
+// Email service using EmailJS
+import emailjs from '@emailjs/browser';
 
-interface EmailData {
-  from: string;
-  to: string;
-  subject: string;
-  html: string;
+// Initialize EmailJS with your public key
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const CONTACT_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_CONTACT_TEMPLATE_ID;
+const SIGNUP_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_SIGNUP_TEMPLATE_ID;
+const CAREER_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_CAREER_TEMPLATE_ID;
+
+const RECIPIENT_EMAIL = 'kottesaisreelasya@gmail.com';
+
+// Initialize EmailJS once
+if (PUBLIC_KEY && SERVICE_ID) {
+  emailjs.init(PUBLIC_KEY);
 }
 
-export const sendEmail = async (emailData: EmailData): Promise<boolean> => {
+export const sendEmail = async (templateId: string, variables: Record<string, any>): Promise<boolean> => {
   try {
-    if (!RESEND_API_KEY) {
-      console.error('Resend API key not configured');
+    if (!PUBLIC_KEY || !SERVICE_ID || !templateId) {
+      console.error('EmailJS not properly configured. Please set environment variables.');
       return false;
     }
 
-    const response = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${RESEND_API_KEY}`,
-      },
-      body: JSON.stringify(emailData),
-    });
-
-    if (!response.ok) {
-      const errorData = await response.json();
-      console.error('Email sending failed:', errorData);
-      return false;
-    }
-
-    const data = await response.json();
-    console.log('Email sent successfully:', data);
-    return true;
+    const response = await emailjs.send(SERVICE_ID, templateId, variables);
+    console.log('Email sent successfully:', response.status);
+    return response.status === 200;
   } catch (error) {
     console.error('Error sending email:', error);
     return false;
@@ -47,24 +37,12 @@ export const sendContactFormEmail = async (
   email: string,
   message: string
 ): Promise<boolean> => {
-  const html = `
-    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-      <h2 style="color: #333;">New Contact Form Submission</h2>
-      <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong></p>
-        <p style="white-space: pre-wrap; color: #555;">${message}</p>
-      </div>
-      <p style="color: #888; font-size: 12px;">This message was sent from your website contact form.</p>
-    </div>
-  `;
-
-  return sendEmail({
-    from: SENDER_EMAIL,
-    to: RECIPIENT_EMAIL,
+  return sendEmail(CONTACT_TEMPLATE_ID, {
+    to_email: RECIPIENT_EMAIL,
+    from_name: name,
+    from_email: email,
+    message: message,
     subject: `New Contact Form Submission from ${name}`,
-    html,
   });
 };
 
@@ -75,24 +53,13 @@ export const sendSignupEmail = async (
   email: string,
   company: string
 ): Promise<boolean> => {
-  const html = `
-    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-      <h2 style="color: #333;">New User Signup</h2>
-      <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-        <p><strong>First Name:</strong> ${firstName}</p>
-        <p><strong>Last Name:</strong> ${lastName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Company:</strong> ${company || 'Not provided'}</p>
-      </div>
-      <p style="color: #888; font-size: 12px;">A new user has registered on your website.</p>
-    </div>
-  `;
-
-  return sendEmail({
-    from: SENDER_EMAIL,
-    to: RECIPIENT_EMAIL,
+  return sendEmail(SIGNUP_TEMPLATE_ID, {
+    to_email: RECIPIENT_EMAIL,
+    first_name: firstName,
+    last_name: lastName,
+    email: email,
+    company: company || 'Not provided',
     subject: `New User Signup: ${firstName} ${lastName}`,
-    html,
   });
 };
 
@@ -105,24 +72,14 @@ export const sendCareerApplicationEmail = async (
   position: string,
   linkedin: string
 ): Promise<boolean> => {
-  const html = `
-    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-      <h2 style="color: #333;">New Career Application</h2>
-      <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-        <p><strong>Position Applied For:</strong> ${position}</p>
-        <p><strong>LinkedIn:</strong> ${linkedin ? `<a href="${linkedin}">${linkedin}</a>` : 'Not provided'}</p>
-      </div>
-      <p style="color: #888; font-size: 12px;">A new career application has been submitted.</p>
-    </div>
-  `;
-
-  return sendEmail({
-    from: SENDER_EMAIL,
-    to: RECIPIENT_EMAIL,
+  return sendEmail(CAREER_TEMPLATE_ID, {
+    to_email: RECIPIENT_EMAIL,
+    first_name: firstName,
+    last_name: lastName,
+    email: email,
+    phone: phone || 'Not provided',
+    position: position,
+    linkedin: linkedin || 'Not provided',
     subject: `Career Application: ${firstName} ${lastName} - ${position}`,
-    html,
   });
 };
