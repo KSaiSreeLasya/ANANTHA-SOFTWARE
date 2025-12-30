@@ -297,13 +297,13 @@ const Signup: React.FC<SignupProps> = ({ onNavigate, onAuthSuccess }) => {
             />
             <span className="ml-3">
               I agree to the{' '}
-              <a href="#" className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
+              <button type="button" onClick={() => onNavigate('terms')} className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
                 Terms of Service
-              </a>{' '}
+              </button>{' '}
               and{' '}
-              <a href="#" className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
+              <button type="button" onClick={() => onNavigate('privacy')} className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
                 Privacy Policy
-              </a>
+              </button>
             </span>
           </label>
 
