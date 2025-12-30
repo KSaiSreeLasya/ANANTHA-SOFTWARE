@@ -79,8 +79,8 @@ const App: React.FC = () => {
               </div>
 
               <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-                <div className="inline-block mb-12 animate-fade-in-up" style={{animationDuration: '0.8s'}}>
-                  <div className="px-8 py-3.5 text-secondary text-xs font-bold uppercase tracking-widest border border-secondary/50 rounded-full bg-gradient-to-r from-secondary/14 to-secondary/6 backdrop-blur-xl" style={{boxShadow: '0 0 40px rgba(251, 191, 36, 0.25)'}}>
+                <div className="inline-block mb-12 animate-fade-in-up" style={{animationDuration: '0.7s'}}>
+                  <div className="px-8 py-3.5 text-secondary text-xs font-bold uppercase tracking-widest border border-secondary/35 rounded-full bg-gradient-to-r from-secondary/10 to-secondary/4 backdrop-blur-sm" style={{boxShadow: '0 0 25px rgba(251, 191, 36, 0.2)'}}>
                     Our Core Strength
                   </div>
                 </div>
