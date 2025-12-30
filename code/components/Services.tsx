@@ -225,12 +225,12 @@ const Services: React.FC = () => {
             Our Expertise
           </div>
           <div className="text-center">
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-white" style={{letterSpacing: '-0.025em', lineHeight: '1.15'}}>
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-white block" style={{letterSpacing: '-0.025em', lineHeight: '1.15'}}>
               Comprehensive
             </h2>
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-white" style={{letterSpacing: '-0.025em', lineHeight: '1.15'}}>
+            <div className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-white block" style={{letterSpacing: '-0.025em', lineHeight: '1.15'}}>
               Technology Solutions
-            </h2>
+            </div>
           </div>
           <div className="divider w-20 mx-auto mb-12 hover:w-32 transition-all duration-500"></div>
           <p className="text-text-secondary max-w-4xl mx-auto text-lg md:text-xl lg:text-2xl leading-relaxed font-light animate-fade-in-up hover:text-text-primary transition-colors duration-500 group" style={{animationDelay: '0.1s', letterSpacing: '0.3px', lineHeight: '1.8'}}>
