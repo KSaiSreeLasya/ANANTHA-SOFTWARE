@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
           <p className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 inline-block">Get In Touch</p>
           <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight uppercase tracking-tight">
             Ready to start your <br />
-            <span className="text-gradient bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text">digital journey?</span>
+            <span className="text-gradient">digital journey?</span>
           </h2>
           <div className="h-1 w-16 bg-gradient-to-r from-primary via-accent to-primary mx-auto mb-8 rounded-full"></div>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto font-medium leading-relaxed">
