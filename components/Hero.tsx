@@ -7,22 +7,22 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
   return (
     <div className="relative min-h-[100vh] flex flex-col justify-center items-center overflow-hidden bg-gradient-to-b from-white via-gray-50 to-white">
-      {/* Animated Background Spheres - Premium Gold Theme */}
+      {/* Animated Background Spheres - White Theme */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Large Primary Sphere - Deep Blue */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-primary/40 via-primary/20 to-primary/8 rounded-full mix-blend-screen filter blur-3xl opacity-70 animate-float-slow" style={{animation: 'floatSlow 16s ease-in-out infinite'}}></div>
+        {/* Large Primary Sphere - Blue */}
+        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-primary/20 via-primary/12 to-primary/5 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float-slow" style={{animation: 'floatSlow 20s ease-in-out infinite'}}></div>
 
         {/* Secondary Gold Sphere */}
-        <div className="absolute top-40 right-0 w-80 h-80 bg-gradient-to-bl from-secondary/30 via-secondary/15 to-secondary/5 rounded-full mix-blend-screen filter blur-3xl opacity-60 animate-float" style={{animation: 'float 18s ease-in-out infinite 2s'}}></div>
+        <div className="absolute top-40 right-0 w-80 h-80 bg-gradient-to-bl from-secondary/18 via-secondary/10 to-secondary/3 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float" style={{animation: 'float 24s ease-in-out infinite 2s'}}></div>
 
         {/* Tertiary Teal Sphere */}
-        <div className="absolute bottom-10 left-1/3 w-72 h-72 bg-gradient-to-tr from-accent/25 to-accent/8 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float" style={{animation: 'float 20s ease-in-out infinite 4s'}}></div>
+        <div className="absolute bottom-10 left-1/3 w-72 h-72 bg-gradient-to-tr from-accent/15 to-accent/5 rounded-full mix-blend-multiply filter blur-3xl opacity-35 animate-float" style={{animation: 'float 28s ease-in-out infinite 4s'}}></div>
 
         {/* Gold Accent Sphere */}
-        <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-gradient-to-bl from-secondary/20 to-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-45 animate-float-slow" style={{animation: 'floatSlow 24s ease-in-out infinite 3s'}}></div>
+        <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-gradient-to-bl from-secondary/12 to-primary/6 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-slow" style={{animation: 'floatSlow 30s ease-in-out infinite 3s'}}></div>
 
-        {/* Extra Bottom Gold */}
-        <div className="absolute -bottom-20 right-20 w-96 h-96 bg-gradient-to-t from-secondary/25 to-transparent rounded-full mix-blend-screen filter blur-3xl opacity-50" style={{animation: 'float 26s ease-in-out infinite 6s'}}></div>
+        {/* Extra Bottom Accent */}
+        <div className="absolute -bottom-20 right-20 w-96 h-96 bg-gradient-to-t from-accent/15 to-transparent rounded-full mix-blend-multiply filter blur-3xl opacity-35" style={{animation: 'float 32s ease-in-out infinite 6s'}}></div>
       </div>
 
       {/* Grid Background */}
