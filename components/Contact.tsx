@@ -143,7 +143,7 @@ const Contact: React.FC = () => {
                       type="text"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-5 py-3 rounded-lg bg-primary/5 border border-primary/20 text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all duration-400 placeholder-text-muted/50"
+                      className="w-full px-5 py-3 rounded-lg bg-primary/5 border border-primary/20 text-text focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all duration-400 placeholder-text-muted/50"
                       placeholder="Your name"
                     />
                   </div>
@@ -154,7 +154,7 @@ const Contact: React.FC = () => {
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-5 py-3 rounded-lg bg-primary/5 border border-primary/20 text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all duration-400 placeholder-text-muted/50"
+                      className="w-full px-5 py-3 rounded-lg bg-primary/5 border border-primary/20 text-text focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all duration-400 placeholder-text-muted/50"
                       placeholder="you@company.com"
                     />
                   </div>
@@ -165,7 +165,7 @@ const Contact: React.FC = () => {
                       rows={5}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-5 py-3 rounded-lg bg-primary/5 border border-primary/20 text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all duration-400 resize-none placeholder-text-muted/50"
+                      className="w-full px-5 py-3 rounded-lg bg-primary/5 border border-primary/20 text-text focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all duration-400 resize-none placeholder-text-muted/50"
                       placeholder="Tell us about your project..."
                     ></textarea>
                   </div>
