@@ -224,11 +224,14 @@ const Services: React.FC = () => {
             <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-secondary rounded-full inline-block mr-3 animate-pulse-scale"></span>
             Our Expertise
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-white text-center animate-fade-in-up" style={{letterSpacing: '-0.025em', lineHeight: '1.2'}}>
-            {'Comprehensive\nTechnology Solutions'.split('\n').map((line, i) => (
-              <div key={i}>{line}</div>
-            ))}
-          </h1>
+          <div style={{textAlign: 'center', animation: 'fadeInUp 0.6s ease-out'}}>
+            <div style={{fontSize: 'clamp(2.25rem, 8vw, 7.5rem)', fontWeight: '900', textTransform: 'uppercase', color: '#ffffff', letterSpacing: '-0.025em', lineHeight: '1.1'}}>
+              Comprehensive
+            </div>
+            <div style={{fontSize: 'clamp(2.25rem, 8vw, 7.5rem)', fontWeight: '900', textTransform: 'uppercase', color: '#ffffff', letterSpacing: '-0.025em', lineHeight: '1.1', marginTop: '0.5rem'}}>
+              Technology Solutions
+            </div>
+          </div>
           <div className="divider w-20 mx-auto mb-12 hover:w-32 transition-all duration-500"></div>
           <p className="text-text-secondary max-w-4xl mx-auto text-lg md:text-xl lg:text-2xl leading-relaxed font-light animate-fade-in-up hover:text-text-primary transition-colors duration-500 group" style={{animationDelay: '0.1s', letterSpacing: '0.3px', lineHeight: '1.8'}}>
             End-to-end engineering and <span className="text-text font-medium">software solutions</span> designed for businesses that demand excellence and innovation.
