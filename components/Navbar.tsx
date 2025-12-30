@@ -144,7 +144,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-gradient-to-b from-gray-50 via-white to-white border-b border-gray-200 animate-slide-in-down" style={{boxShadow: '0 8px 32px rgba(31, 111, 235, 0.08)'}}>
+        <div className="lg:hidden bg-gradient-to-b from-white via-white to-white border-b border-slate-200 animate-slide-in-down" style={{boxShadow: '0 4px 20px rgba(15, 23, 42, 0.06)'}}>
           <div className="px-4 pt-3 pb-8 space-y-2">
             {navItems.map((item: any, index: number) => (
               <a
