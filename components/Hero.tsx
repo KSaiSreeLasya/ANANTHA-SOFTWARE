@@ -134,7 +134,7 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
         </div>
 
         {/* Enhanced Stats Row with 3D Effects */}
-        <div className="mt-40 grid grid-cols-3 gap-6 md:gap-10 max-w-4xl mx-auto animate-fade-in-up" style={{animationDelay: '0.6s', animationDuration: '0.9s'}}>
+        <div className="mt-40 grid grid-cols-3 gap-6 md:gap-10 max-w-4xl mx-auto animate-fade-in-up" style={{animationDelay: '0.6s', animationDuration: '0.8s'}}>
           {[
             { value: '4+', label: 'Years', delay: 0, icon: '📅' },
             { value: '50+', label: 'Team Members', delay: 0.1, icon: '👥' },
