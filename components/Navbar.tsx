@@ -155,8 +155,8 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                 rel={item.external ? 'noopener noreferrer' : undefined}
                 className={`block px-4 py-3.5 text-base font-semibold transition-all duration-500 group relative border-l-3 rounded-r-lg ${
                   activePage === item.id
-                    ? 'text-secondary border-l-secondary bg-gradient-to-r from-yellow-100 to-yellow-50'
-                    : 'text-gray-600 hover:text-secondary border-l-transparent hover:border-l-secondary/60 hover:bg-gradient-to-r from-yellow-50 to-white'
+                    ? 'text-secondary border-l-secondary bg-gradient-to-r from-yellow-50 to-white'
+                    : 'text-slate-600 hover:text-secondary border-l-transparent hover:border-l-secondary/50 hover:bg-gradient-to-r from-yellow-25 to-white'
                 }`}
                 style={{animation: `slideInLeft 0.5s ease-out ${0.06 * index}s backwards`}}
               >
