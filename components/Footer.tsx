@@ -106,15 +106,15 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
           {/* Newsletter - Enhanced */}
           <div className="animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-            <h4 className="text-white font-bold mb-10 text-sm uppercase tracking-widest">Stay Updated</h4>
+            <h4 className="text-slate-900 font-bold mb-10 text-sm uppercase tracking-widest">Stay Updated</h4>
             {newsletterSuccess ? (
-              <div className="bg-gradient-to-r from-tertiary/35 to-tertiary/12 border border-tertiary/50 text-tertiary p-5 rounded-xl text-xs text-center font-bold animate-pulse-scale shadow-lg shadow-tertiary/25 uppercase tracking-wide">
+              <div className="bg-gradient-to-r from-tertiary/20 to-tertiary/8 border border-tertiary/35 text-tertiary p-5 rounded-xl text-xs text-center font-bold animate-pulse-scale shadow-sm shadow-tertiary/15 uppercase tracking-wide">
                 ✓ Thanks for subscribing!
               </div>
             ) : (
               <form className="space-y-4 group" onSubmit={handleNewsletterSubmit}>
                 {newsletterError && (
-                  <div className="bg-red-500/25 border border-red-500/50 text-red-300 p-4 rounded-lg text-xs text-center font-bold animate-pulse-smooth uppercase tracking-wide">
+                  <div className="bg-red-500/15 border border-red-500/30 text-red-700 p-4 rounded-lg text-xs text-center font-bold animate-pulse-smooth uppercase tracking-wide">
                     {newsletterError}
                   </div>
                 )}
@@ -124,7 +124,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   placeholder="name@company.com"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
-                  className="gradient-card px-5 py-3.5 outline-none focus:border-primary focus:shadow-xl focus:shadow-primary/40 w-full text-white text-xs rounded-lg transition-all duration-500 placeholder:text-white focus:bg-gradient-to-br focus:from-primary/10 focus:to-primary/5"
+                  className="gradient-card px-5 py-3.5 outline-none focus:border-primary focus:shadow-md focus:shadow-primary/25 w-full text-slate-900 text-xs rounded-lg transition-all duration-500 placeholder:text-slate-500 focus:bg-gradient-to-br focus:from-primary/8 focus:to-primary/4"
                 />
                 <button
                   type="submit"
