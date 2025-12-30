@@ -95,7 +95,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                   <>
                     <div className="flex items-center space-x-3 text-slate-700 group cursor-default px-4 py-2.5 rounded-xl bg-gradient-to-r from-purple-50 to-white border border-secondary/25 hover:border-secondary/40 transition-all duration-500 hover:shadow-sm hover:shadow-secondary/5">
                       <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-secondary to-accent animate-pulse-scale"></div>
-                      <span className="text-xs font-semibold uppercase tracking-wider text-secondary group-hover:text-yellow-600 transition-colors duration-500">{getUserDisplayName()}</span>
+                      <span className="text-xs font-semibold uppercase tracking-wider text-secondary group-hover:text-purple-600 transition-colors duration-500">{getUserDisplayName()}</span>
                     </div>
                     <button
                       onClick={handleLogout}
@@ -109,7 +109,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                   <>
                     <button
                       onClick={() => onNavigate('login')}
-                      className="flex items-center text-xs font-bold text-secondary hover:text-yellow-600 transition-all duration-500 group relative px-7 py-3 rounded-xl hover:bg-gradient-to-br hover:from-secondary/15 hover:to-secondary/8 border border-secondary/40 hover:border-secondary/60 uppercase tracking-wider hover:shadow-md hover:shadow-secondary/15"
+                      className="flex items-center text-xs font-bold text-secondary hover:text-purple-600 transition-all duration-500 group relative px-7 py-3 rounded-xl hover:bg-gradient-to-br hover:from-secondary/15 hover:to-secondary/8 border border-secondary/40 hover:border-secondary/60 uppercase tracking-wider hover:shadow-md hover:shadow-secondary/15"
                     >
                       <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg rounded-lg -z-10"></div>
                       <svg className="w-4 h-4 mr-2.5 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500" fill="currentColor" viewBox="0 0 20 20">
@@ -155,8 +155,8 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                 rel={item.external ? 'noopener noreferrer' : undefined}
                 className={`block px-4 py-3.5 text-base font-semibold transition-all duration-500 group relative border-l-3 rounded-r-lg ${
                   activePage === item.id
-                    ? 'text-secondary border-l-secondary bg-gradient-to-r from-yellow-50 to-white'
-                    : 'text-slate-600 hover:text-secondary border-l-transparent hover:border-l-secondary/50 hover:bg-gradient-to-r from-yellow-25 to-white'
+                    ? 'text-secondary border-l-secondary bg-gradient-to-r from-purple-50 to-white'
+                    : 'text-slate-600 hover:text-secondary border-l-transparent hover:border-l-secondary/50 hover:bg-gradient-to-r from-purple-25 to-white'
                 }`}
                 style={{animation: `slideInLeft 0.5s ease-out ${0.06 * index}s backwards`}}
               >
@@ -166,13 +166,13 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
             <div className="pt-6 border-t border-slate-200 flex flex-col space-y-3">
               {user ? (
                 <>
-                  <div className="px-4 py-3.5 flex items-center space-x-2.5 text-slate-700 group cursor-default rounded-lg bg-yellow-50 border border-secondary/25">
+                  <div className="px-4 py-3.5 flex items-center space-x-2.5 text-slate-700 group cursor-default rounded-lg bg-purple-50 border border-secondary/25">
                     <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-secondary to-accent animate-pulse-scale"></div>
                     <span className="text-xs font-semibold uppercase tracking-wider text-secondary group-hover:text-yellow-600 transition-colors duration-500">{getUserDisplayName()}</span>
                   </div>
                   <button
                     onClick={handleLogout}
-                    className="text-left px-4 py-3.5 text-slate-600 font-semibold hover:text-secondary transition-all duration-500 group relative rounded-lg hover:bg-yellow-50 border border-transparent hover:border-secondary/25 uppercase text-xs tracking-wider"
+                    className="text-left px-4 py-3.5 text-slate-600 font-semibold hover:text-secondary transition-all duration-500 group relative rounded-lg hover:bg-purple-50 border border-transparent hover:border-secondary/25 uppercase text-xs tracking-wider"
                   >
                     Logout
                     <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-8 transition-all duration-500 rounded-full"></div>
@@ -181,7 +181,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
               ) : (
                 <button
                   onClick={() => onNavigate('login')}
-                  className="text-left px-4 py-3.5 text-secondary font-bold hover:text-orange-600 transition-all duration-500 group relative rounded-lg hover:bg-yellow-50 border border-secondary/30 uppercase text-xs tracking-wider"
+                  className="text-left px-4 py-3.5 text-secondary font-bold hover:text-purple-600 transition-all duration-500 group relative rounded-lg hover:bg-purple-50 border border-secondary/30 uppercase text-xs tracking-wider"
                 >
                   Log In
                   <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-12 transition-all duration-500 rounded-full"></div>
