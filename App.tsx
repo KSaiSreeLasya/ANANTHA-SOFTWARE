@@ -11,6 +11,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsAndConditions from './components/TermsAndConditions';
 
 const App: React.FC = () => {
   // Use state to track the current "page"
@@ -49,6 +51,10 @@ const App: React.FC = () => {
         return <Login onNavigate={navigateTo} />;
       case 'signup':
         return <Signup onNavigate={navigateTo} />;
+      case 'privacy':
+        return <PrivacyPolicy onNavigate={navigateTo} />;
+      case 'terms':
+        return <TermsAndConditions onNavigate={navigateTo} />;
       case 'services':
         return <Services />;
       case 'vision':

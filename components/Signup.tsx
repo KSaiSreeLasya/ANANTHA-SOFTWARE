@@ -297,13 +297,13 @@ const Signup: React.FC<SignupProps> = ({ onNavigate, onAuthSuccess }) => {
             />
             <span className="ml-3">
               I agree to the{' '}
-              <a href="#" className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
+              <button type="button" onClick={() => onNavigate('terms')} className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
                 Terms of Service
-              </a>{' '}
+              </button>{' '}
               and{' '}
-              <a href="#" className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
+              <button type="button" onClick={() => onNavigate('privacy')} className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
                 Privacy Policy
-              </a>
+              </button>
             </span>
           </label>
 
@@ -311,9 +311,9 @@ const Signup: React.FC<SignupProps> = ({ onNavigate, onAuthSuccess }) => {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-4 bg-gradient-to-r from-secondary to-accent text-primary font-bold rounded-xl hover:shadow-2xl hover:shadow-secondary/40 transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest text-sm transform hover:scale-105 active:scale-95 relative group overflow-hidden"
+            className="w-full py-4 bg-gradient-to-r from-secondary via-yellow-400 to-secondary text-primary font-bold rounded-xl hover:shadow-2xl hover:shadow-secondary/60 transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest text-sm transform hover:scale-105 active:scale-95 relative group overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
             <span className="relative z-10">
               {isLoading ? 'Creating Account...' : 'Create Account'}
             </span>
