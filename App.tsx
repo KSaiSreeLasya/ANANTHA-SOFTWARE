@@ -89,10 +89,10 @@ const App: React.FC = () => {
                   <span className="text-gradient inline-block" style={{backgroundImage: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 8s ease infinite'}}>Excellence in Engineering</span>
                 </h2>
 
-                <div className="h-2 w-40 bg-gradient-to-r from-secondary via-accent to-primary mx-auto mb-16 animate-fade-in-up rounded-full" style={{animationDelay: '0.2s', animationDuration: '0.8s', boxShadow: '0 0 40px rgba(251, 191, 36, 0.4)'}}></div>
+                <div className="h-2 w-40 bg-gradient-to-r from-secondary via-accent to-primary mx-auto mb-16 animate-fade-in-up rounded-full" style={{animationDelay: '0.2s', animationDuration: '0.7s', boxShadow: '0 0 25px rgba(251, 191, 36, 0.25)'}}></div>
 
-                <div className="group relative animate-fade-in-up" style={{animationDelay: '0.3s', animationDuration: '0.8s'}}>
-                  <p className="text-text-secondary max-w-4xl mx-auto leading-relaxed text-lg md:text-xl font-light" style={{letterSpacing: '0.4px', fontWeight: '300'}}>
+                <div className="group relative animate-fade-in-up" style={{animationDelay: '0.3s', animationDuration: '0.7s'}}>
+                  <p className="text-text-secondary max-w-4xl mx-auto leading-relaxed text-lg md:text-xl font-normal" style={{letterSpacing: '0.3px', fontWeight: '400'}}>
                     Anantha Software is a global leader in Silicon Engineering and Integrated Solutions.
                     We specialize in VLSI, AI/ML development, and bespoke software applications, driving innovation across industries.
                   </p>
