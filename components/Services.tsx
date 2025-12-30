@@ -583,7 +583,7 @@ const Services: React.FC = () => {
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/0 via-primary/15 to-primary/0 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-600 -z-10"></div>
                 <div className="relative z-10 flex flex-col items-center gap-3">
                   <div className="text-5xl md:text-6xl group-hover:scale-125 transition-transform duration-600">{s.icon}</div>
-                  <div className="text-5xl md:text-6xl font-black text-transparent group-hover:scale-110 transition-transform duration-600" style={{backgroundImage: 'linear-gradient(135deg, #1e3a8a 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 6s ease infinite'}}>{s.val}</div>
+                  <div className="text-5xl md:text-6xl font-black text-transparent group-hover:scale-110 transition-transform duration-600" style={{backgroundImage: 'linear-gradient(135deg, #1e3a8a 0%, #14b8a6 50%, #a855f7 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 6s ease infinite'}}>{s.val}</div>
                   <div className="text-xs md:text-sm uppercase tracking-widest text-text-muted group-hover:text-primary font-bold transition-colors duration-600">{s.label}</div>
                 </div>
               </div>
