@@ -51,6 +51,10 @@ const App: React.FC = () => {
         return <Login onNavigate={navigateTo} />;
       case 'signup':
         return <Signup onNavigate={navigateTo} />;
+      case 'privacy':
+        return <PrivacyPolicy onNavigate={navigateTo} />;
+      case 'terms':
+        return <TermsAndConditions onNavigate={navigateTo} />;
       case 'services':
         return <Services />;
       case 'vision':
