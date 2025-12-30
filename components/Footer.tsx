@@ -139,7 +139,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
           {/* Social - Enhanced */}
           <div className="animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-            <h4 className="text-white font-bold mb-10 text-sm uppercase tracking-widest">Connect</h4>
+            <h4 className="text-slate-900 font-bold mb-10 text-sm uppercase tracking-widest">Connect</h4>
             <div className="flex space-x-5 mb-10">
               <a href="https://www.linkedin.com/company/anantha-software/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full border-2 border-primary/50 flex items-center justify-center text-text-secondary hover:text-white hover:border-primary bg-gradient-to-br from-primary/15 to-primary/8 hover:from-primary/30 hover:to-primary/15 transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/50 group active:scale-95 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-white/20 to-primary/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-800"></div>
