@@ -104,10 +104,10 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
         </div>
 
         {/* CTA Buttons with Enhanced Hover States */}
-        <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 items-center animate-fade-in-up" style={{animationDelay: '0.5s', animationDuration: '0.9s'}}>
+        <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 items-center animate-fade-in-up" style={{animationDelay: '0.5s', animationDuration: '0.8s'}}>
           <button
             onClick={() => navigateTo('services')}
-            className="btn-primary-gold btn-primary-solid rounded-3xl px-16 py-6 text-xs font-bold uppercase tracking-widest shadow-glow hover:shadow-2xl transform transition-all hover:scale-110 active:scale-95 duration-500 relative group overflow-hidden"
+            className="btn-primary-gold btn-primary-solid rounded-3xl px-16 py-6 text-xs font-bold uppercase tracking-widest shadow-glow transform transition-all hover:scale-105 active:scale-98 duration-500 relative group overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
             <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
