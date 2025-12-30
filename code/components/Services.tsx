@@ -224,11 +224,11 @@ const Services: React.FC = () => {
             <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-secondary rounded-full inline-block mr-3 animate-pulse-scale"></span>
             Our Expertise
           </div>
-          <div style={{textAlign: 'center', animation: 'fadeInUp 0.6s ease-out'}}>
-            <div style={{fontSize: 'clamp(2.25rem, 8vw, 7.5rem)', fontWeight: '900', textTransform: 'uppercase', color: '#ffffff', letterSpacing: '-0.025em', lineHeight: '1.1'}}>
+          <div style={{textAlign: 'center', animation: 'fadeInUp 0.6s ease-out', position: 'relative'}}>
+            <div style={{fontSize: 'clamp(2.25rem, 8vw, 7.5rem)', fontWeight: '900', textTransform: 'uppercase', color: 'white', letterSpacing: '-0.025em', lineHeight: '1.1'}}>
               Comprehensive
             </div>
-            <div style={{fontSize: 'clamp(2.25rem, 8vw, 7.5rem)', fontWeight: '900', textTransform: 'uppercase', color: '#ffffff', letterSpacing: '-0.025em', lineHeight: '1.1', marginTop: '0.5rem'}}>
+            <div style={{fontSize: 'clamp(2.25rem, 8vw, 7.5rem)', fontWeight: '900', textTransform: 'uppercase', color: 'white', letterSpacing: '-0.025em', lineHeight: '1.1', marginTop: '0.5rem', zIndex: 10}}>
               Technology Solutions
             </div>
           </div>
