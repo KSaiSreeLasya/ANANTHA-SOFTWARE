@@ -94,12 +94,14 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
         </h1>
 
         {/* Subheading with Enhanced Typography */}
-        <p className="text-lg md:text-xl lg:text-2xl text-text-secondary max-w-4xl mx-auto mb-24 font-light leading-relaxed animate-fade-in-up group" style={{animationDelay: '0.35s', animationDuration: '0.9s', letterSpacing: '0.3px', fontWeight: '300', lineHeight: '1.8'}}>
-          <span className="text-text font-medium">Cutting-edge solutions</span> in VLSI, AI/ML, and Software Engineering.
-          <br className="hidden md:block" />
-          Empowering businesses to innovate, scale, and lead their industries with advanced technology partnerships.
+        <div className="relative group">
           <div className="absolute -inset-8 bg-gradient-to-r from-secondary/0 via-secondary/15 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl rounded-xl -z-10 pointer-events-none"></div>
-        </p>
+          <p className="text-lg md:text-xl lg:text-2xl text-text-secondary max-w-4xl mx-auto mb-24 font-light leading-relaxed animate-fade-in-up" style={{animationDelay: '0.35s', animationDuration: '0.9s', letterSpacing: '0.3px', fontWeight: '300', lineHeight: '1.8'}}>
+            <span className="text-text font-medium">Cutting-edge solutions</span> in VLSI, AI/ML, and Software Engineering.
+            <br className="hidden md:block" />
+            Empowering businesses to innovate, scale, and lead their industries with advanced technology partnerships.
+          </p>
+        </div>
 
         {/* CTA Buttons with Enhanced Hover States */}
         <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 items-center animate-fade-in-up" style={{animationDelay: '0.5s', animationDuration: '0.9s'}}>
