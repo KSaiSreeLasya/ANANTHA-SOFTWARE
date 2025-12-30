@@ -122,7 +122,7 @@ const App: React.FC = () => {
 
   return (
     <AuthProvider>
-      <div className="relative min-h-screen flex flex-col bg-[#0a0a0a] text-white selection:bg-coral selection:text-white">
+      <div className="relative min-h-screen flex flex-col bg-white text-gray-900 selection:bg-coral selection:text-white">
         <Navbar activePage={currentPage} onNavigate={navigateTo} />
 
         <main className="flex-grow pt-20">
