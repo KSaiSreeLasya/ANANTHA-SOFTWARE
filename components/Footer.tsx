@@ -155,7 +155,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </a>
             </div>
             <p className="text-[10px] text-slate-600 uppercase tracking-widest font-bold group hover:text-slate-700 transition-colors duration-500">
-               Work with us — <button onClick={() => onNavigate('careers')} className="text-secondary hover:text-yellow-600 transition-colors duration-400 font-bold">View Openings</button>
+               Work with us — <button onClick={() => onNavigate('careers')} className="text-secondary hover:text-secondary/80 transition-colors duration-400 font-bold">View Openings</button>
             </p>
           </div>
         </div>
