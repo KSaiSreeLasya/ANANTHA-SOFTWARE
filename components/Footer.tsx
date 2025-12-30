@@ -124,7 +124,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   placeholder="name@company.com"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
-                  className="gradient-card px-5 py-3.5 outline-none focus:border-primary focus:shadow-xl focus:shadow-primary/40 w-full text-white text-xs rounded-lg transition-all duration-500 placeholder:text-text-muted/50 focus:bg-gradient-to-br focus:from-primary/10 focus:to-primary/5"
+                  className="gradient-card px-5 py-3.5 outline-none focus:border-primary focus:shadow-xl focus:shadow-primary/40 w-full text-white text-xs rounded-lg transition-all duration-500 placeholder:text-white focus:bg-gradient-to-br focus:from-primary/10 focus:to-primary/5"
                 />
                 <button
                   type="submit"
