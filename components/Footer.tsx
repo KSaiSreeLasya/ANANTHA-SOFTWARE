@@ -57,7 +57,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   };
 
   return (
-    <footer className="bg-gradient-to-t from-gray-100 via-gray-50 to-white border-t border-gray-200 pt-24 pb-12 mt-auto">
+    <footer className="bg-gradient-to-t from-white via-white to-white border-t border-slate-200 pt-24 pb-12 mt-auto" style={{boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.8)'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
 
