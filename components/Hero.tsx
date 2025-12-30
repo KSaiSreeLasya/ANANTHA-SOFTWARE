@@ -142,13 +142,13 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
           ].map((stat, i) => (
             <div
               key={i}
-              className="text-center group/stat cursor-default relative p-8 md:p-12 rounded-3xl border border-secondary/35 hover:border-secondary/70 transition-all duration-600 bg-gradient-to-br from-secondary/14 to-secondary/6 hover:from-secondary/25 hover:to-secondary/15 overflow-hidden backdrop-blur-xl transform hover:-translate-y-2"
-              style={{animation: 'fadeInUp 0.9s ease-out', animationDelay: `${0.65 + stat.delay}s`, animationFillMode: 'both', perspective: '1000px'}}
+              className="text-center group/stat cursor-default relative p-8 md:p-12 rounded-3xl border border-secondary/25 hover:border-secondary/50 transition-all duration-600 bg-gradient-to-br from-secondary/10 to-secondary/4 hover:from-secondary/18 hover:to-secondary/12 overflow-hidden backdrop-blur-sm transform hover:-translate-y-1"
+              style={{animation: 'fadeInUp 0.8s ease-out', animationDelay: `${0.65 + stat.delay}s`, animationFillMode: 'both', perspective: '1000px'}}
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-secondary/25 via-transparent to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-700 rounded-3xl"></div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/40 to-secondary/0 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-600 blur-2xl -z-10"></div>
-              <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/20 rounded-full mix-blend-screen filter blur-3xl opacity-0 group-hover/stat:opacity-60 transition-opacity duration-700 -z-10"></div>
-              <div className="absolute bottom-0 left-0 w-28 h-28 bg-accent/15 rounded-full mix-blend-screen filter blur-2xl opacity-0 group-hover/stat:opacity-40 transition-opacity duration-700 -z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-secondary/15 via-transparent to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-700 rounded-3xl"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/20 to-secondary/0 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-600 blur-2xl -z-10"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/12 rounded-full mix-blend-multiply filter blur-3xl opacity-0 group-hover/stat:opacity-40 transition-opacity duration-700 -z-10"></div>
+              <div className="absolute bottom-0 left-0 w-28 h-28 bg-accent/10 rounded-full mix-blend-multiply filter blur-2xl opacity-0 group-hover/stat:opacity-30 transition-opacity duration-700 -z-10"></div>
 
               <div className="relative z-10 flex flex-col items-center gap-3">
                 <div className="text-5xl group-hover/stat:scale-125 transition-transform duration-600">{stat.icon}</div>
