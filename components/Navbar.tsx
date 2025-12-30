@@ -77,8 +77,8 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                   rel={item.external ? 'noopener noreferrer' : undefined}
                   className={`px-6 py-2.5 text-sm font-semibold transition-all duration-500 relative group border-b-2 rounded-xl overflow-hidden ${
                     activePage === item.id
-                      ? 'text-secondary border-b-secondary bg-gradient-to-br from-yellow-50 to-yellow-25 shadow-md shadow-secondary/10'
-                      : 'text-slate-600 border-b-transparent hover:text-secondary hover:border-b-secondary/50 hover:bg-gradient-to-br from-yellow-50 to-white hover:shadow-sm hover:shadow-secondary/5'
+                      ? 'text-secondary border-b-secondary bg-gradient-to-br from-purple-50 to-purple-25 shadow-md shadow-secondary/10'
+                      : 'text-slate-600 border-b-transparent hover:text-secondary hover:border-b-secondary/50 hover:bg-gradient-to-br from-purple-50 to-white hover:shadow-sm hover:shadow-secondary/5'
                   }`}
                   style={{animation: `fadeInUp 0.6s ease-out ${0.06 * index}s backwards`}}
                 >
@@ -93,13 +93,13 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
               <div className="ml-8 flex items-center space-x-4 pl-8 border-l border-secondary/25">
                 {user ? (
                   <>
-                    <div className="flex items-center space-x-3 text-slate-700 group cursor-default px-4 py-2.5 rounded-xl bg-gradient-to-r from-yellow-50 to-white border border-secondary/25 hover:border-secondary/40 transition-all duration-500 hover:shadow-sm hover:shadow-secondary/5">
+                    <div className="flex items-center space-x-3 text-slate-700 group cursor-default px-4 py-2.5 rounded-xl bg-gradient-to-r from-purple-50 to-white border border-secondary/25 hover:border-secondary/40 transition-all duration-500 hover:shadow-sm hover:shadow-secondary/5">
                       <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-secondary to-accent animate-pulse-scale"></div>
                       <span className="text-xs font-semibold uppercase tracking-wider text-secondary group-hover:text-yellow-600 transition-colors duration-500">{getUserDisplayName()}</span>
                     </div>
                     <button
                       onClick={handleLogout}
-                      className="text-sm font-semibold text-slate-600 hover:text-secondary transition-all duration-500 group relative px-5 py-2.5 rounded-xl hover:bg-yellow-50 border border-transparent hover:border-secondary/25 hover:shadow-sm hover:shadow-secondary/5"
+                      className="text-sm font-semibold text-slate-600 hover:text-secondary transition-all duration-500 group relative px-5 py-2.5 rounded-xl hover:bg-purple-50 border border-transparent hover:border-secondary/25 hover:shadow-sm hover:shadow-secondary/5"
                     >
                       <span className="relative z-10">Logout</span>
                       <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-[calc(100%-10px)] transition-all duration-500 rounded-full"></div>
