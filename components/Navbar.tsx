@@ -109,7 +109,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                   <>
                     <button
                       onClick={() => onNavigate('login')}
-                      className="flex items-center text-xs font-bold text-secondary hover:text-yellow-300 transition-all duration-500 group relative px-7 py-3 rounded-xl hover:bg-gradient-to-br hover:from-secondary/20 hover:to-secondary/10 border border-secondary/50 hover:border-secondary/70 uppercase tracking-wider hover:shadow-lg hover:shadow-secondary/20"
+                      className="flex items-center text-xs font-bold text-secondary hover:text-yellow-600 transition-all duration-500 group relative px-7 py-3 rounded-xl hover:bg-gradient-to-br hover:from-secondary/15 hover:to-secondary/8 border border-secondary/40 hover:border-secondary/60 uppercase tracking-wider hover:shadow-md hover:shadow-secondary/15"
                     >
                       <div className="absolute -inset-1 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg rounded-lg -z-10"></div>
                       <svg className="w-4 h-4 mr-2.5 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500" fill="currentColor" viewBox="0 0 20 20">
