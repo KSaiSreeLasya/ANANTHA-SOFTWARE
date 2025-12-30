@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="section-padding bg-gradient-to-b from-color-bg via-color-bg-light to-color-bg text-white relative overflow-hidden">
+    <div className="section-padding bg-gradient-to-b from-white via-gray-50 to-white text-text relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-1/3 -right-1/4 w-1/2 h-1/2 bg-gradient-to-tl from-primary/8 via-transparent to-transparent rounded-full blur-3xl opacity-50 animate-float-slow"></div>
       <div className="absolute bottom-1/4 -left-1/4 w-1/3 h-1/3 bg-gradient-to-br from-accent/8 via-transparent to-transparent rounded-full blur-3xl opacity-40 animate-float"></div>
