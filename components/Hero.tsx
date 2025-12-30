@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center py-20">
         {/* Badge */}
         <div className="mb-14 inline-block animate-fade-in-up" style={{animationDuration: '0.7s'}}>
-          <div className="px-8 py-4 text-secondary text-xs font-bold uppercase tracking-widest flex items-center gap-3 group relative backdrop-blur-sm border border-secondary/40 rounded-full bg-gradient-to-r from-secondary/12 to-secondary/6" style={{boxShadow: '0 0 25px rgba(168, 85, 247, 0.2)'}}>
+          <div className="px-8 py-4 text-secondary text-xs font-bold uppercase tracking-widest flex items-center gap-3 group relative backdrop-blur-sm border border-secondary/40 rounded-full bg-gradient-to-r from-secondary/12 to-secondary/6" style={{boxShadow: '0 0 25px rgba(168, 85, 247, 0.25)'}}>
             <span className="w-3.5 h-3.5 bg-gradient-to-r from-secondary to-accent rounded-full animate-pulse-scale"></span>
             <span className="text-secondary">Transforming Industries</span>
             <div className="absolute -inset-2 bg-gradient-to-r from-secondary/0 via-secondary/10 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-600 blur-lg -z-10"></div>
@@ -57,9 +57,9 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
               <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/12 rounded-full mix-blend-screen filter blur-3xl opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
               <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
               <h3 className="text-3xl md:text-4xl font-black group-hover:text-secondary transition-colors duration-600 w-full flex flex-col items-center justify-center relative z-10 letter-spacing-tight">
-                Anantha Software is now <span className="inline-block mt-3 font-black text-3xl md:text-4xl" style={{background: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', animation: 'gradient-shift 8s ease infinite'}}>ASOCSEMI</span>
+                Anantha Software is now <span className="inline-block mt-3 font-black text-3xl md:text-4xl" style={{background: 'linear-gradient(120deg, #a855f7 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', animation: 'gradient-shift 8s ease infinite'}}>ASOCSEMI</span>
               </h3>
-              <div className="h-2 w-40 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-600 rounded-full relative z-10" style={{boxShadow: '0 0 30px rgba(251, 191, 36, 0.4)'}}></div>
+              <div className="h-2 w-40 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-600 rounded-full relative z-10" style={{boxShadow: '0 0 30px rgba(168, 85, 247, 0.4)'}}></div>
               <p className="text-sm md:text-base text-text-secondary leading-relaxed uppercase tracking-wider font-medium group-hover:text-text-primary transition-colors duration-600 max-w-2xl relative z-10">
                 Transitioning to ASOCSEMI! We are excited to introduce our expanded semiconductor and engineering services. Our commitment to excellence drives us to deliver top-tier technology.
               </p>
@@ -86,11 +86,11 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
               <span className="absolute -inset-6 bg-gradient-to-r from-secondary/0 via-secondary/15 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl rounded-xl"></span>
               <span className="relative hover:text-secondary transition-colors duration-500">Transforming</span>
             </span>
-            <span className="inline-block ml-3 mr-3 hover:scale-110 transition-transform duration-500" style={{animation: 'gradient-shift 8s ease infinite', background: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 900, display: 'inline-block'}}>Innovation</span>
+            <span className="inline-block ml-3 mr-3 hover:scale-110 transition-transform duration-500" style={{animation: 'gradient-shift 8s ease infinite', background: 'linear-gradient(120deg, #a855f7 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 900, display: 'inline-block'}}>Innovation</span>
             <br />
             <span className="text-text-secondary font-light">Into</span>
           </span>
-          <span className="block animate-fade-in-up relative" style={{animationDelay: '0.4s', animationDuration: '0.9s', background: 'linear-gradient(120deg, #3b82f6 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 8s ease infinite', fontWeight: 900, lineHeight: '1.05', display: 'block'}}>Reality</span>
+          <span className="block animate-fade-in-up relative" style={{animationDelay: '0.4s', animationDuration: '0.9s', background: 'linear-gradient(120deg, #3b82f6 0%, #14b8a6 50%, #a855f7 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 8s ease infinite', fontWeight: 900, lineHeight: '1.05', display: 'block'}}>Reality</span>
         </h1>
 
         {/* Subheading with Enhanced Typography */}
@@ -152,7 +152,7 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
 
               <div className="relative z-10 flex flex-col items-center gap-3">
                 <div className="text-5xl group-hover/stat:scale-110 transition-transform duration-600">{stat.icon}</div>
-                <div className="text-5xl md:text-7xl font-black group-hover/stat:scale-105 transition-transform duration-600" style={{background: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #fbbf24 100%)', backgroundSize: '200% 200%', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', animation: 'gradient-shift 6s ease infinite'}}>{stat.value}</div>
+                <div className="text-5xl md:text-7xl font-black group-hover/stat:scale-105 transition-transform duration-600" style={{background: 'linear-gradient(120deg, #a855f7 0%, #14b8a6 50%, #a855f7 100%)', backgroundSize: '200% 200%', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', animation: 'gradient-shift 6s ease infinite'}}>{stat.value}</div>
                 <div className="text-xs text-text-secondary uppercase tracking-widest font-bold group-hover/stat:text-secondary transition-colors duration-600">{stat.label}</div>
               </div>
             </div>
