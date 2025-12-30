@@ -226,7 +226,7 @@ const Services: React.FC = () => {
           </div>
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-10 animate-fade-in-up flex flex-col items-center justify-center" style={{letterSpacing: '-0.025em', lineHeight: '1.3'}}>
             <span className="text-white font-black">Comprehensive</span>
-            <span className="text-secondary font-black text-5xl md:text-7xl lg:text-8xl block mt-4" style={{animation: 'gradient-shift 8s ease infinite', backgroundImage: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', color: 'transparent', WebkitTextFillColor: 'transparent'}}>Technology Solutions</span>
+            <span className="text-white font-black text-5xl md:text-7xl lg:text-8xl block mt-4">Technology Solutions</span>
           </h2>
           <div className="divider w-20 mx-auto mb-12 hover:w-32 transition-all duration-500"></div>
           <p className="text-text-secondary max-w-4xl mx-auto text-lg md:text-xl lg:text-2xl leading-relaxed font-light animate-fade-in-up hover:text-text-primary transition-colors duration-500 group" style={{animationDelay: '0.1s', letterSpacing: '0.3px', lineHeight: '1.8'}}>
