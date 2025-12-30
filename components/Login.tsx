@@ -191,13 +191,13 @@ const Login: React.FC<LoginProps> = ({ onNavigate, onAuthSuccess }) => {
         {/* Footer Info */}
         <div className="mt-16 pt-10 border-t border-secondary/25 text-center text-xs text-text-muted font-medium uppercase tracking-widest animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           By signing in, you agree to our{' '}
-          <a href="#" className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
+          <button onClick={() => onNavigate('terms')} className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
             Terms of Service
-          </a>{' '}
+          </button>{' '}
           and{' '}
-          <a href="#" className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
+          <button onClick={() => onNavigate('privacy')} className="text-secondary hover:text-accent transition-colors duration-300 font-bold">
             Privacy Policy
-          </a>
+          </button>
         </div>
       </div>
     </div>
