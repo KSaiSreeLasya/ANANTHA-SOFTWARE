@@ -49,11 +49,11 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
         </div>
 
         {/* ASOCSEMI Banner */}
-        <div className="mb-20 w-full px-4 animate-fade-in-up" style={{animationDelay: '0.1s', animationDuration: '0.8s'}}>
+        <div className="mb-20 w-full px-4 animate-fade-in-up" style={{animationDelay: '0.1s', animationDuration: '0.7s'}}>
           <div className="max-w-4xl mx-auto relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/12 via-accent/8 to-secondary/10 opacity-0 group-hover:opacity-100 transition-all duration-700 blur-3xl -z-10 rounded-3xl"></div>
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/30 via-accent/25 to-secondary/25 opacity-0 group-hover:opacity-100 blur-xl -z-20 rounded-3xl transition-opacity duration-700"></div>
-            <div className="flex flex-col items-center text-center space-y-6 py-24 px-12 relative border border-secondary/40 group-hover:border-secondary/80 bg-gradient-to-br from-secondary/14 to-secondary/6 rounded-3xl backdrop-blur-xl transition-all duration-600 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/8 via-accent/6 to-secondary/8 opacity-0 group-hover:opacity-100 transition-all duration-700 blur-3xl -z-10 rounded-3xl"></div>
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/15 via-accent/12 to-secondary/12 opacity-0 group-hover:opacity-100 blur-xl -z-20 rounded-3xl transition-opacity duration-700"></div>
+            <div className="flex flex-col items-center text-center space-y-6 py-24 px-12 relative border border-secondary/30 group-hover:border-secondary/60 bg-gradient-to-br from-secondary/12 to-secondary/5 rounded-3xl backdrop-blur-sm transition-all duration-600 overflow-hidden">
               <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/12 rounded-full mix-blend-screen filter blur-3xl opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
               <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
               <h3 className="text-3xl md:text-4xl font-black group-hover:text-secondary transition-colors duration-600 w-full flex flex-col items-center justify-center relative z-10 letter-spacing-tight">
