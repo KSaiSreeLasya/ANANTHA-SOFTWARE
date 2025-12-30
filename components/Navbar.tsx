@@ -77,8 +77,8 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                   rel={item.external ? 'noopener noreferrer' : undefined}
                   className={`px-6 py-2.5 text-sm font-semibold transition-all duration-500 relative group border-b-2 rounded-xl overflow-hidden ${
                     activePage === item.id
-                      ? 'text-secondary border-b-secondary bg-gradient-to-br from-yellow-100 to-yellow-50 shadow-lg shadow-secondary/15'
-                      : 'text-gray-600 border-b-transparent hover:text-secondary hover:border-b-secondary/60 hover:bg-gradient-to-br from-yellow-50 to-yellow-25 hover:shadow-md hover:shadow-secondary/10'
+                      ? 'text-secondary border-b-secondary bg-gradient-to-br from-yellow-50 to-yellow-25 shadow-md shadow-secondary/10'
+                      : 'text-slate-600 border-b-transparent hover:text-secondary hover:border-b-secondary/50 hover:bg-gradient-to-br from-yellow-50 to-white hover:shadow-sm hover:shadow-secondary/5'
                   }`}
                   style={{animation: `fadeInUp 0.6s ease-out ${0.06 * index}s backwards`}}
                 >
