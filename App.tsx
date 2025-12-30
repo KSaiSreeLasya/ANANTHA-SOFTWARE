@@ -96,7 +96,7 @@ const App: React.FC = () => {
                     Anantha Software is a global leader in Silicon Engineering and Integrated Solutions.
                     We specialize in VLSI, AI/ML development, and bespoke software applications, driving innovation across industries.
                   </p>
-                  <div className="absolute -inset-8 bg-gradient-to-r from-secondary/0 via-secondary/12 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-600 blur-2xl rounded-xl -z-10 pointer-events-none"></div>
+                  <div className="absolute -inset-8 bg-gradient-to-r from-secondary/0 via-secondary/8 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-600 blur-2xl rounded-xl -z-10 pointer-events-none"></div>
                 </div>
 
                 <div className="mt-24 animate-fade-in-up" style={{animationDelay: '0.4s', animationDuration: '0.8s'}}>
