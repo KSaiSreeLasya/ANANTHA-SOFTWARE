@@ -70,12 +70,12 @@ const App: React.FC = () => {
         return (
           <div className="animate-in fade-in duration-700">
             <Hero navigateTo={navigateTo} />
-            <div className="bg-gradient-to-b from-white via-gray-50 to-white py-44 border-t border-gray-200 relative overflow-hidden" style={{boxShadow: 'inset 0 1px 0 rgba(0, 0, 0, 0.06)'}}>
+            <div className="bg-gradient-to-b from-white via-white to-white py-44 border-t border-slate-200 relative overflow-hidden" style={{boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.8)'}}>
               {/* Background decorative elements */}
               <div className="absolute inset-0 overflow-hidden -z-10">
-                <div className="absolute top-0 left-1/4 w-80 h-80 bg-secondary/12 rounded-full mix-blend-screen filter blur-3xl opacity-60 animate-float" style={{animation: 'float 22s ease-in-out infinite'}}></div>
-                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/12 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float-slow" style={{animation: 'floatSlow 28s ease-in-out infinite'}}></div>
-                <div className="absolute top-1/2 right-10 w-72 h-72 bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-40" style={{animation: 'float 24s ease-in-out infinite 3s'}}></div>
+                <div className="absolute top-0 left-1/4 w-80 h-80 bg-secondary/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float" style={{animation: 'float 26s ease-in-out infinite'}}></div>
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/10 rounded-full mix-blend-multiply filter blur-3xl opacity-35 animate-float-slow" style={{animation: 'floatSlow 32s ease-in-out infinite'}}></div>
+                <div className="absolute top-1/2 right-10 w-72 h-72 bg-primary/8 rounded-full mix-blend-multiply filter blur-3xl opacity-30" style={{animation: 'float 28s ease-in-out infinite 3s'}}></div>
               </div>
 
               <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
