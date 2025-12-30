@@ -95,9 +95,9 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
 
         {/* Subheading with Enhanced Typography */}
         <div className="relative group">
-          <div className="absolute -inset-8 bg-gradient-to-r from-secondary/0 via-secondary/15 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl rounded-xl -z-10 pointer-events-none"></div>
-          <p className="text-lg md:text-xl lg:text-2xl text-text-secondary max-w-4xl mx-auto mb-24 font-light leading-relaxed animate-fade-in-up" style={{animationDelay: '0.35s', animationDuration: '0.9s', letterSpacing: '0.3px', fontWeight: '300', lineHeight: '1.8'}}>
-            <span className="text-text font-medium">Cutting-edge solutions</span> in VLSI, AI/ML, and Software Engineering.
+          <div className="absolute -inset-8 bg-gradient-to-r from-secondary/0 via-secondary/10 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl rounded-xl -z-10 pointer-events-none"></div>
+          <p className="text-lg md:text-xl lg:text-2xl text-text-secondary max-w-4xl mx-auto mb-24 font-light leading-relaxed animate-fade-in-up" style={{animationDelay: '0.35s', animationDuration: '0.8s', letterSpacing: '0.3px', fontWeight: '400', lineHeight: '1.8'}}>
+            <span className="text-text font-semibold">Cutting-edge solutions</span> in VLSI, AI/ML, and Software Engineering.
             <br className="hidden md:block" />
             Empowering businesses to innovate, scale, and lead their industries with advanced technology partnerships.
           </p>
