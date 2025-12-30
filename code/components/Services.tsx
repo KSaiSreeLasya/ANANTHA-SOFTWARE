@@ -224,7 +224,7 @@ const Services: React.FC = () => {
             <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-secondary rounded-full inline-block mr-3 animate-pulse-scale"></span>
             Our Expertise
           </div>
-          <h2 className="animate-fade-in-up flex flex-col items-center justify-center" style={{letterSpacing: '-0.025em', lineHeight: '1.05'}}>
+          <h2 className="animate-fade-in-up flex flex-col items-center justify-center" style={{letterSpacing: '-0.025em', lineHeight: '1.15'}}>
             <span className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-white">Comprehensive</span>
             <span className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-white ">Technology Solutions</span>
           </h2>
