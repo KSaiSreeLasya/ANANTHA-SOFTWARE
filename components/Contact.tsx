@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="section-padding bg-gradient-to-b from-color-bg via-color-bg-light to-color-bg text-white relative overflow-hidden">
+    <div className="section-padding bg-gradient-to-b from-white via-gray-50 to-white text-text relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-1/3 -right-1/4 w-1/2 h-1/2 bg-gradient-to-tl from-primary/8 via-transparent to-transparent rounded-full blur-3xl opacity-50 animate-float-slow"></div>
       <div className="absolute bottom-1/4 -left-1/4 w-1/3 h-1/3 bg-gradient-to-br from-accent/8 via-transparent to-transparent rounded-full blur-3xl opacity-40 animate-float"></div>
@@ -126,7 +126,7 @@ const Contact: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-4xl font-bold mb-3 text-white">Message Sent!</h3>
+                  <h3 className="text-4xl font-bold mb-3 text-text">Message Sent!</h3>
                   <p className="text-text-secondary font-medium">Thank you for reaching out. Our team will get back to you within 24 hours.</p>
                 </div>
               ) : (
@@ -143,7 +143,7 @@ const Contact: React.FC = () => {
                       type="text"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-5 py-3 rounded-lg bg-primary/5 border border-primary/20 text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all duration-400 placeholder-text-muted/50"
+                      className="w-full px-5 py-3 rounded-lg bg-primary/5 border border-primary/20 text-text focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all duration-400 placeholder-text-muted/50"
                       placeholder="Your name"
                     />
                   </div>
@@ -154,7 +154,7 @@ const Contact: React.FC = () => {
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-5 py-3 rounded-lg bg-primary/5 border border-primary/20 text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all duration-400 placeholder-text-muted/50"
+                      className="w-full px-5 py-3 rounded-lg bg-primary/5 border border-primary/20 text-text focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all duration-400 placeholder-text-muted/50"
                       placeholder="you@company.com"
                     />
                   </div>
@@ -165,7 +165,7 @@ const Contact: React.FC = () => {
                       rows={5}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-5 py-3 rounded-lg bg-primary/5 border border-primary/20 text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all duration-400 resize-none placeholder-text-muted/50"
+                      className="w-full px-5 py-3 rounded-lg bg-primary/5 border border-primary/20 text-text focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all duration-400 resize-none placeholder-text-muted/50"
                       placeholder="Tell us about your project..."
                     ></textarea>
                   </div>

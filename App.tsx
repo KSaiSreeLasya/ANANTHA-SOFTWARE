@@ -80,16 +80,16 @@ const App: React.FC = () => {
 
               <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
                 <div className="inline-block mb-12 animate-fade-in-up" style={{animationDuration: '0.7s'}}>
-                  <div className="px-8 py-3.5 text-secondary text-xs font-bold uppercase tracking-widest border border-secondary/35 rounded-full bg-gradient-to-r from-secondary/10 to-secondary/4 backdrop-blur-sm" style={{boxShadow: '0 0 25px rgba(251, 191, 36, 0.2)'}}>
+                  <div className="px-8 py-3.5 text-secondary text-xs font-bold uppercase tracking-widest border border-secondary/35 rounded-full bg-gradient-to-r from-secondary/10 to-secondary/4 backdrop-blur-sm" style={{boxShadow: '0 0 25px rgba(168, 85, 247, 0.2)'}}>
                     Our Core Strength
                   </div>
                 </div>
 
                 <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-12 uppercase tracking-tight animate-fade-in-up" style={{animationDelay: '0.1s', animationDuration: '0.7s', lineHeight: '1.1', letterSpacing: '-0.02em'}}>
-                  <span className="text-gradient inline-block" style={{backgroundImage: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 8s ease infinite'}}>Excellence in Engineering</span>
+                  <span className="text-gradient inline-block" style={{backgroundImage: 'linear-gradient(120deg, #a855f7 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', animation: 'gradient-shift 8s ease infinite'}}>Excellence in Engineering</span>
                 </h2>
 
-                <div className="h-2 w-40 bg-gradient-to-r from-secondary via-accent to-primary mx-auto mb-16 animate-fade-in-up rounded-full" style={{animationDelay: '0.2s', animationDuration: '0.7s', boxShadow: '0 0 25px rgba(251, 191, 36, 0.25)'}}></div>
+                <div className="h-2 w-40 bg-gradient-to-r from-secondary via-accent to-primary mx-auto mb-16 animate-fade-in-up rounded-full" style={{animationDelay: '0.2s', animationDuration: '0.7s', boxShadow: '0 0 25px rgba(168, 85, 247, 0.25)'}}></div>
 
                 <div className="group relative animate-fade-in-up" style={{animationDelay: '0.3s', animationDuration: '0.7s'}}>
                   <p className="text-text-secondary max-w-4xl mx-auto leading-relaxed text-lg md:text-xl font-normal" style={{letterSpacing: '0.3px', fontWeight: '400'}}>
