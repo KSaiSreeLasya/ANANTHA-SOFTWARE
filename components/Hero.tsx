@@ -120,7 +120,7 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
           </button>
           <button
             onClick={() => navigateTo('contact')}
-            className="btn-primary-outline-gold rounded-3xl px-16 py-6 text-xs font-bold uppercase tracking-widest transform transition-all hover:scale-110 active:scale-95 duration-500 relative group overflow-hidden border-2.5"
+            className="btn-primary-outline-gold rounded-3xl px-16 py-6 text-xs font-bold uppercase tracking-widest transform transition-all hover:scale-105 active:scale-98 duration-500 relative group overflow-hidden border-2.5"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-secondary/0 via-secondary/40 to-secondary/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
             <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-secondary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
