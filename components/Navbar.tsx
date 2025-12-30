@@ -163,16 +163,16 @@ const Navbar: React.FC<NavbarProps> = ({ activePage, onNavigate }) => {
                 <span className="relative z-10">{item.label}</span>
               </a>
             ))}
-            <div className="pt-6 border-t border-secondary/30 flex flex-col space-y-3">
+            <div className="pt-6 border-t border-slate-200 flex flex-col space-y-3">
               {user ? (
                 <>
-                  <div className="px-4 py-3.5 flex items-center space-x-2.5 text-gray-700 group cursor-default rounded-lg bg-yellow-100 border border-secondary/30">
+                  <div className="px-4 py-3.5 flex items-center space-x-2.5 text-slate-700 group cursor-default rounded-lg bg-yellow-50 border border-secondary/25">
                     <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-secondary to-accent animate-pulse-scale"></div>
-                    <span className="text-xs font-semibold uppercase tracking-wider group-hover:text-secondary transition-colors duration-500">{getUserDisplayName()}</span>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-secondary group-hover:text-yellow-600 transition-colors duration-500">{getUserDisplayName()}</span>
                   </div>
                   <button
                     onClick={handleLogout}
-                    className="text-left px-4 py-3.5 text-gray-600 font-semibold hover:text-secondary transition-all duration-500 group relative rounded-lg hover:bg-yellow-50 border border-transparent hover:border-secondary/35 uppercase text-xs tracking-wider"
+                    className="text-left px-4 py-3.5 text-slate-600 font-semibold hover:text-secondary transition-all duration-500 group relative rounded-lg hover:bg-yellow-50 border border-transparent hover:border-secondary/25 uppercase text-xs tracking-wider"
                   >
                     Logout
                     <div className="absolute bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-accent group-hover:w-8 transition-all duration-500 rounded-full"></div>
