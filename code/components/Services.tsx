@@ -225,10 +225,10 @@ const Services: React.FC = () => {
             Our Expertise
           </div>
           <div className="text-center">
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-white" style={{letterSpacing: '-0.025em', lineHeight: '1.1'}}>
+            <h2 key="comprehensive" className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-white" style={{letterSpacing: '-0.025em', lineHeight: '1.1'}}>
               Comprehensive
             </h2>
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter" style={{letterSpacing: '-0.025em', lineHeight: '1.1', marginTop: '0.5rem', color: '#ffffff !important', opacity: '1 !important', visibility: 'visible !important', display: 'block !important', backgroundColor: 'rgba(255, 0, 0, 0.5)'}}>
+            <h2 key="technology-solutions" className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-white" style={{letterSpacing: '-0.025em', lineHeight: '1.1', marginTop: '0.5rem'}}>
               Technology Solutions
             </h2>
           </div>
