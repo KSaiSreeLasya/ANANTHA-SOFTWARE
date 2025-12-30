@@ -81,9 +81,9 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
 
         {/* Main Heading with Enhanced Typography */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1] mb-16 uppercase" style={{letterSpacing: '-0.025em'}}>
-          <span className="block text-text group animate-fade-in-up relative" style={{animationDelay: '0.2s', animationDuration: '0.9s', marginBottom: '1rem', fontWeight: 900, lineHeight: '1.05'}}>
+          <span className="block text-text group animate-fade-in-up relative" style={{animationDelay: '0.2s', animationDuration: '0.8s', marginBottom: '1rem', fontWeight: 900, lineHeight: '1.05'}}>
             <span className="inline-block relative">
-              <span className="absolute -inset-6 bg-gradient-to-r from-secondary/0 via-secondary/30 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl rounded-xl"></span>
+              <span className="absolute -inset-6 bg-gradient-to-r from-secondary/0 via-secondary/15 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl rounded-xl"></span>
               <span className="relative hover:text-secondary transition-colors duration-500">Transforming</span>
             </span>
             <span className="inline-block ml-3 mr-3 hover:scale-110 transition-transform duration-500" style={{animation: 'gradient-shift 8s ease infinite', background: 'linear-gradient(120deg, #fbbf24 0%, #14b8a6 50%, #3b82f6 100%)', backgroundSize: '200% 200%', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 900, display: 'inline-block'}}>Innovation</span>
