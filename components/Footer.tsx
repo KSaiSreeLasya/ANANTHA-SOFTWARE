@@ -129,7 +129,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <button
                   type="submit"
                   disabled={newsletterSubmitting}
-                  className="btn-primary btn-primary-solid rounded-lg w-full text-[11px] font-bold uppercase tracking-wider disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-500 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-1"
+                  className="btn-primary btn-primary-solid rounded-lg w-full text-[11px] font-bold uppercase tracking-wider disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-500 hover:shadow-md hover:shadow-primary/25 hover:-translate-y-0.5"
                 >
                   {newsletterSubmitting ? 'Subscribing...' : 'Subscribe'}
                 </button>
