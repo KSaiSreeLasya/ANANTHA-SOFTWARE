@@ -399,7 +399,7 @@ const Services: React.FC = () => {
               <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-secondary rounded-full inline-block mr-3 animate-pulse-scale"></span>
               Expertise Breakdown
             </div>
-            <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-4 text-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text">
+            <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-4 text-primary">
               Service Portfolios
             </h3>
             <div className="divider w-20 mx-auto hover:w-32 transition-all duration-500"></div>
@@ -483,7 +483,7 @@ const Services: React.FC = () => {
                                 </svg>
                               </div>
                               <div className="flex-1">
-                                <h5 className="text-xl md:text-2xl font-bold text-white group-hover:text-primary transition-colors duration-400 mb-3 tracking-tight">
+                                <h5 className="text-xl md:text-2xl font-bold text-primary group-hover:text-accent transition-colors duration-400 mb-3 tracking-tight">
                                   {category.service}
                                 </h5>
                                 <div className="flex flex-wrap gap-2">
