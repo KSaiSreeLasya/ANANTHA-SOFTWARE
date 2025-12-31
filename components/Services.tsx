@@ -483,7 +483,7 @@ const Services: React.FC = () => {
                                 </svg>
                               </div>
                               <div className="flex-1">
-                                <h5 className="text-xl md:text-2xl font-bold text-white group-hover:text-primary transition-colors duration-400 mb-3 tracking-tight">
+                                <h5 className="text-xl md:text-2xl font-bold text-primary group-hover:text-accent transition-colors duration-400 mb-3 tracking-tight">
                                   {category.service}
                                 </h5>
                                 <div className="flex flex-wrap gap-2">
