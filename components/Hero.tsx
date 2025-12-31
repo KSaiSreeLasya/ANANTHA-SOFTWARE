@@ -6,7 +6,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
   return (
-    <div className="relative min-h-[100vh] flex flex-col justify-center items-center overflow-hidden" style={{backgroundColor: '#FFFFF0'}}>
+    <div className="relative min-h-[100vh] flex flex-col justify-center items-center overflow-hidden" style={{backgroundColor: '#FFFFFF'}}>
       {/* Animated Background Spheres - White Theme */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {/* Large Primary Sphere - Blue */}

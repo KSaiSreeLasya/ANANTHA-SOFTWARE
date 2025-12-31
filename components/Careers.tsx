@@ -114,7 +114,7 @@ const Careers: React.FC = () => {
   };
 
   return (
-    <div className="section-padding relative overflow-hidden" style={{backgroundColor: '#FFFFF0'}}>
+    <div className="section-padding relative overflow-hidden" style={{backgroundColor: '#FFFFFF'}}>
       {/* Background Elements */}
       <div className="absolute top-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-tl from-primary/8 via-transparent to-transparent rounded-full blur-3xl opacity-50 animate-float-slow"></div>
       <div className="absolute bottom-1/4 -left-1/4 w-1/3 h-1/3 bg-gradient-to-br from-accent/8 via-transparent to-transparent rounded-full blur-3xl opacity-40 animate-float"></div>
@@ -130,7 +130,7 @@ const Careers: React.FC = () => {
 
         <div className="gradient-card p-12 rounded-2xl card-hover border-primary/30 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
           <div className="mb-10">
-            <h3 className="text-3xl font-bold text-white">Application Form</h3>
+            <h3 className="text-3xl font-bold text-text">Application Form</h3>
             <p className="text-text-muted mt-2">Fill out the form below and join our growing team of innovators.</p>
           </div>
 
@@ -141,7 +141,7 @@ const Careers: React.FC = () => {
                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                  </svg>
               </div>
-              <h3 className="text-3xl font-bold mb-3 text-white">Application Received!</h3>
+              <h3 className="text-3xl font-bold mb-3 text-text">Application Received!</h3>
               <p className="text-text-secondary font-medium">Our HR team will review your profile and reach out within 2-3 business days.</p>
             </div>
           ) : (

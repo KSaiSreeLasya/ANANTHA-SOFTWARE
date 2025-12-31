@@ -57,7 +57,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   };
 
   return (
-    <footer className="pt-24 pb-12 mt-auto border-t border-primary/20" style={{backgroundColor: '#FFFFF0', boxShadow: 'inset 0 1px 0 rgba(255, 255, 240, 0.8)'}}>
+    <footer className="pt-24 pb-12 mt-auto border-t border-primary/20" style={{backgroundColor: '#FFFFFF', boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.8)'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
 
