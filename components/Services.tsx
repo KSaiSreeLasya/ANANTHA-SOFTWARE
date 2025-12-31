@@ -211,7 +211,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <div className="section-padding bg-gradient-to-b from-color-bg via-color-bg-light to-color-bg wavy-bg relative overflow-hidden">
+    <div className="section-padding wavy-bg relative overflow-hidden" style={{backgroundColor: '#FFFFF0'}}>
       {/* Background Animation */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/3 right-0 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-20 animate-float" style={{animation: 'float 15s ease-in-out infinite'}}></div>
@@ -225,8 +225,8 @@ const Services: React.FC = () => {
             Our Expertise
           </div>
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-10 animate-fade-in-up flex flex-col items-center justify-center" style={{letterSpacing: '-0.025em', lineHeight: '1.3'}}>
-            <span className="text-white font-black">Comprehensive</span>
-            <span className="text-white font-black text-5xl md:text-7xl lg:text-8xl block mt-4">Technology Solutions</span>
+            <span className="text-primary font-black">Comprehensive</span>
+            <span className="text-primary font-black text-5xl md:text-7xl lg:text-8xl block mt-4">Technology Solutions</span>
           </h2>
           <div className="divider w-20 mx-auto mb-12 hover:w-32 transition-all duration-500"></div>
           <p className="text-text-secondary max-w-4xl mx-auto text-lg md:text-xl lg:text-2xl leading-relaxed font-light animate-fade-in-up hover:text-text-primary transition-colors duration-500 group" style={{animationDelay: '0.1s', letterSpacing: '0.3px', lineHeight: '1.8'}}>

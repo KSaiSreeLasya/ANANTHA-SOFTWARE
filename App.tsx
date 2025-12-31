@@ -70,7 +70,7 @@ const App: React.FC = () => {
         return (
           <div className="animate-in fade-in duration-700">
             <Hero navigateTo={navigateTo} />
-            <div className="bg-gradient-to-b from-white via-white to-white py-44 border-t border-slate-200 relative overflow-hidden" style={{boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.8)'}}>
+            <div className="py-44 relative overflow-hidden" style={{backgroundColor: '#FFFFF0', boxShadow: 'inset 0 1px 0 rgba(255, 255, 240, 0.8)'}}>
               {/* Background decorative elements */}
               <div className="absolute inset-0 overflow-hidden -z-10">
                 <div className="absolute top-0 left-1/4 w-80 h-80 bg-secondary/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float" style={{animation: 'float 26s ease-in-out infinite'}}></div>

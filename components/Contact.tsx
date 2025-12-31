@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="section-padding bg-gradient-to-b from-white via-gray-50 to-white text-text relative overflow-hidden">
+    <div className="section-padding text-text relative overflow-hidden" style={{backgroundColor: '#FFFFF0'}}>
       {/* Background Elements */}
       <div className="absolute top-1/3 -right-1/4 w-1/2 h-1/2 bg-gradient-to-tl from-primary/8 via-transparent to-transparent rounded-full blur-3xl opacity-50 animate-float-slow"></div>
       <div className="absolute bottom-1/4 -left-1/4 w-1/3 h-1/3 bg-gradient-to-br from-accent/8 via-transparent to-transparent rounded-full blur-3xl opacity-40 animate-float"></div>
@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
           <p className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 inline-block">Get In Touch</p>
           <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight uppercase tracking-tight">
             Ready to start your <br />
-            <span className="text-gradient bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text">digital journey?</span>
+            <span className="text-gradient">digital journey?</span>
           </h2>
           <div className="h-1 w-16 bg-gradient-to-r from-primary via-accent to-primary mx-auto mb-8 rounded-full"></div>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto font-medium leading-relaxed">
