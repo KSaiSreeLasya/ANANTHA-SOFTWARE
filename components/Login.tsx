@@ -157,12 +157,9 @@ const Login: React.FC<LoginProps> = ({ onNavigate, onAuthSuccess }) => {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-4 bg-gradient-to-r from-secondary via-purple-500 to-secondary text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-secondary/60 transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest text-sm transform hover:scale-105 active:scale-95 relative group overflow-hidden"
+            className="w-full py-4 bg-secondary text-white font-bold rounded-xl hover:bg-purple-600 transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest text-sm transform hover:scale-105 active:scale-95"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
-            <span className="relative z-10">
-              {isLoading ? 'Signing in...' : 'Sign In'}
-            </span>
+            {isLoading ? 'Signing in...' : 'Sign In'}
           </button>
 
           {/* Divider */}
