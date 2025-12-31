@@ -403,7 +403,7 @@ const Services: React.FC = () => {
               <span className="w-2.5 h-2.5 bg-gradient-to-r from-primary to-secondary rounded-full inline-block mr-3 animate-pulse-scale"></span>
               Expertise Breakdown
             </div>
-            <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-4" style={{color: '#0f172a'}}>
+            <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-4" style={{color: '#0f172a', backgroundColor: '#ffcccc', padding: '10px'}}>
               Service Portfolios
             </h3>
             <div className="divider w-20 mx-auto hover:w-32 transition-all duration-500"></div>
