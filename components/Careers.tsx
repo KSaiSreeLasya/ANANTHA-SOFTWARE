@@ -130,7 +130,7 @@ const Careers: React.FC = () => {
 
         <div className="gradient-card p-12 rounded-2xl card-hover border-primary/30 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
           <div className="mb-10">
-            <h3 className="text-3xl font-bold text-white">Application Form</h3>
+            <h3 className="text-3xl font-bold text-text">Application Form</h3>
             <p className="text-text-muted mt-2">Fill out the form below and join our growing team of innovators.</p>
           </div>
 
@@ -141,7 +141,7 @@ const Careers: React.FC = () => {
                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                  </svg>
               </div>
-              <h3 className="text-3xl font-bold mb-3 text-white">Application Received!</h3>
+              <h3 className="text-3xl font-bold mb-3 text-text">Application Received!</h3>
               <p className="text-text-secondary font-medium">Our HR team will review your profile and reach out within 2-3 business days.</p>
             </div>
           ) : (
