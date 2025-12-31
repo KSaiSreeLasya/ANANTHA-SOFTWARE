@@ -58,7 +58,7 @@ const Login: React.FC<LoginProps> = ({ onNavigate, onAuthSuccess }) => {
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-white via-gray-50 to-white pt-32 pb-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-screen bg-white pt-32 pb-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center overflow-hidden">
       {/* Animated Background Spheres */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-primary/20 via-primary/10 to-primary/5 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float-slow"></div>
