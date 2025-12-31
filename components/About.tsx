@@ -2,7 +2,7 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <div className="section-padding relative overflow-hidden" style={{backgroundColor: '#FFFFF0'}}>
+    <div className="section-padding relative overflow-hidden" style={{backgroundColor: '#FFFFFF'}}>
       {/* Background Elements */}
       <div className="absolute top-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-tl from-primary/8 via-transparent to-transparent rounded-full blur-3xl opacity-50 animate-float-slow"></div>
       <div className="absolute bottom-0 -left-1/3 w-1/2 h-1/2 bg-gradient-to-tr from-accent/8 via-transparent to-transparent rounded-full blur-3xl opacity-40 animate-float"></div>

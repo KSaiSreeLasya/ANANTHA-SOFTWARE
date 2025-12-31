@@ -2,7 +2,7 @@ import React from 'react';
 
 const Vision: React.FC = () => {
   return (
-    <div className="section-padding relative" style={{backgroundColor: '#FFFFF0'}}>
+    <div className="section-padding relative" style={{backgroundColor: '#FFFFFF'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-20 animate-fade-in-up">
           <p className="text-secondary font-bold tracking-[0.3em] uppercase text-xs mb-4 inline-block px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30">Our Foundation</p>
